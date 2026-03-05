@@ -1,0 +1,6596 @@
+title: Ventus Ally (Donald)
+originalAuthor: Omniツ
+description: Revamped Ventus Ally! Ask any questions here https://discord.gg/YMV6Ea2
+assets:
+# Moose DLL and Config
+ - name: dll/KH2Moose.dll
+   method: copy
+   platform: pc
+   source:
+     - name: dll/KH2Moose.dll
+ - name: dll/KH2Moose.ini
+   method: copy
+   platform: pc
+   source:
+     - name: dll/KH2Moose.ini
+# ARD Files (Yensid's Tower)
+ - name: ard/us/tt29.ard
+   method: copy
+   source:
+     - name: ard/us/tt29.ard
+ - name: ard/us/tt30.ard
+   method: copy
+   source:
+     - name: ard/us/tt30.ard
+# Sound Bar (Footstep Sounds)
+ - name: 12soundinfo.bar
+   method: copy
+   source:
+     - name: 12soundinfo.bar
+# Pride Lands Flying + AI Fix
+ - name: 00objentry.bin
+   method: listpatch
+   type: List
+   source:
+     - name: ObjList.yml
+       type: objentry
+# Blizzard Lord + Zexion Book MSETs
+ - name: obj/B_AL110.mset
+   method: copy
+   source:
+     - name: obj/B_AL110.mset
+ - name: obj/B_EX410.mset
+   method: copy
+   source:
+     - name: obj/B_EX410.mset
+ - name: obj/B_AL120.mset
+   method: copy
+   source:
+     - name: obj/B_AL120.mset
+# Base Model     
+ - name: obj/P_EX020.mdlx
+   multi:
+   - name: obj/P_EX020_NM.mdlx
+   - name: obj/P_EX020_CM.mdlx
+   - name: obj/P_EX020_DC.mdlx
+   - name: obj/P_EX020_TR.mdlx
+   - name: obj/P_EX020_XM.mdlx
+   - name: obj/P_LK020.mdlx
+   - name: obj/P_WI020.mdlx
+   method: copy
+   source:
+     - name: obj/P_EX020.mdlx
+# Base A.US
+ - name: obj/P_EX020.a.us
+   multi:
+   - name: obj/P_EX020_NM.a.us 
+   - name: obj/P_EX020_DC.a.us 
+   - name: obj/P_EX020_CM.a.us 
+   - name: obj/P_EX020_TR.a.us 
+   - name: obj/P_EX020_XM.a.us 
+   - name: obj/P_LK020.a.us 
+   - name: obj/P_WI020.a.us 
+   method: copy
+   source:
+     - name: obj/P_EX020.a.us
+# Base MSET
+ - name: obj/P_EX020.mset
+   multi:
+   - name: obj/P_LK020.mset
+   - name: obj/P_WI020.mset
+   method: copy
+   source:
+     - name: obj/P_EX020.mset
+# MEMO MSETs
+ - name: obj/P_EX020_MEMO.mset
+   multi:
+   - name: obj/P_WI020_MEMO.mset
+   - name: obj/P_LK020_MEMO.mset
+   method: copy
+   source:
+     - name: obj/P_EX020_MEMO.mset
+# Base Weapon MDLX (Wayward Wind)
+ - name: obj/W_EX020.mdlx
+   multi:
+   - name: obj/W_EX020_NM.mdlx
+   - name: obj/W_EX020_TR.mdlx
+   - name: obj/W_EX020_XM.mdlx
+   - name: obj/W_EX020_WI.mdlx
+   method: copy
+   source:
+     - name: obj/W_EX020.mdlx
+# Base Weapon MDLX (Treasure Trove)
+ - name: obj/W_EX020_10.mdlx
+   multi:
+   - name: obj/W_EX020_10_NM.mdlx
+   - name: obj/W_EX020_10_TR.mdlx
+   - name: obj/W_EX020_10_XM.mdlx
+   - name: obj/W_EX020_10_WI.mdlx
+   method: copy
+   source:
+     - name: obj/W_EX020_10.mdlx
+# Base Weapon MDLX (Pixie Petal)
+ - name: obj/W_EX020_20.mdlx
+   multi:
+   - name: obj/W_EX020_20_NM.mdlx
+   - name: obj/W_EX020_20_TR.mdlx
+   - name: obj/W_EX020_20_XM.mdlx
+   - name: obj/W_EX020_20_WI.mdlx
+   method: copy
+   source:
+     - name: obj/W_EX020_20.mdlx
+# Base Weapon MDLX (Mark of a Hero)
+ - name: obj/W_EX020_30.mdlx
+   multi:
+   - name: obj/W_EX020_30_NM.mdlx
+   - name: obj/W_EX020_30_TR.mdlx
+   - name: obj/W_EX020_30_XM.mdlx
+   - name: obj/W_EX020_30_WI.mdlx
+   method: copy
+   source:
+     - name: obj/W_EX020_30.mdlx
+# Base Weapon MDLX (Stroke of Midnight)
+ - name: obj/W_EX020_40.mdlx
+   multi:
+   - name: obj/W_EX020_40_NM.mdlx
+   - name: obj/W_EX020_40_TR.mdlx
+   - name: obj/W_EX020_40_XM.mdlx
+   - name: obj/W_EX020_40_WI.mdlx
+   method: copy
+   source:
+     - name: obj/W_EX020_40.mdlx
+# Base Weapon MDLX (Hyperdrive)
+ - name: obj/W_EX020_50.mdlx
+   multi:
+   - name: obj/W_EX020_50_NM.mdlx
+   - name: obj/W_EX020_50_TR.mdlx
+   - name: obj/W_EX020_50_XM.mdlx
+   - name: obj/W_EX020_50_WI.mdlx
+   method: copy
+   source:
+     - name: obj/W_EX020_50.mdlx
+# Base Weapon MDLX (Fairy Stars)
+ - name: obj/W_EX020_60.mdlx
+   multi:
+   - name: obj/W_EX020_60_NM.mdlx
+   - name: obj/W_EX020_60_TR.mdlx
+   - name: obj/W_EX020_60_XM.mdlx
+   - name: obj/W_EX020_60_WI.mdlx
+   method: copy
+   source:
+     - name: obj/W_EX020_60.mdlx
+# Base Weapon MDLX (Frolic Flame)
+ - name: obj/W_EX020_70.mdlx
+   multi:
+   - name: obj/W_EX020_70_NM.mdlx
+   - name: obj/W_EX020_70_TR.mdlx
+   - name: obj/W_EX020_70_XM.mdlx
+   - name: obj/W_EX020_70_WI.mdlx
+   method: copy
+   source:
+     - name: obj/W_EX020_70.mdlx
+# Base Weapon MDLX (Victory Line)
+ - name: obj/W_EX020_80.mdlx
+   multi:
+   - name: obj/W_EX020_80_NM.mdlx
+   - name: obj/W_EX020_80_TR.mdlx
+   - name: obj/W_EX020_80_XM.mdlx
+   - name: obj/W_EX020_80_WI.mdlx
+   method: copy
+   source:
+     - name: obj/W_EX020_80.mdlx
+# Base Weapon MDLX (Rainfell)
+ - name: obj/W_EX020_90.mdlx
+   multi:
+   - name: obj/W_EX020_90_NM.mdlx
+   - name: obj/W_EX020_90_TR.mdlx
+   - name: obj/W_EX020_90_XM.mdlx
+   - name: obj/W_EX020_90_WI.mdlx
+   method: copy
+   source:
+     - name: obj/W_EX020_90.mdlx
+# Base Weapon MDLX (Stormfall)
+ - name: obj/W_EX020_94.mdlx
+   multi:
+   - name: obj/W_EX020_94_NM.mdlx
+   - name: obj/W_EX020_94_TR.mdlx
+   - name: obj/W_EX020_94_XM.mdlx
+   - name: obj/W_EX020_94_WI.mdlx
+   method: copy
+   source:
+     - name: obj/W_EX020_94.mdlx
+# Base Weapon MDLX (Lost Memory)
+ - name: obj/W_EX020_A0.mdlx
+   multi:
+   - name: obj/W_EX020_A0_NM.mdlx
+   - name: obj/W_EX020_A0_TR.mdlx
+   - name: obj/W_EX020_A0_XM.mdlx
+   - name: obj/W_EX020_A0_WI.mdlx
+   method: copy
+   source:
+     - name: obj/W_EX020_A0.mdlx
+# Base Weapon MDLX (Ultima Weapon)
+ - name: obj/W_EX020_A4.mdlx
+   multi:
+   - name: obj/W_EX020_A4_NM.mdlx
+   - name: obj/W_EX020_A4_TR.mdlx
+   - name: obj/W_EX020_A4_XM.mdlx
+   - name: obj/W_EX020_A4_WI.mdlx
+   method: copy
+   source:
+     - name: obj/W_EX020_A4.mdlx
+# Base Weapon MDLX (Earthshaker)
+ - name: obj/W_EX020_B0.mdlx
+   multi:
+   - name: obj/W_EX020_B0_NM.mdlx
+   - name: obj/W_EX020_B0_TR.mdlx
+   - name: obj/W_EX020_B0_XM.mdlx
+   - name: obj/W_EX020_B0_WI.mdlx
+   method: copy
+   source:
+     - name: obj/W_EX020_B0.mdlx
+# Base Weapon MDLX (Ends of the Earth)
+ - name: obj/W_EX020_B4.mdlx
+   multi:
+   - name: obj/W_EX020_B4_NM.mdlx
+   - name: obj/W_EX020_B4_TR.mdlx
+   - name: obj/W_EX020_B4_XM.mdlx
+   - name: obj/W_EX020_B4_WI.mdlx
+   method: copy
+   source:
+     - name: obj/W_EX020_B4.mdlx
+# Base Weapon MDLX (Wooden Keyblade)
+ - name: obj/W_EX020_C0.mdlx
+   multi:
+   - name: obj/W_EX020_C0_NM.mdlx
+   - name: obj/W_EX020_C0_TR.mdlx
+   - name: obj/W_EX020_C0_XM.mdlx
+   - name: obj/W_EX020_C0_WI.mdlx
+   method: copy
+   source:
+     - name: obj/W_EX020_C0.mdlx
+# Base Weapon MDLX (Missing Ache)
+ - name: obj/W_EX020_C4.mdlx
+   multi:
+   - name: obj/W_EX020_C4_NM.mdlx
+   - name: obj/W_EX020_C4_TR.mdlx
+   - name: obj/W_EX020_C4_XM.mdlx
+   - name: obj/W_EX020_C4_WI.mdlx
+   method: copy
+   source:
+     - name: obj/W_EX020_C4.mdlx
+# Base Weapon MDLX (Void Gear)
+ - name: obj/W_EX020_C8.mdlx
+   multi:
+   - name: obj/W_EX020_C8_NM.mdlx
+   - name: obj/W_EX020_C8_TR.mdlx
+   - name: obj/W_EX020_C8_XM.mdlx
+   - name: obj/W_EX020_C8_WI.mdlx
+   method: copy
+   source:
+     - name: obj/W_EX020_C8.mdlx
+# Base Weapon MDLX (Sweetstack)
+ - name: obj/W_EX020_CC.mdlx
+   multi:
+   - name: obj/W_EX020_CC_NM.mdlx
+   - name: obj/W_EX020_CC_TR.mdlx
+   - name: obj/W_EX020_CC_XM.mdlx
+   - name: obj/W_EX020_CC_WI.mdlx
+   method: copy
+   source:
+     - name: obj/W_EX020_CC.mdlx
+# Base Weapon MDLX (No Name)
+ - name: obj/W_EX020_CG.mdlx
+   multi:
+   - name: obj/W_EX020_CG_NM.mdlx
+   - name: obj/W_EX020_CG_TR.mdlx
+   - name: obj/W_EX020_CG_XM.mdlx
+   - name: obj/W_EX020_CG_WI.mdlx
+   method: copy
+   source:
+     - name: obj/W_EX020_CG.mdlx
+# Base Weapon MSET
+ - name: obj/W_EX020.mset
+   multi:
+   - name: obj/W_EX020_LK.mset
+   - name: obj/W_EX020_WI.mset
+   method: copy
+   source:
+     - name: obj/W_EX020.mset
+# Base Weapon A.US
+ - name: obj/W_EX020.a.us
+   multi:
+   - name: obj/W_EX020_NM.a.us 
+   - name: obj/W_EX020_TR.a.us 
+   - name: obj/W_EX020_WI.a.us 
+   method: copy
+   source:
+     - name: obj/W_EX020.a.us
+# Base Weapon A.US (Treasure Trove)
+ - name: obj/W_EX020_10.a.us
+   multi:
+   - name: obj/W_EX020_10_NM.a.us 
+   - name: obj/W_EX020_10_TR.a.us 
+   - name: obj/W_EX020_10_WI.a.us 
+   method: copy
+   source:
+     - name: obj/W_EX020_10.a.us
+# Base Weapon A.US (Pixie Petal)
+ - name: obj/W_EX020_20.a.us
+   multi:
+   - name: obj/W_EX020_20_NM.a.us 
+   - name: obj/W_EX020_20_TR.a.us 
+   - name: obj/W_EX020_20_WI.a.us 
+   method: copy
+   source:
+     - name: obj/W_EX020_20.a.us
+# Base Weapon A.US (Mark of a Hero)
+ - name: obj/W_EX020_30.a.us
+   multi:
+   - name: obj/W_EX020_30_NM.a.us 
+   - name: obj/W_EX020_30_TR.a.us 
+   - name: obj/W_EX020_30_WI.a.us 
+   method: copy
+   source:
+     - name: obj/W_EX020_30.a.us
+# Base Weapon A.US (Stroke of Midnight)
+ - name: obj/W_EX020_40.a.us
+   multi:
+   - name: obj/W_EX020_40_NM.a.us 
+   - name: obj/W_EX020_40_TR.a.us 
+   - name: obj/W_EX020_40_WI.a.us 
+   method: copy
+   source:
+     - name: obj/W_EX020_40.a.us
+# Base Weapon A.US (Hypderdrive)
+ - name: obj/W_EX020_50.a.us
+   multi:
+   - name: obj/W_EX020_50_NM.a.us 
+   - name: obj/W_EX020_50_TR.a.us 
+   - name: obj/W_EX020_50_WI.a.us 
+   method: copy
+   source:
+     - name: obj/W_EX020_50.a.us
+# Base Weapon A.US (Fairy Stars)
+ - name: obj/W_EX020_60.a.us
+   multi:
+   - name: obj/W_EX020_60_NM.a.us 
+   - name: obj/W_EX020_60_TR.a.us 
+   - name: obj/W_EX020_60_WI.a.us 
+   method: copy
+   source:
+     - name: obj/W_EX020_60.a.us
+# Base Weapon A.US (Frolic Flame)
+ - name: obj/W_EX020_70.a.us
+   multi:
+   - name: obj/W_EX020_70_NM.a.us 
+   - name: obj/W_EX020_70_TR.a.us 
+   - name: obj/W_EX020_70_WI.a.us 
+   method: copy
+   source:
+     - name: obj/W_EX020_70.a.us
+# Base Weapon A.US (Victory Line)
+ - name: obj/W_EX020_80.a.us
+   multi:
+   - name: obj/W_EX020_80_NM.a.us 
+   - name: obj/W_EX020_80_TR.a.us 
+   - name: obj/W_EX020_80_WI.a.us 
+   method: copy
+   source:
+     - name: obj/W_EX020_80.a.us
+# Base Weapon A.US (Rainfell)
+ - name: obj/W_EX020_90.a.us
+   multi:
+   - name: obj/W_EX020_90_NM.a.us 
+   - name: obj/W_EX020_90_TR.a.us 
+   - name: obj/W_EX020_90_WI.a.us 
+   method: copy
+   source:
+     - name: obj/W_EX020_90.a.us
+# Base Weapon A.US (Stormfall)
+ - name: obj/W_EX020_94.a.us
+   multi:
+   - name: obj/W_EX020_94_NM.a.us 
+   - name: obj/W_EX020_94_TR.a.us 
+   - name: obj/W_EX020_94_WI.a.us 
+   method: copy
+   source:
+     - name: obj/W_EX020_94.a.us
+# Base Weapon A.US (Earthshaker)
+ - name: obj/W_EX020_B0.a.us
+   multi:
+   - name: obj/W_EX020_B0_NM.a.us 
+   - name: obj/W_EX020_B0_TR.a.us 
+   - name: obj/W_EX020_B0_WI.a.us 
+   method: copy
+   source:
+     - name: obj/W_EX020_B0.a.us
+# Base Weapon A.US (Ends of the Earth)
+ - name: obj/W_EX020_B4.a.us
+   multi:
+   - name: obj/W_EX020_B4_NM.a.us 
+   - name: obj/W_EX020_B4_TR.a.us 
+   - name: obj/W_EX020_B4_WI.a.us 
+   method: copy
+   source:
+     - name: obj/W_EX020_B4.a.us
+# Base Weapon A.US (Lost Memory)
+ - name: obj/W_EX020_A0.a.us
+   multi:
+   - name: obj/W_EX020_A0_NM.a.us 
+   - name: obj/W_EX020_A0_TR.a.us 
+   - name: obj/W_EX020_A0_WI.a.us 
+   method: copy
+   source:
+     - name: obj/W_EX020_A0.a.us
+# Base Weapon A.US (Ultima Weapon)
+ - name: obj/W_EX020_A4.a.us
+   multi:
+   - name: obj/W_EX020_A4_NM.a.us 
+   - name: obj/W_EX020_A4_TR.a.us 
+   - name: obj/W_EX020_A4_WI.a.us 
+   method: copy
+   source:
+     - name: obj/W_EX020_A4.a.us
+# Base Weapon A.US (Wooden Keyblade)
+ - name: obj/W_EX020_C0.a.us
+   multi:
+   - name: obj/W_EX020_C0_NM.a.us 
+   - name: obj/W_EX020_C0_TR.a.us 
+   - name: obj/W_EX020_C0_WI.a.us 
+   method: copy
+   source:
+     - name: obj/W_EX020_C0.a.us
+# Base Weapon A.US (Missing Ache)
+ - name: obj/W_EX020_C4.a.us
+   multi:
+   - name: obj/W_EX020_C4_NM.a.us 
+   - name: obj/W_EX020_C4_TR.a.us 
+   - name: obj/W_EX020_C4_WI.a.us 
+   method: copy
+   source:
+     - name: obj/W_EX020_C4.a.us
+# Base Weapon A.US (Void Gear)
+ - name: obj/W_EX020_C8.a.us
+   multi:
+   - name: obj/W_EX020_C8_NM.a.us 
+   - name: obj/W_EX020_C8_TR.a.us 
+   - name: obj/W_EX020_C8_WI.a.us 
+   method: copy
+   source:
+     - name: obj/W_EX020_C8.a.us
+# Base Weapon A.US (Sweetstack)
+ - name: obj/W_EX020_CC.a.us
+   multi:
+   - name: obj/W_EX020_CC_NM.a.us 
+   - name: obj/W_EX020_CC_TR.a.us 
+   - name: obj/W_EX020_CC_WI.a.us 
+   method: copy
+   source:
+     - name: obj/W_EX020_CC.a.us
+# Base Weapon A.US (No Name)
+ - name: obj/W_EX020_CG.a.us
+   multi:
+   - name: obj/W_EX020_CG_NM.a.us 
+   - name: obj/W_EX020_CG_TR.a.us 
+   - name: obj/W_EX020_CG_WI.a.us 
+   method: copy
+   source:
+     - name: obj/W_EX020_CG.a.us
+# fucking Thing
+ - name: obj/P_EX020_ANGRY_NPC.mdlx
+   method: copy
+   source:
+     - name: obj/P_EX020_ANGRY_NPC.mdlx
+# RTN MDLX
+ - name: obj/P_EX020_RTN.mdlx
+   multi:
+   - name: obj/P_EX020_NM_RTN.mdlx
+   - name: obj/P_EX020_XM_RTN.mdlx
+   - name: obj/P_WI020_RTN.mdlx
+   - name: obj/P_WI020_RTN.mdlx
+   - name: obj/P_LK020_RTN.mdlx
+   - name: obj/P_EX020_TR_RTN.mdlx
+   method: copy
+   source:
+     - name: obj/P_EX020_RTN.mdlx
+# spacing for my eyes
+ - name: obj/P_EX020_NOBG_RTN.mdlx
+   method: copy
+   source:
+     - name: obj/P_EX020_NOBG_RTN.mdlx
+# RTN MSETs
+ - name: obj/P_EX020_RTN.mset
+   multi:
+   - name: obj/P_EX020_TR_RTN.mset
+   - name: obj/P_LK020_RTN.mset
+   - name: obj/P_WI020_RTN.mset
+   method: copy
+   source:
+     - name: obj/P_EX020_RTN.mset
+# Base Itempic
+ - name: itempic/item-068.imd
+   multi:
+   - name: itempic/item-068.imd
+   - name: itempic/item-069.imd
+   - name: itempic/item-070.imd
+   - name: itempic/item-071.imd
+   - name: itempic/item-072.imd
+   - name: itempic/item-073.imd
+   - name: itempic/item-074.imd
+   - name: itempic/item-075.imd
+   - name: itempic/item-076.imd
+   - name: itempic/item-077.imd
+   - name: itempic/item-078.imd
+   - name: itempic/item-302.imd
+   - name: itempic/item-303.imd
+   - name: itempic/item-304.imd
+   - name: itempic/item-305.imd
+   - name: itempic/item-306.imd
+   - name: itempic/item-307.imd
+   - name: itempic/item-308.imd
+   - name: itempic/item-309.imd
+   - name: itempic/item-318.imd
+   method: copy
+   source:
+     - name: itempic/item-068.imd
+# Remastered Itempic
+# Wayward Wind
+ - name: remastered/itempic/item-068.imd/-0.dds
+   method: copy
+   source:
+     - name: remastered/itempic/item-068.imd/-0.dds
+# Treasure Trove
+ - name: remastered/itempic/item-069.imd/-0.dds
+   method: copy
+   source:
+     - name: remastered/itempic/item-069.imd/-0.dds
+# Pixie Petal
+ - name: remastered/itempic/item-070.imd/-0.dds
+   method: copy
+   source:
+     - name: remastered/itempic/item-070.imd/-0.dds
+# Mark of a Hero
+ - name: remastered/itempic/item-071.imd/-0.dds
+   method: copy
+   source:
+     - name: remastered/itempic/item-071.imd/-0.dds
+# Stroke of Midnight
+ - name: remastered/itempic/item-072.imd/-0.dds
+   method: copy
+   source:
+     - name: remastered/itempic/item-072.imd/-0.dds
+# Hyperdrive
+ - name: remastered/itempic/item-073.imd/-0.dds
+   method: copy
+   source:
+     - name: remastered/itempic/item-073.imd/-0.dds
+# Fairy Stars
+ - name: remastered/itempic/item-074.imd/-0.dds
+   method: copy
+   source:
+     - name: remastered/itempic/item-074.imd/-0.dds
+# Frolic Flame
+ - name: remastered/itempic/item-075.imd/-0.dds
+   method: copy
+   source:
+     - name: remastered/itempic/item-075.imd/-0.dds
+# Victory Line
+ - name: remastered/itempic/item-076.imd/-0.dds
+   method: copy
+   source:
+     - name: remastered/itempic/item-076.imd/-0.dds
+# Rainfell 
+ - name: remastered/itempic/item-077.imd/-0.dds
+   method: copy
+   source:
+     - name: remastered/itempic/item-077.imd/-0.dds
+# Lost Memory 
+ - name: remastered/itempic/item-078.imd/-0.dds
+   method: copy
+   source:
+     - name: remastered/itempic/item-078.imd/-0.dds
+# Ultima Weapon 
+ - name: remastered/itempic/item-302.imd/-0.dds
+   method: copy
+   source:
+     - name: remastered/itempic/item-302.imd/-0.dds
+# Earthshaker 
+ - name: remastered/itempic/item-303.imd/-0.dds
+   method: copy
+   source:
+     - name: remastered/itempic/item-303.imd/-0.dds
+# Ends of the Earth 
+ - name: remastered/itempic/item-304.imd/-0.dds
+   method: copy
+   source:
+     - name: remastered/itempic/item-304.imd/-0.dds
+# Wooden Keyblade
+ - name: remastered/itempic/item-305.imd/-0.dds
+   method: copy
+   source:
+     - name: remastered/itempic/item-305.imd/-0.dds
+# Missing Ache
+ - name: remastered/itempic/item-306.imd/-0.dds
+   method: copy
+   source:
+     - name: remastered/itempic/item-306.imd/-0.dds
+# Void Gear
+ - name: remastered/itempic/item-307.imd/-0.dds
+   method: copy
+   source:
+     - name: remastered/itempic/item-307.imd/-0.dds
+# Sweetstack
+ - name: remastered/itempic/item-308.imd/-0.dds
+   method: copy
+   source:
+     - name: remastered/itempic/item-308.imd/-0.dds
+# No Name
+ - name: remastered/itempic/item-309.imd/-0.dds
+   method: copy
+   source:
+     - name: remastered/itempic/item-309.imd/-0.dds
+# Stormfall 
+ - name: remastered/itempic/item-318.imd/-0.dds
+   method: copy
+   source:
+     - name: remastered/itempic/item-318.imd/-0.dds
+# -0.DDS (P_EX020)  
+ - name: remastered/obj/P_EX020.a.us/-0.dds
+   multi:
+   - name: remastered/obj/P_EX020_NM.a.us/-0.dds 
+   - name: remastered/obj/P_EX020_DC.a.us/-0.dds 
+   - name: remastered/obj/P_EX020_CM.a.us/-0.dds 
+   - name: remastered/obj/P_EX020_TR.a.us/-0.dds
+   - name: remastered/obj/P_EX020_XM.a.us/-0.dds
+   - name: remastered/obj/P_LK020.a.us/-0.dds 
+   - name: remastered/obj/P_WI020.a.us/-0.dds 
+   method: copy
+   source:
+     - name: remastered/obj/P_EX020.a.us/-0.dds
+# -1.DDS (P_EX020)  
+ - name: remastered/obj/P_EX020.a.us/-1.dds
+   multi:
+   - name: remastered/obj/P_EX020_NM.a.us/-1.dds 
+   - name: remastered/obj/P_EX020_TR.a.us/-1.dds
+   - name: remastered/obj/P_EX020_DC.a.us/-1.dds 
+   - name: remastered/obj/P_EX020_CM.a.us/-1.dds
+   - name: remastered/obj/P_EX020_XM.a.us/-1.dds
+   - name: remastered/obj/P_LK020.a.us/-1.dds 
+   - name: remastered/obj/P_WI020.a.us/-1.dds 
+   method: copy
+   source:
+     - name: remastered/obj/P_EX020.a.us/-1.dds
+# -2.DDS (P_EX020)  
+ - name: remastered/obj/P_EX020.a.us/-2.dds
+   multi:
+   - name: remastered/obj/P_EX020_NM.a.us/-2.dds 
+   - name: remastered/obj/P_EX020_CM.a.us/-2.dds 
+   - name: remastered/obj/P_EX020_DC.a.us/-2.dds 
+   - name: remastered/obj/P_EX020_TR.a.us/-2.dds
+   - name: remastered/obj/P_EX020_XM.a.us/-2.dds
+   - name: remastered/obj/P_LK020.a.us/-2.dds 
+   - name: remastered/obj/P_WI020.a.us/-2.dds 
+   method: copy
+   source:
+     - name: remastered/obj/P_EX020.a.us/-2.dds
+# -3.DDS (P_EX020)  
+ - name: remastered/obj/P_EX020.a.us/-3.dds
+   multi:
+   - name: remastered/obj/P_EX020_NM.a.us/-3.dds 
+   - name: remastered/obj/P_EX020_CM.a.us/-3.dds 
+   - name: remastered/obj/P_EX020_DC.a.us/-3.dds 
+   - name: remastered/obj/P_EX020_TR.a.us/-3.dds
+   - name: remastered/obj/P_EX020_XM.a.us/-3.dds
+   - name: remastered/obj/P_LK020.a.us/-3.dds 
+   - name: remastered/obj/P_WI020.a.us/-3.dds 
+   method: copy
+   source:
+     - name: remastered/obj/P_EX020.a.us/-3.dds
+# -4.DDS (P_EX020)  
+ - name: remastered/obj/P_EX020.a.us/-4.dds
+   multi:
+   - name: remastered/obj/P_EX020_NM.a.us/-4.dds 
+   - name: remastered/obj/P_EX020_CM.a.us/-4.dds 
+   - name: remastered/obj/P_EX020_DC.a.us/-4.dds 
+   - name: remastered/obj/P_EX020_TR.a.us/-4.dds
+   - name: remastered/obj/P_EX020_XM.a.us/-4.dds
+   - name: remastered/obj/P_LK020.a.us/-4.dds 
+   - name: remastered/obj/P_WI020.a.us/-4.dds 
+   method: copy
+   source:
+     - name: remastered/obj/P_EX020.a.us/-4.dds
+# -5.DDS (P_EX020)  
+ - name: remastered/obj/P_EX020.a.us/-5.dds
+   multi:
+   - name: remastered/obj/P_EX020_NM.a.us/-5.dds 
+   - name: remastered/obj/P_EX020_CM.a.us/-5.dds 
+   - name: remastered/obj/P_EX020_DC.a.us/-5.dds 
+   - name: remastered/obj/P_EX020_TR.a.us/-5.dds
+   - name: remastered/obj/P_EX020_XM.a.us/-5.dds
+   - name: remastered/obj/P_LK020.a.us/-5.dds 
+   - name: remastered/obj/P_WI020.a.us/-5.dds 
+   method: copy
+   source:
+     - name: remastered/obj/P_EX020.a.us/-5.dds
+# -6.DDS (P_EX020)  
+ - name: remastered/obj/P_EX020.a.us/-6.dds
+   multi:
+   - name: remastered/obj/P_EX020_NM.a.us/-6.dds 
+   - name: remastered/obj/P_EX020_CM.a.us/-6.dds 
+   - name: remastered/obj/P_EX020_DC.a.us/-6.dds 
+   - name: remastered/obj/P_EX020_TR.a.us/-6.dds
+   - name: remastered/obj/P_EX020_XM.a.us/-6.dds
+   - name: remastered/obj/P_LK020.a.us/-6.dds 
+   - name: remastered/obj/P_WI020.a.us/-6.dds 
+   method: copy
+   source:
+     - name: remastered/obj/P_EX020.a.us/-6.dds
+# -7.DDS (P_EX020)  
+ - name: remastered/obj/P_EX020.a.us/-7.dds
+   multi:
+   - name: remastered/obj/P_EX020_NM.a.us/-7.dds 
+   - name: remastered/obj/P_EX020_CM.a.us/-7.dds 
+   - name: remastered/obj/P_EX020_DC.a.us/-7.dds 
+   - name: remastered/obj/P_EX020_TR.a.us/-7.dds
+   - name: remastered/obj/P_EX020_XM.a.us/-7.dds
+   - name: remastered/obj/P_LK020.a.us/-7.dds 
+   - name: remastered/obj/P_WI020.a.us/-7.dds 
+   method: copy
+   source:
+     - name: remastered/obj/P_EX020.a.us/-7.dds
+# -8.DDS (P_EX020)  
+ - name: remastered/obj/P_EX020.a.us/-8.dds
+   multi:
+   - name: remastered/obj/P_EX020_NM.a.us/-8.dds 
+   - name: remastered/obj/P_EX020_CM.a.us/-8.dds 
+   - name: remastered/obj/P_EX020_DC.a.us/-8.dds 
+   - name: remastered/obj/P_EX020_TR.a.us/-8.dds
+   - name: remastered/obj/P_EX020_XM.a.us/-8.dds
+   - name: remastered/obj/P_LK020.a.us/-8.dds 
+   - name: remastered/obj/P_WI020.a.us/-8.dds 
+   method: copy
+   source:
+     - name: remastered/obj/P_EX020.a.us/-8.dds  
+# -9.DDS (P_EX020)   
+ - name: remastered/obj/P_EX020.a.us/-9.dds
+   multi:
+   - name: remastered/obj/P_EX020_NM.a.us/-9.dds 
+   - name: remastered/obj/P_EX020_CM.a.us/-9.dds 
+   - name: remastered/obj/P_EX020_DC.a.us/-9.dds 
+   - name: remastered/obj/P_EX020_TR.a.us/-9.dds
+   - name: remastered/obj/P_EX020_XM.a.us/-9.dds
+   - name: remastered/obj/P_LK020.a.us/-9.dds 
+   - name: remastered/obj/P_WI020.a.us/-9.dds 
+   method: copy
+   source:
+     - name: remastered/obj/P_EX020.a.us/-9.dds
+# -10.DDS (P_EX020)
+ - name: remastered/obj/P_EX020.a.us/-10.dds
+   multi:
+   - name: remastered/obj/P_EX020_NM.a.us/-10.dds 
+   - name: remastered/obj/P_EX020_CM.a.us/-10.dds 
+   - name: remastered/obj/P_EX020_DC.a.us/-10.dds 
+   - name: remastered/obj/P_EX020_TR.a.us/-10.dds
+   - name: remastered/obj/P_EX020_XM.a.us/-10.dds
+   - name: remastered/obj/P_LK020.a.us/-10.dds 
+   - name: remastered/obj/P_WI020.a.us/-10.dds 
+   method: copy
+   source:
+     - name: remastered/obj/P_EX020.a.us/-10.dds
+# -11.DDS (P_EX020)
+ - name: remastered/obj/P_EX020.a.us/-11.dds
+   multi:
+   - name: remastered/obj/P_EX020_NM.a.us/-11.dds 
+   - name: remastered/obj/P_EX020_CM.a.us/-11.dds 
+   - name: remastered/obj/P_EX020_DC.a.us/-11.dds 
+   - name: remastered/obj/P_EX020_TR.a.us/-11.dds
+   - name: remastered/obj/P_EX020_XM.a.us/-11.dds
+   - name: remastered/obj/P_LK020.a.us/-11.dds 
+   - name: remastered/obj/P_WI020.a.us/-11.dds 
+   method: copy
+   source:
+     - name: remastered/obj/P_EX020.a.us/-11.dds     
+# -12.DDS (P_EX020)
+ - name: remastered/obj/P_EX020.a.us/-12.dds
+   multi:
+   - name: remastered/obj/P_EX020_NM.a.us/-12.dds 
+   - name: remastered/obj/P_EX020_CM.a.us/-12.dds 
+   - name: remastered/obj/P_EX020_DC.a.us/-12.dds 
+   - name: remastered/obj/P_EX020_TR.a.us/-12.dds
+   - name: remastered/obj/P_EX020_XM.a.us/-12.dds
+   - name: remastered/obj/P_LK020.a.us/-12.dds 
+   - name: remastered/obj/P_WI020.a.us/-12.dds 
+   method: copy
+   source:
+     - name: remastered/obj/P_EX020.a.us/-12.dds
+# -13.DDS (P_EX020)
+ - name: remastered/obj/P_EX020.a.us/-13.dds
+   multi:
+   - name: remastered/obj/P_EX020_NM.a.us/-13.dds 
+   - name: remastered/obj/P_EX020_CM.a.us/-13.dds 
+   - name: remastered/obj/P_EX020_DC.a.us/-13.dds 
+   - name: remastered/obj/P_EX020_TR.a.us/-13.dds
+   - name: remastered/obj/P_EX020_XM.a.us/-13.dds
+   - name: remastered/obj/P_LK020.a.us/-13.dds 
+   - name: remastered/obj/P_WI020.a.us/-13.dds 
+   method: copy
+   source:
+     - name: remastered/obj/P_EX020.a.us/-13.dds
+# -14.DDS (P_EX020)
+ - name: remastered/obj/P_EX020.a.us/-14.dds
+   multi:
+   - name: remastered/obj/P_EX020_NM.a.us/-14.dds 
+   - name: remastered/obj/P_EX020_CM.a.us/-14.dds 
+   - name: remastered/obj/P_EX020_DC.a.us/-14.dds 
+   - name: remastered/obj/P_EX020_TR.a.us/-14.dds
+   - name: remastered/obj/P_EX020_XM.a.us/-14.dds
+   - name: remastered/obj/P_LK020.a.us/-14.dds 
+   - name: remastered/obj/P_WI020.a.us/-14.dds 
+   method: copy
+   source:
+     - name: remastered/obj/P_EX020.a.us/-14.dds
+# -15.DDS (P_EX020)
+ - name: remastered/obj/P_EX020.a.us/-15.dds
+   multi:
+   - name: remastered/obj/P_EX020_NM.a.us/-15.dds 
+   - name: remastered/obj/P_EX020_CM.a.us/-15.dds 
+   - name: remastered/obj/P_EX020_DC.a.us/-15.dds 
+   - name: remastered/obj/P_EX020_TR.a.us/-15.dds
+   - name: remastered/obj/P_EX020_XM.a.us/-15.dds
+   - name: remastered/obj/P_LK020.a.us/-15.dds 
+   - name: remastered/obj/P_WI020.a.us/-15.dds 
+   method: copy
+   source:
+     - name: remastered/obj/P_EX020.a.us/-15.dds
+# -16.DDS (P_EX020)
+ - name: remastered/obj/P_EX020.a.us/-16.dds
+   multi:
+   - name: remastered/obj/P_EX020_NM.a.us/-16.dds 
+   - name: remastered/obj/P_EX020_CM.a.us/-16.dds 
+   - name: remastered/obj/P_EX020_DC.a.us/-16.dds 
+   - name: remastered/obj/P_EX020_TR.a.us/-16.dds
+   - name: remastered/obj/P_EX020_XM.a.us/-16.dds
+   - name: remastered/obj/P_LK020.a.us/-16.dds 
+   - name: remastered/obj/P_WI020.a.us/-16.dds 
+   method: copy
+   source:
+     - name: remastered/obj/P_EX020.a.us/-16.dds
+# -17.DDS (P_EX020)
+ - name: remastered/obj/P_EX020.a.us/-17.dds
+   multi:
+   - name: remastered/obj/P_EX020_NM.a.us/-17.dds 
+   - name: remastered/obj/P_EX020_CM.a.us/-17.dds 
+   - name: remastered/obj/P_EX020_DC.a.us/-17.dds 
+   - name: remastered/obj/P_EX020_TR.a.us/-17.dds
+   - name: remastered/obj/P_EX020_XM.a.us/-17.dds
+   - name: remastered/obj/P_LK020.a.us/-17.dds 
+   - name: remastered/obj/P_WI020.a.us/-17.dds 
+   method: copy
+   source:
+     - name: remastered/obj/P_EX020.a.us/-17.dds
+# -18.DDS (P_EX020)
+ - name: remastered/obj/P_EX020.a.us/-18.dds
+   multi:
+   - name: remastered/obj/P_EX020_NM.a.us/-18.dds 
+   - name: remastered/obj/P_EX020_CM.a.us/-18.dds 
+   - name: remastered/obj/P_EX020_DC.a.us/-18.dds 
+   - name: remastered/obj/P_EX020_TR.a.us/-18.dds
+   - name: remastered/obj/P_EX020_XM.a.us/-18.dds
+   - name: remastered/obj/P_LK020.a.us/-18.dds 
+   - name: remastered/obj/P_WI020.a.us/-18.dds 
+   method: copy
+   source:
+     - name: remastered/obj/P_EX020.a.us/-18.dds
+# -19.DDS (P_EX020)
+ - name: remastered/obj/P_EX020.a.us/-19.dds
+   multi:
+   - name: remastered/obj/P_EX020_NM.a.us/-19.dds 
+   - name: remastered/obj/P_EX020_CM.a.us/-19.dds 
+   - name: remastered/obj/P_EX020_DC.a.us/-19.dds 
+   - name: remastered/obj/P_EX020_TR.a.us/-19.dds
+   - name: remastered/obj/P_EX020_XM.a.us/-19.dds
+   - name: remastered/obj/P_LK020.a.us/-19.dds 
+   - name: remastered/obj/P_WI020.a.us/-19.dds 
+   method: copy
+   source:
+     - name: remastered/obj/P_EX020.a.us/-19.dds
+# -20.DDS (P_EX020)
+ - name: remastered/obj/P_EX020.a.us/-20.dds
+   multi:
+   - name: remastered/obj/P_EX020_NM.a.us/-20.dds 
+   - name: remastered/obj/P_EX020_CM.a.us/-20.dds 
+   - name: remastered/obj/P_EX020_DC.a.us/-20.dds 
+   - name: remastered/obj/P_EX020_TR.a.us/-20.dds
+   - name: remastered/obj/P_EX020_XM.a.us/-20.dds
+   - name: remastered/obj/P_LK020.a.us/-20.dds 
+   - name: remastered/obj/P_WI020.a.us/-20.dds 
+   method: copy
+   source:
+     - name: remastered/obj/P_EX020.a.us/-20.dds
+# -21.DDS (P_EX020)
+ - name: remastered/obj/P_EX020.a.us/-21.dds
+   multi:
+   - name: remastered/obj/P_EX020_NM.a.us/-21.dds 
+   - name: remastered/obj/P_EX020_CM.a.us/-21.dds 
+   - name: remastered/obj/P_EX020_DC.a.us/-21.dds 
+   - name: remastered/obj/P_EX020_TR.a.us/-21.dds
+   - name: remastered/obj/P_EX020_XM.a.us/-21.dds
+   - name: remastered/obj/P_LK020.a.us/-21.dds 
+   - name: remastered/obj/P_WI020.a.us/-21.dds 
+   method: copy
+   source:
+     - name: remastered/obj/P_EX020.a.us/-21.dds
+# -22.DDS (P_EX020)
+ - name: remastered/obj/P_EX020.a.us/-22.dds
+   multi:
+   - name: remastered/obj/P_EX020_NM.a.us/-22.dds 
+   - name: remastered/obj/P_EX020_CM.a.us/-22.dds 
+   - name: remastered/obj/P_EX020_DC.a.us/-22.dds 
+   - name: remastered/obj/P_EX020_TR.a.us/-22.dds
+   - name: remastered/obj/P_EX020_XM.a.us/-22.dds
+   - name: remastered/obj/P_LK020.a.us/-22.dds 
+   - name: remastered/obj/P_WI020.a.us/-22.dds 
+   method: copy
+   source:
+     - name: remastered/obj/P_EX020.a.us/-22.dds
+# -23.DDS (P_EX020)
+ - name: remastered/obj/P_EX020.a.us/-23.dds
+   multi:
+   - name: remastered/obj/P_EX020_NM.a.us/-23.dds 
+   - name: remastered/obj/P_EX020_CM.a.us/-23.dds 
+   - name: remastered/obj/P_EX020_DC.a.us/-23.dds 
+   - name: remastered/obj/P_EX020_TR.a.us/-23.dds
+   - name: remastered/obj/P_EX020_XM.a.us/-23.dds
+   - name: remastered/obj/P_LK020.a.us/-23.dds 
+   - name: remastered/obj/P_WI020.a.us/-23.dds 
+   method: copy
+   source:
+     - name: remastered/obj/P_EX020.a.us/-23.dds
+# -24.DDS (P_EX020)
+ - name: remastered/obj/P_EX020.a.us/-24.dds
+   multi:
+   - name: remastered/obj/P_EX020_NM.a.us/-24.dds 
+   - name: remastered/obj/P_EX020_CM.a.us/-24.dds 
+   - name: remastered/obj/P_EX020_DC.a.us/-24.dds 
+   - name: remastered/obj/P_EX020_TR.a.us/-24.dds
+   - name: remastered/obj/P_EX020_XM.a.us/-24.dds
+   - name: remastered/obj/P_LK020.a.us/-24.dds 
+   - name: remastered/obj/P_WI020.a.us/-24.dds 
+   method: copy
+   source:
+     - name: remastered/obj/P_EX020.a.us/-24.dds
+# -25.DDS (P_EX020)
+ - name: remastered/obj/P_EX020.a.us/-25.dds
+   multi:
+   - name: remastered/obj/P_EX020_NM.a.us/-25.dds 
+   - name: remastered/obj/P_EX020_CM.a.us/-25.dds 
+   - name: remastered/obj/P_EX020_DC.a.us/-25.dds 
+   - name: remastered/obj/P_EX020_TR.a.us/-25.dds
+   - name: remastered/obj/P_EX020_XM.a.us/-25.dds
+   - name: remastered/obj/P_LK020.a.us/-25.dds 
+   - name: remastered/obj/P_WI020.a.us/-25.dds 
+   method: copy
+   source:
+     - name: remastered/obj/P_EX020.a.us/-25.dds
+# -26.DDS (P_EX020)
+ - name: remastered/obj/P_EX020.a.us/-26.dds
+   multi:
+   - name: remastered/obj/P_EX020_NM.a.us/-26.dds 
+   - name: remastered/obj/P_EX020_CM.a.us/-26.dds 
+   - name: remastered/obj/P_EX020_DC.a.us/-26.dds 
+   - name: remastered/obj/P_EX020_TR.a.us/-26.dds
+   - name: remastered/obj/P_EX020_XM.a.us/-26.dds
+   - name: remastered/obj/P_LK020.a.us/-26.dds 
+   - name: remastered/obj/P_WI020.a.us/-26.dds 
+   method: copy
+   source:
+     - name: remastered/obj/P_EX020.a.us/-26.dds
+# -27.DDS (P_EX020)
+ - name: remastered/obj/P_EX020.a.us/-27.dds
+   multi:
+   - name: remastered/obj/P_EX020_NM.a.us/-27.dds 
+   - name: remastered/obj/P_EX020_CM.a.us/-27.dds 
+   - name: remastered/obj/P_EX020_DC.a.us/-27.dds 
+   - name: remastered/obj/P_EX020_TR.a.us/-27.dds
+   - name: remastered/obj/P_EX020_XM.a.us/-27.dds
+   - name: remastered/obj/P_LK020.a.us/-27.dds 
+   - name: remastered/obj/P_WI020.a.us/-27.dds 
+   method: copy
+   source:
+     - name: remastered/obj/P_EX020.a.us/-27.dds
+# -28.DDS (P_EX020)
+ - name: remastered/obj/P_EX020.a.us/-28.dds
+   multi:
+   - name: remastered/obj/P_EX020_NM.a.us/-28.dds 
+   - name: remastered/obj/P_EX020_CM.a.us/-28.dds 
+   - name: remastered/obj/P_EX020_DC.a.us/-28.dds 
+   - name: remastered/obj/P_EX020_TR.a.us/-28.dds
+   - name: remastered/obj/P_EX020_XM.a.us/-28.dds
+   - name: remastered/obj/P_LK020.a.us/-28.dds 
+   - name: remastered/obj/P_WI020.a.us/-28.dds 
+   method: copy
+   source:
+     - name: remastered/obj/P_EX020.a.us/-28.dds
+# -29.DDS (P_EX020)
+ - name: remastered/obj/P_EX020.a.us/-29.dds
+   multi:
+   - name: remastered/obj/P_EX020_NM.a.us/-29.dds 
+   - name: remastered/obj/P_EX020_CM.a.us/-29.dds 
+   - name: remastered/obj/P_EX020_DC.a.us/-29.dds 
+   - name: remastered/obj/P_EX020_TR.a.us/-29.dds
+   - name: remastered/obj/P_EX020_XM.a.us/-29.dds
+   - name: remastered/obj/P_LK020.a.us/-29.dds 
+   - name: remastered/obj/P_WI020.a.us/-29.dds 
+   method: copy
+   source:
+     - name: remastered/obj/P_EX020.a.us/-29.dds
+# -30.DDS (P_EX020)
+ - name: remastered/obj/P_EX020.a.us/-30.dds
+   multi:
+   - name: remastered/obj/P_EX020_NM.a.us/-30.dds 
+   - name: remastered/obj/P_EX020_CM.a.us/-30.dds 
+   - name: remastered/obj/P_EX020_DC.a.us/-30.dds 
+   - name: remastered/obj/P_EX020_TR.a.us/-30.dds
+   - name: remastered/obj/P_EX020_XM.a.us/-30.dds
+   - name: remastered/obj/P_LK020.a.us/-30.dds 
+   - name: remastered/obj/P_WI020.a.us/-30.dds 
+   method: copy
+   source:
+     - name: remastered/obj/P_EX020.a.us/-30.dds
+# -31.DDS (P_EX020)
+ - name: remastered/obj/P_EX020.a.us/-31.dds
+   multi:
+   - name: remastered/obj/P_EX020_NM.a.us/-31.dds 
+   - name: remastered/obj/P_EX020_CM.a.us/-31.dds 
+   - name: remastered/obj/P_EX020_DC.a.us/-31.dds 
+   - name: remastered/obj/P_EX020_TR.a.us/-31.dds
+   - name: remastered/obj/P_EX020_XM.a.us/-31.dds
+   - name: remastered/obj/P_LK020.a.us/-31.dds 
+   - name: remastered/obj/P_WI020.a.us/-31.dds 
+   method: copy
+   source:
+     - name: remastered/obj/P_EX020.a.us/-31.dds
+# -0.DDS (W_EX020)  
+ - name: remastered/obj/W_EX020.a.us/-0.dds
+   multi:
+   - name: remastered/obj/W_EX020_NM.a.us/-0.dds
+   - name: remastered/obj/W_EX020_TR.a.us/-0.dds
+   - name: remastered/obj/W_EX020_WI.a.us/-0.dds
+   method: copy
+   source:
+     - name: remastered/obj/W_EX020.a.us/-0.dds
+# -1.DDS (W_EX020)       
+ - name: remastered/obj/W_EX020.a.us/-1.dds
+   multi:
+   - name: remastered/obj/W_EX020_NM.a.us/-1.dds
+   - name: remastered/obj/W_EX020_TR.a.us/-1.dds
+   - name: remastered/obj/W_EX020_WI.a.us/-1.dds
+   method: copy
+   source:
+     - name: remastered/obj/W_EX020.a.us/-1.dds
+# -0.DDS (W_EX020_10)  
+ - name: remastered/obj/W_EX020_10.a.us/-0.dds
+   multi:
+   - name: remastered/obj/W_EX020_10_NM.a.us/-0.dds
+   - name: remastered/obj/W_EX020_10_TR.a.us/-0.dds
+   - name: remastered/obj/W_EX020_10_WI.a.us/-0.dds
+   method: copy
+   source:
+     - name: remastered/obj/W_EX020_10.a.us/-0.dds
+# -1.DDS (W_EX020_10)       
+ - name: remastered/obj/W_EX020_10.a.us/-1.dds
+   multi:
+   - name: remastered/obj/W_EX020_10_NM.a.us/-1.dds
+   - name: remastered/obj/W_EX020_10_TR.a.us/-1.dds
+   - name: remastered/obj/W_EX020_10_WI.a.us/-1.dds
+   method: copy
+   source:
+     - name: remastered/obj/W_EX020_10.a.us/-1.dds
+# -0.DDS (W_EX020_20)  
+ - name: remastered/obj/W_EX020_20.a.us/-0.dds
+   multi:
+   - name: remastered/obj/W_EX020_20_NM.a.us/-0.dds
+   - name: remastered/obj/W_EX020_20_TR.a.us/-0.dds
+   - name: remastered/obj/W_EX020_20_WI.a.us/-0.dds
+   method: copy
+   source:
+     - name: remastered/obj/W_EX020_20.a.us/-0.dds
+# -1.DDS (W_EX020_20)       
+ - name: remastered/obj/W_EX020_20.a.us/-1.dds
+   multi:
+   - name: remastered/obj/W_EX020_20_NM.a.us/-1.dds
+   - name: remastered/obj/W_EX020_20_TR.a.us/-1.dds
+   - name: remastered/obj/W_EX020_20_WI.a.us/-1.dds
+   method: copy
+   source:
+     - name: remastered/obj/W_EX020_20.a.us/-1.dds
+# -0.DDS (W_EX020_30)  
+ - name: remastered/obj/W_EX020_30.a.us/-0.dds
+   multi:
+   - name: remastered/obj/W_EX020_30_NM.a.us/-0.dds
+   - name: remastered/obj/W_EX020_30_TR.a.us/-0.dds
+   - name: remastered/obj/W_EX020_30_WI.a.us/-0.dds
+   method: copy
+   source:
+     - name: remastered/obj/W_EX020_30.a.us/-0.dds
+# -1.DDS (W_EX020_30)       
+ - name: remastered/obj/W_EX020_30.a.us/-1.dds
+   multi:
+   - name: remastered/obj/W_EX020_30_NM.a.us/-1.dds
+   - name: remastered/obj/W_EX020_30_TR.a.us/-1.dds
+   - name: remastered/obj/W_EX020_30_WI.a.us/-1.dds
+   method: copy
+   source:
+     - name: remastered/obj/W_EX020_30.a.us/-1.dds
+# -0.DDS (W_EX020_40)  
+ - name: remastered/obj/W_EX020_40.a.us/-0.dds
+   multi:
+   - name: remastered/obj/W_EX020_40_NM.a.us/-0.dds
+   - name: remastered/obj/W_EX020_40_TR.a.us/-0.dds
+   - name: remastered/obj/W_EX020_40_WI.a.us/-0.dds
+   method: copy
+   source:
+     - name: remastered/obj/W_EX020_40.a.us/-0.dds
+# -1.DDS (W_EX020_40)       
+ - name: remastered/obj/W_EX020_40.a.us/-1.dds
+   multi:
+   - name: remastered/obj/W_EX020_40_NM.a.us/-1.dds
+   - name: remastered/obj/W_EX020_40_TR.a.us/-1.dds
+   - name: remastered/obj/W_EX020_40_WI.a.us/-1.dds
+   method: copy
+   source:
+     - name: remastered/obj/W_EX020_40.a.us/-1.dds
+# -0.DDS (W_EX020_50)  
+ - name: remastered/obj/W_EX020_50.a.us/-0.dds
+   multi:
+   - name: remastered/obj/W_EX020_50_NM.a.us/-0.dds
+   - name: remastered/obj/W_EX020_50_TR.a.us/-0.dds
+   - name: remastered/obj/W_EX020_50_WI.a.us/-0.dds
+   method: copy
+   source:
+     - name: remastered/obj/W_EX020_50.a.us/-0.dds
+# -1.DDS (W_EX020_50)       
+ - name: remastered/obj/W_EX020_50.a.us/-1.dds
+   multi:
+   - name: remastered/obj/W_EX020_50_NM.a.us/-1.dds
+   - name: remastered/obj/W_EX020_50_TR.a.us/-1.dds
+   - name: remastered/obj/W_EX020_50_WI.a.us/-1.dds
+   method: copy
+   source:
+     - name: remastered/obj/W_EX020_50.a.us/-1.dds
+# -0.DDS (W_EX020_60)  
+ - name: remastered/obj/W_EX020_60.a.us/-0.dds
+   multi:
+   - name: remastered/obj/W_EX020_60_NM.a.us/-0.dds
+   - name: remastered/obj/W_EX020_60_TR.a.us/-0.dds
+   - name: remastered/obj/W_EX020_60_WI.a.us/-0.dds
+   method: copy
+   source:
+     - name: remastered/obj/W_EX020_60.a.us/-0.dds
+# -1.DDS (W_EX020_60)       
+ - name: remastered/obj/W_EX020_60.a.us/-1.dds
+   multi:
+   - name: remastered/obj/W_EX020_60_NM.a.us/-1.dds
+   - name: remastered/obj/W_EX020_60_TR.a.us/-1.dds
+   - name: remastered/obj/W_EX020_60_WI.a.us/-1.dds
+   method: copy
+   source:
+     - name: remastered/obj/W_EX020_60.a.us/-1.dds
+# -0.DDS (W_EX020_70)  
+ - name: remastered/obj/W_EX020_70.a.us/-0.dds
+   multi:
+   - name: remastered/obj/W_EX020_70_NM.a.us/-0.dds
+   - name: remastered/obj/W_EX020_70_TR.a.us/-0.dds
+   - name: remastered/obj/W_EX020_70_WI.a.us/-0.dds
+   method: copy
+   source:
+     - name: remastered/obj/W_EX020_70.a.us/-0.dds
+# -1.DDS (W_EX020_70)       
+ - name: remastered/obj/W_EX020_70.a.us/-1.dds
+   multi:
+   - name: remastered/obj/W_EX020_70_NM.a.us/-1.dds
+   - name: remastered/obj/W_EX020_70_TR.a.us/-1.dds
+   - name: remastered/obj/W_EX020_70_WI.a.us/-1.dds
+   method: copy
+   source:
+     - name: remastered/obj/W_EX020_70.a.us/-1.dds
+# -0.DDS (W_EX020_80)  
+ - name: remastered/obj/W_EX020_80.a.us/-0.dds
+   multi:
+   - name: remastered/obj/W_EX020_80_NM.a.us/-0.dds
+   - name: remastered/obj/W_EX020_80_TR.a.us/-0.dds
+   - name: remastered/obj/W_EX020_80_WI.a.us/-0.dds
+   method: copy
+   source:
+     - name: remastered/obj/W_EX020_80.a.us/-0.dds
+# -1.DDS (W_EX020_80)       
+ - name: remastered/obj/W_EX020_80.a.us/-1.dds
+   multi:
+   - name: remastered/obj/W_EX020_80_NM.a.us/-1.dds
+   - name: remastered/obj/W_EX020_80_TR.a.us/-1.dds
+   - name: remastered/obj/W_EX020_80_WI.a.us/-1.dds
+   method: copy
+   source:
+     - name: remastered/obj/W_EX020_80.a.us/-1.dds
+# -0.DDS (W_EX020_90)  
+ - name: remastered/obj/W_EX020_90.a.us/-0.dds
+   multi:
+   - name: remastered/obj/W_EX020_90_NM.a.us/-0.dds
+   - name: remastered/obj/W_EX020_90_TR.a.us/-0.dds
+   - name: remastered/obj/W_EX020_90_WI.a.us/-0.dds
+   method: copy
+   source:
+     - name: remastered/obj/W_EX020_90.a.us/-0.dds
+# -1.DDS (W_EX020_90)       
+ - name: remastered/obj/W_EX020_90.a.us/-1.dds
+   multi:
+   - name: remastered/obj/W_EX020_90_NM.a.us/-1.dds
+   - name: remastered/obj/W_EX020_90_TR.a.us/-1.dds
+   - name: remastered/obj/W_EX020_90_WI.a.us/-1.dds
+   method: copy
+   source:
+     - name: remastered/obj/W_EX020_90.a.us/-1.dds
+# -0.DDS (W_EX020_94)  
+ - name: remastered/obj/W_EX020_94.a.us/-0.dds
+   multi:
+   - name: remastered/obj/W_EX020_94_NM.a.us/-0.dds
+   - name: remastered/obj/W_EX020_94_TR.a.us/-0.dds
+   - name: remastered/obj/W_EX020_94_WI.a.us/-0.dds
+   method: copy
+   source:
+     - name: remastered/obj/W_EX020_94.a.us/-0.dds
+# -1.DDS (W_EX020_94)       
+ - name: remastered/obj/W_EX020_94.a.us/-1.dds
+   multi:
+   - name: remastered/obj/W_EX020_94_NM.a.us/-1.dds
+   - name: remastered/obj/W_EX020_94_TR.a.us/-1.dds
+   - name: remastered/obj/W_EX020_94_WI.a.us/-1.dds
+   method: copy
+   source:
+     - name: remastered/obj/W_EX020_94.a.us/-1.dds
+# -0.DDS (W_EX020_B0)  
+ - name: remastered/obj/W_EX020_B0.a.us/-0.dds
+   multi:
+   - name: remastered/obj/W_EX020_B0_NM.a.us/-0.dds
+   - name: remastered/obj/W_EX020_B0_TR.a.us/-0.dds
+   - name: remastered/obj/W_EX020_B0_WI.a.us/-0.dds
+   method: copy
+   source:
+     - name: remastered/obj/W_EX020_B0.a.us/-0.dds
+# -1.DDS (W_EX020_B0)       
+ - name: remastered/obj/W_EX020_B0.a.us/-1.dds
+   multi:
+   - name: remastered/obj/W_EX020_B0_NM.a.us/-1.dds
+   - name: remastered/obj/W_EX020_B0_TR.a.us/-1.dds
+   - name: remastered/obj/W_EX020_B0_WI.a.us/-1.dds
+   method: copy
+   source:
+     - name: remastered/obj/W_EX020_B0.a.us/-1.dds
+# -0.DDS (W_EX020_B4)  
+ - name: remastered/obj/W_EX020_B4.a.us/-0.dds
+   multi:
+   - name: remastered/obj/W_EX020_B4_NM.a.us/-0.dds
+   - name: remastered/obj/W_EX020_B4_TR.a.us/-0.dds
+   - name: remastered/obj/W_EX020_B4_WI.a.us/-0.dds
+   method: copy
+   source:
+     - name: remastered/obj/W_EX020_B4.a.us/-0.dds
+# -1.DDS (W_EX020_B4)       
+ - name: remastered/obj/W_EX020_B4.a.us/-1.dds
+   multi:
+   - name: remastered/obj/W_EX020_B4_NM.a.us/-1.dds
+   - name: remastered/obj/W_EX020_B4_TR.a.us/-1.dds
+   - name: remastered/obj/W_EX020_B4_WI.a.us/-1.dds
+   method: copy
+   source:
+     - name: remastered/obj/W_EX020_B4.a.us/-1.dds
+# -0.DDS (W_EX020_A0)  
+ - name: remastered/obj/W_EX020_A0.a.us/-0.dds
+   multi:
+   - name: remastered/obj/W_EX020_A0_NM.a.us/-0.dds
+   - name: remastered/obj/W_EX020_A0_TR.a.us/-0.dds
+   - name: remastered/obj/W_EX020_A0_WI.a.us/-0.dds
+   method: copy
+   source:
+     - name: remastered/obj/W_EX020_A0.a.us/-0.dds
+# -1.DDS (W_EX020_A0)       
+ - name: remastered/obj/W_EX020_A0.a.us/-1.dds
+   multi:
+   - name: remastered/obj/W_EX020_A0_NM.a.us/-1.dds
+   - name: remastered/obj/W_EX020_A0_TR.a.us/-1.dds
+   - name: remastered/obj/W_EX020_A0_WI.a.us/-1.dds
+   method: copy
+   source:
+     - name: remastered/obj/W_EX020_A0.a.us/-1.dds
+# -0.DDS (W_EX020_A4)  
+ - name: remastered/obj/W_EX020_A4.a.us/-0.dds
+   multi:
+   - name: remastered/obj/W_EX020_A4_NM.a.us/-0.dds
+   - name: remastered/obj/W_EX020_A4_TR.a.us/-0.dds
+   - name: remastered/obj/W_EX020_A4_WI.a.us/-0.dds
+   method: copy
+   source:
+     - name: remastered/obj/W_EX020_A4.a.us/-0.dds
+# -1.DDS (W_EX020_A4)       
+ - name: remastered/obj/W_EX020_A4.a.us/-1.dds
+   multi:
+   - name: remastered/obj/W_EX020_A4_NM.a.us/-1.dds
+   - name: remastered/obj/W_EX020_A4_TR.a.us/-1.dds
+   - name: remastered/obj/W_EX020_A4_WI.a.us/-1.dds
+   method: copy
+   source:
+     - name: remastered/obj/W_EX020_A4.a.us/-1.dds
+# -0.DDS (W_EX020_C0)  
+ - name: remastered/obj/W_EX020_C0.a.us/-0.dds
+   multi:
+   - name: remastered/obj/W_EX020_C0_NM.a.us/-0.dds
+   - name: remastered/obj/W_EX020_C0_TR.a.us/-0.dds
+   - name: remastered/obj/W_EX020_C0_WI.a.us/-0.dds
+   method: copy
+   source:
+     - name: remastered/obj/W_EX020_C0.a.us/-0.dds
+# -1.DDS (W_EX020_C0)       
+ - name: remastered/obj/W_EX020_C0.a.us/-1.dds
+   multi:
+   - name: remastered/obj/W_EX020_C0_NM.a.us/-1.dds
+   - name: remastered/obj/W_EX020_C0_TR.a.us/-1.dds
+   - name: remastered/obj/W_EX020_C0_WI.a.us/-1.dds
+   method: copy
+   source:
+     - name: remastered/obj/W_EX020_C0.a.us/-1.dds
+# -0.DDS (W_EX020_C4)  
+ - name: remastered/obj/W_EX020_C4.a.us/-0.dds
+   multi:
+   - name: remastered/obj/W_EX020_C4_NM.a.us/-0.dds
+   - name: remastered/obj/W_EX020_C4_TR.a.us/-0.dds
+   - name: remastered/obj/W_EX020_C4_WI.a.us/-0.dds
+   method: copy
+   source:
+     - name: remastered/obj/W_EX020_C4.a.us/-0.dds
+# -1.DDS (W_EX020_C4)       
+ - name: remastered/obj/W_EX020_C4.a.us/-1.dds
+   multi:
+   - name: remastered/obj/W_EX020_C4_NM.a.us/-1.dds
+   - name: remastered/obj/W_EX020_C4_TR.a.us/-1.dds
+   - name: remastered/obj/W_EX020_C4_WI.a.us/-1.dds
+   method: copy
+   source:
+     - name: remastered/obj/W_EX020_C4.a.us/-1.dds
+# -0.DDS (W_EX020_C8)  
+ - name: remastered/obj/W_EX020_C8.a.us/-0.dds
+   multi:
+   - name: remastered/obj/W_EX020_C8_NM.a.us/-0.dds
+   - name: remastered/obj/W_EX020_C8_TR.a.us/-0.dds
+   - name: remastered/obj/W_EX020_C8_WI.a.us/-0.dds
+   method: copy
+   source:
+     - name: remastered/obj/W_EX020_C8.a.us/-0.dds
+# -1.DDS (W_EX020_C8)       
+ - name: remastered/obj/W_EX020_C8.a.us/-1.dds
+   multi:
+   - name: remastered/obj/W_EX020_C8_NM.a.us/-1.dds
+   - name: remastered/obj/W_EX020_C8_TR.a.us/-1.dds
+   - name: remastered/obj/W_EX020_C8_WI.a.us/-1.dds
+   method: copy
+   source:
+     - name: remastered/obj/W_EX020_C8.a.us/-1.dds
+# -0.DDS (W_EX020_CC)  
+ - name: remastered/obj/W_EX020_CC.a.us/-0.dds
+   multi:
+   - name: remastered/obj/W_EX020_CC_NM.a.us/-0.dds
+   - name: remastered/obj/W_EX020_CC_TR.a.us/-0.dds
+   - name: remastered/obj/W_EX020_CC_WI.a.us/-0.dds
+   method: copy
+   source:
+     - name: remastered/obj/W_EX020_CC.a.us/-0.dds
+# -1.DDS (W_EX020_CC)       
+ - name: remastered/obj/W_EX020_CC.a.us/-1.dds
+   multi:
+   - name: remastered/obj/W_EX020_CC_NM.a.us/-1.dds
+   - name: remastered/obj/W_EX020_CC_TR.a.us/-1.dds
+   - name: remastered/obj/W_EX020_CC_WI.a.us/-1.dds
+   method: copy
+   source:
+     - name: remastered/obj/W_EX020_CC.a.us/-1.dds
+# -0.DDS (W_EX020_CG)  
+ - name: remastered/obj/W_EX020_CG.a.us/-0.dds
+   multi:
+   - name: remastered/obj/W_EX020_CG_NM.a.us/-0.dds
+   - name: remastered/obj/W_EX020_CG_TR.a.us/-0.dds
+   - name: remastered/obj/W_EX020_CG_WI.a.us/-0.dds
+   method: copy
+   source:
+     - name: remastered/obj/W_EX020_CG.a.us/-0.dds
+# -1.DDS (W_EX020_CG)       
+ - name: remastered/obj/W_EX020_CG.a.us/-1.dds
+   multi:
+   - name: remastered/obj/W_EX020_CG_NM.a.us/-1.dds
+   - name: remastered/obj/W_EX020_CG_TR.a.us/-1.dds
+   - name: remastered/obj/W_EX020_CG_WI.a.us/-1.dds
+   method: copy
+   source:
+     - name: remastered/obj/W_EX020_CG.a.us/-1.dds
+# -0.DDS (P_EX020)
+ - name: remastered/obj/P_EX020.mdlx/-0.dds
+   multi:
+   - name: remastered/obj/P_EX020_NM.mdlx/-0.dds 
+   - name: remastered/obj/P_EX020_CM.mdlx/-0.dds 
+   - name: remastered/obj/P_EX020_DC.mdlx/-0.dds 
+   - name: remastered/obj/P_EX020_TR.mdlx/-0.dds
+   - name: remastered/obj/P_EX020_XM.mdlx/-0.dds
+   - name: remastered/obj/P_LK020.mdlx/-0.dds 
+   - name: remastered/obj/P_WI020.mdlx/-0.dds 
+   method: copy
+   source:
+     - name: remastered/obj/P_EX020.mdlx/-0.dds
+# -1.DDS (P_EX020)
+ - name: remastered/obj/P_EX020.mdlx/-1.dds
+   multi:
+   - name: remastered/obj/P_EX020_NM.mdlx/-1.dds 
+   - name: remastered/obj/P_EX020_CM.mdlx/-1.dds 
+   - name: remastered/obj/P_EX020_DC.mdlx/-1.dds 
+   - name: remastered/obj/P_EX020_TR.mdlx/-1.dds
+   - name: remastered/obj/P_EX020_XM.mdlx/-1.dds
+   - name: remastered/obj/P_LK020.mdlx/-1.dds 
+   - name: remastered/obj/P_WI020.mdlx/-1.dds 
+   method: copy
+   source:
+     - name: remastered/obj/P_EX020.mdlx/-1.dds
+# -2.DDS (P_EX020)
+ - name: remastered/obj/P_EX020.mdlx/-2.dds
+   multi:
+   - name: remastered/obj/P_EX020_NM.mdlx/-2.dds 
+   - name: remastered/obj/P_EX020_CM.mdlx/-2.dds 
+   - name: remastered/obj/P_EX020_DC.mdlx/-2.dds 
+   - name: remastered/obj/P_EX020_TR.mdlx/-2.dds
+   - name: remastered/obj/P_EX020_XM.mdlx/-2.dds
+   - name: remastered/obj/P_LK020.mdlx/-2.dds 
+   - name: remastered/obj/P_WI020.mdlx/-2.dds 
+   method: copy
+   source:
+     - name: remastered/obj/P_EX020.mdlx/-2.dds     
+# Keyblade Sounds
+ - name: remastered/obj/W_EX020.a.us/se/obj/se535
+   multi:
+   - name: remastered/obj/W_EX020_NM.a.us/se/obj/se535
+   - name: remastered/obj/W_EX020_TR.a.us/se/obj/se535
+   - name: remastered/obj/W_EX020_WI.a.us/se/obj/se535
+   method: copy
+   source:
+     - name: remastered/obj/W_EX020.a.us/se/obj/se535   
+# Keyblade Sounds (Treasure Trove)
+ - name: remastered/obj/W_EX020_10.a.us/se/obj/se536
+   multi:
+   - name: remastered/obj/W_EX020_10_NM.a.us/se/obj/se536
+   - name: remastered/obj/W_EX020_10_TR.a.us/se/obj/se536
+   - name: remastered/obj/W_EX020_10_WI.a.us/se/obj/se536
+   method: copy
+   source:
+     - name: remastered/obj/W_EX020_10.a.us/se/obj/se536  
+# Keyblade Sounds (Pixie Petal)
+ - name: remastered/obj/W_EX020_20.a.us/se/obj/se537
+   multi:
+   - name: remastered/obj/W_EX020_20_NM.a.us/se/obj/se537
+   - name: remastered/obj/W_EX020_20_TR.a.us/se/obj/se537
+   - name: remastered/obj/W_EX020_20_WI.a.us/se/obj/se537
+   method: copy
+   source:
+     - name: remastered/obj/W_EX020_20.a.us/se/obj/se537  
+# Keyblade Sounds (Mark of a Hero)
+ - name: remastered/obj/W_EX020_30.a.us/se/obj/se538
+   multi:
+   - name: remastered/obj/W_EX020_30_NM.a.us/se/obj/se538
+   - name: remastered/obj/W_EX020_30_TR.a.us/se/obj/se538
+   - name: remastered/obj/W_EX020_30_WI.a.us/se/obj/se538
+   method: copy
+   source:
+     - name: remastered/obj/W_EX020_30.a.us/se/obj/se538  
+# Keyblade Sounds (Stroke of Midnight)
+ - name: remastered/obj/W_EX020_40.a.us/se/obj/se539
+   multi:
+   - name: remastered/obj/W_EX020_40_NM.a.us/se/obj/se539
+   - name: remastered/obj/W_EX020_40_TR.a.us/se/obj/se539
+   - name: remastered/obj/W_EX020_40_WI.a.us/se/obj/se539
+   method: copy
+   source:
+     - name: remastered/obj/W_EX020_40.a.us/se/obj/se539  
+# Keyblade Sounds (Hypderdrive)
+ - name: remastered/obj/W_EX020_50.a.us/se/obj/se540
+   multi:
+   - name: remastered/obj/W_EX020_50_NM.a.us/se/obj/se540
+   - name: remastered/obj/W_EX020_50_TR.a.us/se/obj/se540
+   - name: remastered/obj/W_EX020_50_WI.a.us/se/obj/se540
+   method: copy
+   source:
+     - name: remastered/obj/W_EX020_50.a.us/se/obj/se540  
+# Keyblade Sounds (Fairy Stars)
+ - name: remastered/obj/W_EX020_60.a.us/se/obj/se541
+   multi:
+   - name: remastered/obj/W_EX020_60_NM.a.us/se/obj/se541
+   - name: remastered/obj/W_EX020_60_TR.a.us/se/obj/se541
+   - name: remastered/obj/W_EX020_60_WI.a.us/se/obj/se541
+   method: copy
+   source:
+     - name: remastered/obj/W_EX020_60.a.us/se/obj/se541  
+# Keyblade Sounds (Frolic Flame)
+ - name: remastered/obj/W_EX020_70.a.us/se/obj/se542
+   multi:
+   - name: remastered/obj/W_EX020_70_NM.a.us/se/obj/se542
+   - name: remastered/obj/W_EX020_70_TR.a.us/se/obj/se542
+   - name: remastered/obj/W_EX020_70_WI.a.us/se/obj/se542
+   method: copy
+   source:
+     - name: remastered/obj/W_EX020_70.a.us/se/obj/se542  
+# Keyblade Sounds (Victory Line)
+ - name: remastered/obj/W_EX020_80.a.us/se/obj/se543
+   multi:
+   - name: remastered/obj/W_EX020_80_NM.a.us/se/obj/se543
+   - name: remastered/obj/W_EX020_80_TR.a.us/se/obj/se543
+   - name: remastered/obj/W_EX020_80_WI.a.us/se/obj/se543
+   method: copy
+   source:
+     - name: remastered/obj/W_EX020_80.a.us/se/obj/se543  
+# Keyblade Sounds (Rainfell)
+ - name: remastered/obj/W_EX020_90.a.us/se/obj/se9991
+   multi:
+   - name: remastered/obj/W_EX020_90_NM.a.us/se/obj/se9991
+   - name: remastered/obj/W_EX020_90_TR.a.us/se/obj/se9991
+   - name: remastered/obj/W_EX020_90_WI.a.us/se/obj/se9991
+   method: copy
+   source:
+     - name: remastered/obj/W_EX020_90.a.us/se/obj/se9991 
+# Keyblade Sounds (Stormfall)
+ - name: remastered/obj/W_EX020_94.a.us/se/obj/se9992
+   multi:
+   - name: remastered/obj/W_EX020_94_NM.a.us/se/obj/se9992
+   - name: remastered/obj/W_EX020_94_TR.a.us/se/obj/se9992
+   - name: remastered/obj/W_EX020_94_WI.a.us/se/obj/se9992
+   method: copy
+   source:
+     - name: remastered/obj/W_EX020_94.a.us/se/obj/se9992
+# Keyblade Sounds (Earthshaker)
+ - name: remastered/obj/W_EX020_B0.a.us/se/obj/se9995
+   multi:
+   - name: remastered/obj/W_EX020_B0_NM.a.us/se/obj/se9995
+   - name: remastered/obj/W_EX020_B0_TR.a.us/se/obj/se9995
+   - name: remastered/obj/W_EX020_B0_WI.a.us/se/obj/se9995
+   method: copy
+   source:
+     - name: remastered/obj/W_EX020_B0.a.us/se/obj/se9995
+# Keyblade Sounds (Ends of the Earth)
+ - name: remastered/obj/W_EX020_B4.a.us/se/obj/se9996
+   multi:
+   - name: remastered/obj/W_EX020_B4_NM.a.us/se/obj/se9996
+   - name: remastered/obj/W_EX020_B4_TR.a.us/se/obj/se9996
+   - name: remastered/obj/W_EX020_B4_WI.a.us/se/obj/se9996
+   method: copy
+   source:
+     - name: remastered/obj/W_EX020_B4.a.us/se/obj/se9996
+# Keyblade Sounds (Lost Memory)
+ - name: remastered/obj/W_EX020_A0.a.us/se/obj/se9993
+   multi:
+   - name: remastered/obj/W_EX020_A0_NM.a.us/se/obj/se9993
+   - name: remastered/obj/W_EX020_A0_TR.a.us/se/obj/se9993
+   - name: remastered/obj/W_EX020_A0_WI.a.us/se/obj/se9993
+   method: copy
+   source:
+     - name: remastered/obj/W_EX020_A0.a.us/se/obj/se9993
+# Keyblade Sounds (Ultima Weapon)
+ - name: remastered/obj/W_EX020_A4.a.us/se/obj/se9994
+   multi:
+   - name: remastered/obj/W_EX020_A4_NM.a.us/se/obj/se9994
+   - name: remastered/obj/W_EX020_A4_TR.a.us/se/obj/se9994
+   - name: remastered/obj/W_EX020_A4_WI.a.us/se/obj/se9994
+   method: copy
+   source:
+     - name: remastered/obj/W_EX020_A4.a.us/se/obj/se9994
+# Keyblade Sounds (Wooden Keyblade)
+ - name: remastered/obj/W_EX020_C0.a.us/se/obj/se9997
+   multi:
+   - name: remastered/obj/W_EX020_C0_NM.a.us/se/obj/se9997
+   - name: remastered/obj/W_EX020_C0_TR.a.us/se/obj/se9997
+   - name: remastered/obj/W_EX020_C0_WI.a.us/se/obj/se9997
+   method: copy
+   source:
+     - name: remastered/obj/W_EX020_C0.a.us/se/obj/se9997 
+# Keyblade Sounds (Missing Ache)
+ - name: remastered/obj/W_EX020_C4.a.us/se/obj/se9998
+   multi:
+   - name: remastered/obj/W_EX020_C4_NM.a.us/se/obj/se9998
+   - name: remastered/obj/W_EX020_C4_TR.a.us/se/obj/se9998
+   - name: remastered/obj/W_EX020_C4_WI.a.us/se/obj/se9998
+   method: copy
+   source:
+     - name: remastered/obj/W_EX020_C4.a.us/se/obj/se9998 
+# Keyblade Sounds (Void Gear)
+ - name: remastered/obj/W_EX020_C8.a.us/se/obj/se9999
+   multi:
+   - name: remastered/obj/W_EX020_C8_NM.a.us/se/obj/se9999
+   - name: remastered/obj/W_EX020_C8_TR.a.us/se/obj/se9999
+   - name: remastered/obj/W_EX020_C8_WI.a.us/se/obj/se9999
+   method: copy
+   source:
+     - name: remastered/obj/W_EX020_C8.a.us/se/obj/se9999 
+# Keyblade Sounds (Sweetstack)
+ - name: remastered/obj/W_EX020_CC.a.us/se/obj/se9990
+   multi:
+   - name: remastered/obj/W_EX020_CC_NM.a.us/se/obj/se9990
+   - name: remastered/obj/W_EX020_CC_TR.a.us/se/obj/se9990
+   - name: remastered/obj/W_EX020_CC_WI.a.us/se/obj/se9990
+   method: copy
+   source:
+     - name: remastered/obj/W_EX020_CC.a.us/se/obj/se9990  
+# Keyblade Sounds (No Name)
+ - name: remastered/obj/W_EX020_CG.a.us/se/obj/se9989
+   multi:
+   - name: remastered/obj/W_EX020_CG_NM.a.us/se/obj/se9989
+   - name: remastered/obj/W_EX020_CG_TR.a.us/se/obj/se9989
+   - name: remastered/obj/W_EX020_CG_WI.a.us/se/obj/se9989
+   method: copy
+   source:
+     - name: remastered/obj/W_EX020_CG.a.us/se/obj/se9989  
+# Text Changes     
+ - name: msg/us/sys.bar
+   method: binarc
+   source:
+     - name: sys 
+       type: list
+       method: kh2msg
+       source:
+       - name: sys.yml
+         language: en
+# Weapon Bone Placement
+ - name: 03system.bin
+   method: binarc
+   source:
+     - name: sklt 
+       type: list
+       method: listpatch
+       source:
+       - name: SkltList.yml
+         type: sklt
+     - name: item 
+       type: list
+       method: listpatch
+       source:
+       - name: ItemList.yml
+         type: item     
+# Attack IDs, Ability Change + Addition
+ - name: 00battle.bin
+   method: binarc
+   source:
+     - name: atkp 
+       type: list
+       method: listpatch
+       source:
+       - name: AtkpList.yml
+         type: atkp
+     - name: plrp
+       type: list
+       method: listpatch
+       source:
+       - name: PlrpList.yml
+         type: plrp
+# Libretto Files
+ - name: libretto/fm/wm1660.bar
+   method: copy
+   source:
+     - name: libretto/fm/wm1660.bar
+ - name: libretto/fm/wm1661.bar
+   method: copy
+   source:
+     - name: libretto/fm/wm1661.bar
+ - name: libretto/fm/wm1662.bar
+   method: copy
+   source:
+     - name: libretto/fm/wm1662.bar
+ - name: libretto/fm/wm1823.bar
+   method: copy
+   source:
+     - name: libretto/fm/wm1823.bar
+ - name: libretto/fm/wm1824.bar
+   method: copy
+   source:
+     - name: libretto/fm/wm1824.bar
+ - name: libretto/fm/wm1836.bar
+   method: copy
+   source:
+     - name: libretto/fm/wm1836.bar
+ - name: libretto/fm/wm1837.bar
+   method: copy
+   source:
+     - name: libretto/fm/wm1837.bar
+ - name: libretto/fm/wm1838.bar
+   method: copy
+   source:
+     - name: libretto/fm/wm1838.bar
+ - name: libretto/fm/wm502.bar
+   method: copy
+   source:
+     - name: libretto/fm/wm502.bar
+ - name: libretto/fm/wm503.bar
+   method: copy
+   source:
+     - name: libretto/fm/wm503.bar
+ - name: libretto/fm/wm512.bar
+   method: copy
+   source:
+     - name: libretto/fm/wm512.bar
+ - name: libretto/fm/wm521.bar
+   method: copy
+   source:
+     - name: libretto/fm/wm521.bar
+ - name: libretto/fm/wm524.bar
+   method: copy
+   source:
+     - name: libretto/fm/wm524.bar
+ - name: libretto/us/wm1660.bar
+   method: copy
+   source:
+     - name: libretto/us/wm1660.bar
+ - name: libretto/us/wm1661.bar
+   method: copy
+   source:
+     - name: libretto/us/wm1661.bar
+ - name: libretto/us/wm1662.bar
+   method: copy
+   source:
+     - name: libretto/us/wm1662.bar
+ - name: libretto/us/wm1823.bar
+   method: copy
+   source:
+     - name: libretto/us/wm1823.bar
+ - name: libretto/us/wm1824.bar
+   method: copy
+   source:
+     - name: libretto/us/wm1824.bar
+ - name: libretto/us/wm1836.bar
+   method: copy
+   source:
+     - name: libretto/us/wm1836.bar
+ - name: libretto/us/wm1837.bar
+   method: copy
+   source:
+     - name: libretto/us/wm1837.bar
+ - name: libretto/us/wm1838.bar
+   method: copy
+   source:
+     - name: libretto/us/wm1838.bar
+ - name: libretto/us/wm502.bar
+   method: copy
+   source:
+     - name: libretto/us/wm502.bar
+ - name: libretto/us/wm503.bar
+   method: copy
+   source:
+     - name: libretto/us/wm503.bar
+ - name: libretto/us/wm512.bar
+   method: copy
+   source:
+     - name: libretto/us/wm512.bar
+ - name: libretto/us/wm521.bar
+   method: copy
+   source:
+     - name: libretto/us/wm521.bar
+ - name: libretto/us/wm524.bar
+   method: copy
+   source:
+     - name: libretto/us/wm524.bar
+# Cutscene Files
+ - name: anm/fm/al/p_ex020/EAL10102E.anb
+   method: copy
+   source:
+     - name: anm/fm/al/p_ex020/EAL10102E.anb
+ - name: anm/fm/al/p_ex020/EAL10103A.anb
+   method: copy
+   source:
+     - name: anm/fm/al/p_ex020/EAL10103A.anb
+ - name: anm/fm/al/p_ex020/EAL10103E.anb
+   method: copy
+   source:
+     - name: anm/fm/al/p_ex020/EAL10103E.anb
+ - name: anm/fm/al/p_ex020/EAL10105E.anb
+   method: copy
+   source:
+     - name: anm/fm/al/p_ex020/EAL10105E.anb
+ - name: anm/fm/al/p_ex020/EAL10107E.anb
+   method: copy
+   source:
+     - name: anm/fm/al/p_ex020/EAL10107E.anb
+ - name: anm/fm/al/p_ex020/EAL10110E.anb
+   method: copy
+   source:
+     - name: anm/fm/al/p_ex020/EAL10110E.anb
+ - name: anm/fm/al/p_ex020/EAL10113E.anb
+   method: copy
+   source:
+     - name: anm/fm/al/p_ex020/EAL10113E.anb
+ - name: anm/fm/al/p_ex020/EAL10301E.anb
+   method: copy
+   source:
+     - name: anm/fm/al/p_ex020/EAL10301E.anb
+ - name: anm/fm/al/p_ex020/EAL10403E.anb
+   method: copy
+   source:
+     - name: anm/fm/al/p_ex020/EAL10403E.anb
+ - name: anm/fm/al/p_ex020/EAL10409A.anb
+   method: copy
+   source:
+     - name: anm/fm/al/p_ex020/EAL10409A.anb
+ - name: anm/fm/al/p_ex020/EAL10409E.anb
+   method: copy
+   source:
+     - name: anm/fm/al/p_ex020/EAL10409E.anb
+ - name: anm/fm/al/p_ex020/EAL10417E.anb
+   method: copy
+   source:
+     - name: anm/fm/al/p_ex020/EAL10417E.anb
+ - name: anm/fm/al/p_ex020/EAL10421E.anb
+   method: copy
+   source:
+     - name: anm/fm/al/p_ex020/EAL10421E.anb
+ - name: anm/fm/al/p_ex020/EAL10501E.anb
+   method: copy
+   source:
+     - name: anm/fm/al/p_ex020/EAL10501E.anb
+ - name: anm/fm/al/p_ex020/EAL10502E.anb
+   method: copy
+   source:
+     - name: anm/fm/al/p_ex020/EAL10502E.anb
+ - name: anm/fm/al/p_ex020/EAL10503E.anb
+   method: copy
+   source:
+     - name: anm/fm/al/p_ex020/EAL10503E.anb
+ - name: anm/fm/al/p_ex020/EAL10609E.anb
+   method: copy
+   source:
+     - name: anm/fm/al/p_ex020/EAL10609E.anb
+ - name: anm/fm/al/p_ex020/EAL10615E.anb
+   method: copy
+   source:
+     - name: anm/fm/al/p_ex020/EAL10615E.anb
+ - name: anm/fm/al/p_ex020/EAL10704E.anb
+   method: copy
+   source:
+     - name: anm/fm/al/p_ex020/EAL10704E.anb
+ - name: anm/fm/al/p_ex020/EAL10709E.anb
+   method: copy
+   source:
+     - name: anm/fm/al/p_ex020/EAL10709E.anb
+ - name: anm/fm/al/p_ex020/EAL10802E.anb
+   method: copy
+   source:
+     - name: anm/fm/al/p_ex020/EAL10802E.anb
+ - name: anm/fm/al/p_ex020/EAL11003E.anb
+   method: copy
+   source:
+     - name: anm/fm/al/p_ex020/EAL11003E.anb
+ - name: anm/fm/al/p_ex020/EAL11004E.anb
+   method: copy
+   source:
+     - name: anm/fm/al/p_ex020/EAL11004E.anb
+ - name: anm/fm/al/p_ex020/EAL11005E.anb
+   method: copy
+   source:
+     - name: anm/fm/al/p_ex020/EAL11005E.anb
+ - name: anm/fm/al/p_ex020/EAL11006E.anb
+   method: copy
+   source:
+     - name: anm/fm/al/p_ex020/EAL11006E.anb
+ - name: anm/fm/al/p_ex020/EAL11009E.anb
+   method: copy
+   source:
+     - name: anm/fm/al/p_ex020/EAL11009E.anb
+ - name: anm/fm/al/p_ex020/EAL11010E.anb
+   method: copy
+   source:
+     - name: anm/fm/al/p_ex020/EAL11010E.anb
+ - name: anm/fm/al/p_ex020/EAL11201E.anb
+   method: copy
+   source:
+     - name: anm/fm/al/p_ex020/EAL11201E.anb
+ - name: anm/fm/al/p_ex020/EAL11407E.anb
+   method: copy
+   source:
+     - name: anm/fm/al/p_ex020/EAL11407E.anb
+ - name: anm/fm/al/p_ex020/EAL11418E.anb
+   method: copy
+   source:
+     - name: anm/fm/al/p_ex020/EAL11418E.anb
+ - name: anm/fm/al/p_ex020/EAL11705E.anb
+   method: copy
+   source:
+     - name: anm/fm/al/p_ex020/EAL11705E.anb
+ - name: anm/fm/al/p_ex020/EAL11710E.anb
+   method: copy
+   source:
+     - name: anm/fm/al/p_ex020/EAL11710E.anb
+ - name: anm/fm/al/p_ex020/EAL11711E.anb
+   method: copy
+   source:
+     - name: anm/fm/al/p_ex020/EAL11711E.anb
+ - name: anm/fm/al/p_ex020/EAL11712E.anb
+   method: copy
+   source:
+     - name: anm/fm/al/p_ex020/EAL11712E.anb
+ - name: anm/fm/al/p_ex020/EAL11713E.anb
+   method: copy
+   source:
+     - name: anm/fm/al/p_ex020/EAL11713E.anb
+ - name: anm/fm/al/p_ex020/EAL11714E.anb
+   method: copy
+   source:
+     - name: anm/fm/al/p_ex020/EAL11714E.anb
+ - name: anm/fm/al/p_ex020/EAL11715E.anb
+   method: copy
+   source:
+     - name: anm/fm/al/p_ex020/EAL11715E.anb
+ - name: anm/fm/al/p_ex020/EAL11716E.anb
+   method: copy
+   source:
+     - name: anm/fm/al/p_ex020/EAL11716E.anb
+ - name: anm/fm/al/p_ex020/EAL20201E.anb
+   method: copy
+   source:
+     - name: anm/fm/al/p_ex020/EAL20201E.anb
+ - name: anm/fm/al/p_ex020/EAL20214E.anb
+   method: copy
+   source:
+     - name: anm/fm/al/p_ex020/EAL20214E.anb
+ - name: anm/fm/al/p_ex020/EAL20306E.anb
+   method: copy
+   source:
+     - name: anm/fm/al/p_ex020/EAL20306E.anb
+ - name: anm/fm/al/p_ex020/EAL20310E.anb
+   method: copy
+   source:
+     - name: anm/fm/al/p_ex020/EAL20310E.anb
+ - name: anm/fm/al/p_ex020/EAL20501E.anb
+   method: copy
+   source:
+     - name: anm/fm/al/p_ex020/EAL20501E.anb
+ - name: anm/fm/al/p_ex020/EAL20506E.anb
+   method: copy
+   source:
+     - name: anm/fm/al/p_ex020/EAL20506E.anb
+ - name: anm/fm/al/p_ex020/EAL20710E.anb
+   method: copy
+   source:
+     - name: anm/fm/al/p_ex020/EAL20710E.anb
+ - name: anm/fm/al/p_ex020/EAL20904E.anb
+   method: copy
+   source:
+     - name: anm/fm/al/p_ex020/EAL20904E.anb
+ - name: anm/fm/al/p_ex020/EAL21003E.anb
+   method: copy
+   source:
+     - name: anm/fm/al/p_ex020/EAL21003E.anb
+ - name: anm/fm/al/p_ex020/EAL21008E.anb
+   method: copy
+   source:
+     - name: anm/fm/al/p_ex020/EAL21008E.anb
+ - name: anm/fm/al/p_ex020/EAL21011E.anb
+   method: copy
+   source:
+     - name: anm/fm/al/p_ex020/EAL21011E.anb
+ - name: anm/fm/al/p_ex020/EAL21013E.anb
+   method: copy
+   source:
+     - name: anm/fm/al/p_ex020/EAL21013E.anb
+ - name: anm/fm/bb/p_ex020/EBB10101E.anb
+   method: copy
+   source:
+     - name: anm/fm/bb/p_ex020/EBB10101E.anb
+ - name: anm/fm/bb/p_ex020/EBB10102E.anb
+   method: copy
+   source:
+     - name: anm/fm/bb/p_ex020/EBB10102E.anb
+ - name: anm/fm/bb/p_ex020/EBB10103E.anb
+   method: copy
+   source:
+     - name: anm/fm/bb/p_ex020/EBB10103E.anb
+ - name: anm/fm/bb/p_ex020/EBB10201E.anb
+   method: copy
+   source:
+     - name: anm/fm/bb/p_ex020/EBB10201E.anb
+ - name: anm/fm/bb/p_ex020/EBB10202E.anb
+   method: copy
+   source:
+     - name: anm/fm/bb/p_ex020/EBB10202E.anb
+ - name: anm/fm/bb/p_ex020/EBB10203E.anb
+   method: copy
+   source:
+     - name: anm/fm/bb/p_ex020/EBB10203E.anb
+ - name: anm/fm/bb/p_ex020/EBB10204A.anb
+   method: copy
+   source:
+     - name: anm/fm/bb/p_ex020/EBB10204A.anb
+ - name: anm/fm/bb/p_ex020/EBB10205A.anb
+   method: copy
+   source:
+     - name: anm/fm/bb/p_ex020/EBB10205A.anb
+ - name: anm/fm/bb/p_ex020/EBB10301R.anb
+   method: copy
+   source:
+     - name: anm/fm/bb/p_ex020/EBB10301R.anb
+ - name: anm/fm/bb/p_ex020/EBB10302R.anb
+   method: copy
+   source:
+     - name: anm/fm/bb/p_ex020/EBB10302R.anb
+ - name: anm/fm/bb/p_ex020/EBB10303E.anb
+   method: copy
+   source:
+     - name: anm/fm/bb/p_ex020/EBB10303E.anb
+ - name: anm/fm/bb/p_ex020/EBB10304E.anb
+   method: copy
+   source:
+     - name: anm/fm/bb/p_ex020/EBB10304E.anb
+ - name: anm/fm/bb/p_ex020/EBB10305E.anb
+   method: copy
+   source:
+     - name: anm/fm/bb/p_ex020/EBB10305E.anb
+ - name: anm/fm/bb/p_ex020/EBB10306E.anb
+   method: copy
+   source:
+     - name: anm/fm/bb/p_ex020/EBB10306E.anb
+ - name: anm/fm/bb/p_ex020/EBB10401E.anb
+   method: copy
+   source:
+     - name: anm/fm/bb/p_ex020/EBB10401E.anb
+ - name: anm/fm/bb/p_ex020/EBB10402E.anb
+   method: copy
+   source:
+     - name: anm/fm/bb/p_ex020/EBB10402E.anb
+ - name: anm/fm/bb/p_ex020/EBB10403E.anb
+   method: copy
+   source:
+     - name: anm/fm/bb/p_ex020/EBB10403E.anb
+ - name: anm/fm/bb/p_ex020/EBB10404E.anb
+   method: copy
+   source:
+     - name: anm/fm/bb/p_ex020/EBB10404E.anb
+ - name: anm/fm/bb/p_ex020/EBB10405E.anb
+   method: copy
+   source:
+     - name: anm/fm/bb/p_ex020/EBB10405E.anb
+ - name: anm/fm/bb/p_ex020/EBB10406E.anb
+   method: copy
+   source:
+     - name: anm/fm/bb/p_ex020/EBB10406E.anb
+ - name: anm/fm/bb/p_ex020/EBB10407E.anb
+   method: copy
+   source:
+     - name: anm/fm/bb/p_ex020/EBB10407E.anb
+ - name: anm/fm/bb/p_ex020/EBB10601E.anb
+   method: copy
+   source:
+     - name: anm/fm/bb/p_ex020/EBB10601E.anb
+ - name: anm/fm/bb/p_ex020/EBB10701E.anb
+   method: copy
+   source:
+     - name: anm/fm/bb/p_ex020/EBB10701E.anb
+ - name: anm/fm/bb/p_ex020/EBB10801E.anb
+   method: copy
+   source:
+     - name: anm/fm/bb/p_ex020/EBB10801E.anb
+ - name: anm/fm/bb/p_ex020/EBB10803E.anb
+   method: copy
+   source:
+     - name: anm/fm/bb/p_ex020/EBB10803E.anb
+ - name: anm/fm/bb/p_ex020/EBB11001E.anb
+   method: copy
+   source:
+     - name: anm/fm/bb/p_ex020/EBB11001E.anb
+ - name: anm/fm/bb/p_ex020/EBB11002E.anb
+   method: copy
+   source:
+     - name: anm/fm/bb/p_ex020/EBB11002E.anb
+ - name: anm/fm/bb/p_ex020/EBB11003E.anb
+   method: copy
+   source:
+     - name: anm/fm/bb/p_ex020/EBB11003E.anb
+ - name: anm/fm/bb/p_ex020/EBB11004E.anb
+   method: copy
+   source:
+     - name: anm/fm/bb/p_ex020/EBB11004E.anb
+ - name: anm/fm/bb/p_ex020/EBB11005E.anb
+   method: copy
+   source:
+     - name: anm/fm/bb/p_ex020/EBB11005E.anb
+ - name: anm/fm/bb/p_ex020/EBB11006E.anb
+   method: copy
+   source:
+     - name: anm/fm/bb/p_ex020/EBB11006E.anb
+ - name: anm/fm/bb/p_ex020/EBB11007E.anb
+   method: copy
+   source:
+     - name: anm/fm/bb/p_ex020/EBB11007E.anb
+ - name: anm/fm/bb/p_ex020/EBB11008E.anb
+   method: copy
+   source:
+     - name: anm/fm/bb/p_ex020/EBB11008E.anb
+ - name: anm/fm/bb/p_ex020/EBB11009E.anb
+   method: copy
+   source:
+     - name: anm/fm/bb/p_ex020/EBB11009E.anb
+ - name: anm/fm/bb/p_ex020/EBB11010E.anb
+   method: copy
+   source:
+     - name: anm/fm/bb/p_ex020/EBB11010E.anb
+ - name: anm/fm/bb/p_ex020/EBB11401E.anb
+   method: copy
+   source:
+     - name: anm/fm/bb/p_ex020/EBB11401E.anb
+ - name: anm/fm/bb/p_ex020/EBB11402E.anb
+   method: copy
+   source:
+     - name: anm/fm/bb/p_ex020/EBB11402E.anb
+ - name: anm/fm/bb/p_ex020/EBB11501E.anb
+   method: copy
+   source:
+     - name: anm/fm/bb/p_ex020/EBB11501E.anb
+ - name: anm/fm/bb/p_ex020/EBB11502E.anb
+   method: copy
+   source:
+     - name: anm/fm/bb/p_ex020/EBB11502E.anb
+ - name: anm/fm/bb/p_ex020/EBB11601E.anb
+   method: copy
+   source:
+     - name: anm/fm/bb/p_ex020/EBB11601E.anb
+ - name: anm/fm/bb/p_ex020/EBB11801E.anb
+   method: copy
+   source:
+     - name: anm/fm/bb/p_ex020/EBB11801E.anb
+ - name: anm/fm/bb/p_ex020/EBB11901A.anb
+   method: copy
+   source:
+     - name: anm/fm/bb/p_ex020/EBB11901A.anb
+ - name: anm/fm/bb/p_ex020/EBB11902E.anb
+   method: copy
+   source:
+     - name: anm/fm/bb/p_ex020/EBB11902E.anb
+ - name: anm/fm/bb/p_ex020/EBB12101E.anb
+   method: copy
+   source:
+     - name: anm/fm/bb/p_ex020/EBB12101E.anb
+ - name: anm/fm/bb/p_ex020/EBB12102E.anb
+   method: copy
+   source:
+     - name: anm/fm/bb/p_ex020/EBB12102E.anb
+ - name: anm/fm/bb/p_ex020/EBB20402E.anb
+   method: copy
+   source:
+     - name: anm/fm/bb/p_ex020/EBB20402E.anb
+ - name: anm/fm/bb/p_ex020/EBB20501A.anb
+   method: copy
+   source:
+     - name: anm/fm/bb/p_ex020/EBB20501A.anb
+ - name: anm/fm/bb/p_ex020/EBB21001E.anb
+   method: copy
+   source:
+     - name: anm/fm/bb/p_ex020/EBB21001E.anb
+ - name: anm/fm/bb/p_ex020/EBB21201E.anb
+   method: copy
+   source:
+     - name: anm/fm/bb/p_ex020/EBB21201E.anb
+ - name: anm/fm/bb/p_ex020/EBB21301E.anb
+   method: copy
+   source:
+     - name: anm/fm/bb/p_ex020/EBB21301E.anb
+ - name: anm/fm/bb/p_ex020/EBB21601E.anb
+   method: copy
+   source:
+     - name: anm/fm/bb/p_ex020/EBB21601E.anb
+ - name: anm/fm/bb/p_ex020/EBB21602E.anb
+   method: copy
+   source:
+     - name: anm/fm/bb/p_ex020/EBB21602E.anb
+ - name: anm/fm/bb/p_ex020/EBB21603E.anb
+   method: copy
+   source:
+     - name: anm/fm/bb/p_ex020/EBB21603E.anb
+ - name: anm/fm/ca/p_ex020/ECA10103E.anb
+   method: copy
+   source:
+     - name: anm/fm/ca/p_ex020/ECA10103E.anb
+ - name: anm/fm/ca/p_ex020/ECA10501A.anb
+   method: copy
+   source:
+     - name: anm/fm/ca/p_ex020/ECA10501A.anb
+ - name: anm/fm/ca/p_ex020/ECA10701E.anb
+   method: copy
+   source:
+     - name: anm/fm/ca/p_ex020/ECA10701E.anb
+ - name: anm/fm/ca/p_ex020/ECA10702E.anb
+   method: copy
+   source:
+     - name: anm/fm/ca/p_ex020/ECA10702E.anb
+ - name: anm/fm/ca/p_ex020/ECA10703E.anb
+   method: copy
+   source:
+     - name: anm/fm/ca/p_ex020/ECA10703E.anb
+ - name: anm/fm/ca/p_ex020/ECA10706E.anb
+   method: copy
+   source:
+     - name: anm/fm/ca/p_ex020/ECA10706E.anb
+ - name: anm/fm/ca/p_ex020/ECA11901E.anb
+   method: copy
+   source:
+     - name: anm/fm/ca/p_ex020/ECA11901E.anb
+ - name: anm/fm/ca/p_ex020/ECA11902E.anb
+   method: copy
+   source:
+     - name: anm/fm/ca/p_ex020/ECA11902E.anb
+ - name: anm/fm/ca/p_ex020/ECA11903E.anb
+   method: copy
+   source:
+     - name: anm/fm/ca/p_ex020/ECA11903E.anb
+ - name: anm/fm/ca/p_ex020/ECA12001E.anb
+   method: copy
+   source:
+     - name: anm/fm/ca/p_ex020/ECA12001E.anb
+ - name: anm/fm/ca/p_ex020/ECA12002E.anb
+   method: copy
+   source:
+     - name: anm/fm/ca/p_ex020/ECA12002E.anb
+ - name: anm/fm/ca/p_ex020/ECA12111E.anb
+   method: copy
+   source:
+     - name: anm/fm/ca/p_ex020/ECA12111E.anb
+ - name: anm/fm/ca/p_ex020/ECA12112E.anb
+   method: copy
+   source:
+     - name: anm/fm/ca/p_ex020/ECA12112E.anb
+ - name: anm/fm/ca/p_ex020/ECA12113E.anb
+   method: copy
+   source:
+     - name: anm/fm/ca/p_ex020/ECA12113E.anb
+ - name: anm/fm/ca/p_ex020/ECA12301E.anb
+   method: copy
+   source:
+     - name: anm/fm/ca/p_ex020/ECA12301E.anb
+ - name: anm/fm/ca/p_ex020/ECA12302A.anb
+   method: copy
+   source:
+     - name: anm/fm/ca/p_ex020/ECA12302A.anb
+ - name: anm/fm/ca/p_ex020/ECA12303E.anb
+   method: copy
+   source:
+     - name: anm/fm/ca/p_ex020/ECA12303E.anb
+ - name: anm/fm/ca/p_ex020/ECA12304E.anb
+   method: copy
+   source:
+     - name: anm/fm/ca/p_ex020/ECA12304E.anb
+ - name: anm/fm/ca/p_ex020/ECA12504E.anb
+   method: copy
+   source:
+     - name: anm/fm/ca/p_ex020/ECA12504E.anb
+ - name: anm/fm/ca/p_ex020/ECA12505E.anb
+   method: copy
+   source:
+     - name: anm/fm/ca/p_ex020/ECA12505E.anb
+ - name: anm/fm/ca/p_ex020/ECA20801E.anb
+   method: copy
+   source:
+     - name: anm/fm/ca/p_ex020/ECA20801E.anb
+ - name: anm/fm/ca/p_ex020/ECA20803E.anb
+   method: copy
+   source:
+     - name: anm/fm/ca/p_ex020/ECA20803E.anb
+ - name: anm/fm/ca/p_ex020/ECA20804A.anb
+   method: copy
+   source:
+     - name: anm/fm/ca/p_ex020/ECA20804A.anb
+ - name: anm/fm/ca/p_ex020/ECA20903E.anb
+   method: copy
+   source:
+     - name: anm/fm/ca/p_ex020/ECA20903E.anb
+ - name: anm/fm/ca/p_ex020/ECA21001E.anb
+   method: copy
+   source:
+     - name: anm/fm/ca/p_ex020/ECA21001E.anb
+ - name: anm/fm/ca/p_ex020/ECA21403E.anb
+   method: copy
+   source:
+     - name: anm/fm/ca/p_ex020/ECA21403E.anb
+ - name: anm/fm/ca/p_ex020/ECA21404E.anb
+   method: copy
+   source:
+     - name: anm/fm/ca/p_ex020/ECA21404E.anb
+ - name: anm/fm/ca/p_ex020/ECA21405E.anb
+   method: copy
+   source:
+     - name: anm/fm/ca/p_ex020/ECA21405E.anb
+ - name: anm/fm/ca/p_ex020/ECA21608E.anb
+   method: copy
+   source:
+     - name: anm/fm/ca/p_ex020/ECA21608E.anb
+ - name: anm/fm/dc/p_ex020/EDC10201E.anb
+   method: copy
+   source:
+     - name: anm/fm/dc/p_ex020/EDC10201E.anb
+ - name: anm/fm/dc/p_ex020/EDC10401E.anb
+   method: copy
+   source:
+     - name: anm/fm/dc/p_ex020/EDC10401E.anb
+ - name: anm/fm/dc/p_ex020/EDC10402E.anb
+   method: copy
+   source:
+     - name: anm/fm/dc/p_ex020/EDC10402E.anb
+ - name: anm/fm/dc/p_ex020/EDC10403E.anb
+   method: copy
+   source:
+     - name: anm/fm/dc/p_ex020/EDC10403E.anb
+ - name: anm/fm/dc/p_ex020/EDC10405E.anb
+   method: copy
+   source:
+     - name: anm/fm/dc/p_ex020/EDC10405E.anb
+ - name: anm/fm/dc/p_ex020/EDC10406E.anb
+   method: copy
+   source:
+     - name: anm/fm/dc/p_ex020/EDC10406E.anb
+ - name: anm/fm/dc/p_ex020/EDC10407E.anb
+   method: copy
+   source:
+     - name: anm/fm/dc/p_ex020/EDC10407E.anb
+ - name: anm/fm/dc/p_ex020/EDC10408E.anb
+   method: copy
+   source:
+     - name: anm/fm/dc/p_ex020/EDC10408E.anb
+ - name: anm/fm/dc/p_ex020/EDC10801E.anb
+   method: copy
+   source:
+     - name: anm/fm/dc/p_ex020/EDC10801E.anb
+ - name: anm/fm/dc/p_ex020/EDC10802A.anb
+   method: copy
+   source:
+     - name: anm/fm/dc/p_ex020/EDC10802A.anb
+ - name: anm/fm/dc/p_ex020/EDC10803A.anb
+   method: copy
+   source:
+     - name: anm/fm/dc/p_ex020/EDC10803A.anb
+ - name: anm/fm/dc/p_ex020/EDC10804E.anb
+   method: copy
+   source:
+     - name: anm/fm/dc/p_ex020/EDC10804E.anb
+ - name: anm/fm/dc/p_ex020/EDC10901E.anb
+   method: copy
+   source:
+     - name: anm/fm/dc/p_ex020/EDC10901E.anb
+ - name: anm/fm/dc/p_ex020/EDC10902E.anb
+   method: copy
+   source:
+     - name: anm/fm/dc/p_ex020/EDC10902E.anb
+ - name: anm/fm/dc/p_ex020/EDC10903E.anb
+   method: copy
+   source:
+     - name: anm/fm/dc/p_ex020/EDC10903E.anb
+ - name: anm/fm/dc/p_ex020/EDC11102E.anb
+   method: copy
+   source:
+     - name: anm/fm/dc/p_ex020/EDC11102E.anb
+ - name: anm/fm/dc/p_ex020/EDC11106E.anb
+   method: copy
+   source:
+     - name: anm/fm/dc/p_ex020/EDC11106E.anb
+ - name: anm/fm/dc/p_ex020/EDC11107E.anb
+   method: copy
+   source:
+     - name: anm/fm/dc/p_ex020/EDC11107E.anb
+ - name: anm/fm/dc/p_ex020/EDC11110E.anb
+   method: copy
+   source:
+     - name: anm/fm/dc/p_ex020/EDC11110E.anb
+ - name: anm/fm/dc/p_ex020/EDC11111E.anb
+   method: copy
+   source:
+     - name: anm/fm/dc/p_ex020/EDC11111E.anb
+ - name: anm/fm/dc/p_ex020/EDC11114E.anb
+   method: copy
+   source:
+     - name: anm/fm/dc/p_ex020/EDC11114E.anb
+ - name: anm/fm/dc/p_ex020/EDC11115E.anb
+   method: copy
+   source:
+     - name: anm/fm/dc/p_ex020/EDC11115E.anb
+ - name: anm/fm/dc/p_ex020/EDC11116E.anb
+   method: copy
+   source:
+     - name: anm/fm/dc/p_ex020/EDC11116E.anb
+ - name: anm/fm/dc/p_ex020/EDC99901E.anb
+   method: copy
+   source:
+     - name: anm/fm/dc/p_ex020/EDC99901E.anb
+ - name: anm/fm/eh/p_ex020/EEH10201E.anb
+   method: copy
+   source:
+     - name: anm/fm/eh/p_ex020/EEH10201E.anb
+ - name: anm/fm/eh/p_ex020/EEH10501E.anb
+   method: copy
+   source:
+     - name: anm/fm/eh/p_ex020/EEH10501E.anb
+ - name: anm/fm/eh/p_ex020/EEH10901E.anb
+   method: copy
+   source:
+     - name: anm/fm/eh/p_ex020/EEH10901E.anb
+ - name: anm/fm/eh/p_ex020/EEH11103A.anb
+   method: copy
+   source:
+     - name: anm/fm/eh/p_ex020/EEH11103A.anb
+ - name: anm/fm/eh/p_ex020/EEH11313E.anb
+   method: copy
+   source:
+     - name: anm/fm/eh/p_ex020/EEH11313E.anb
+ - name: anm/fm/eh/p_ex020/EEH11314E.anb
+   method: copy
+   source:
+     - name: anm/fm/eh/p_ex020/EEH11314E.anb
+ - name: anm/fm/eh/p_ex020/EEH11403E.anb
+   method: copy
+   source:
+     - name: anm/fm/eh/p_ex020/EEH11403E.anb
+ - name: anm/fm/eh/p_ex020/EEH11605E.anb
+   method: copy
+   source:
+     - name: anm/fm/eh/p_ex020/EEH11605E.anb
+ - name: anm/fm/eh/p_ex020/EEH11611E.anb
+   method: copy
+   source:
+     - name: anm/fm/eh/p_ex020/EEH11611E.anb
+ - name: anm/fm/eh/p_ex020/EEH11626E.anb
+   method: copy
+   source:
+     - name: anm/fm/eh/p_ex020/EEH11626E.anb
+ - name: anm/fm/eh/p_ex020/EEH12105A.anb
+   method: copy
+   source:
+     - name: anm/fm/eh/p_ex020/EEH12105A.anb
+ - name: anm/fm/eh/p_ex020/EEH12422E.anb
+   method: copy
+   source:
+     - name: anm/fm/eh/p_ex020/EEH12422E.anb
+ - name: anm/fm/eh/p_ex020/EEH12601E.anb
+   method: copy
+   source:
+     - name: anm/fm/eh/p_ex020/EEH12601E.anb
+ - name: anm/fm/eh/p_ex020/EEH13503E.anb
+   method: copy
+   source:
+     - name: anm/fm/eh/p_ex020/EEH13503E.anb
+ - name: anm/fm/eh/p_ex020/EEH13504A.anb
+   method: copy
+   source:
+     - name: anm/fm/eh/p_ex020/EEH13504A.anb
+ - name: anm/fm/eh/p_ex020/EEH13601A.anb
+   method: copy
+   source:
+     - name: anm/fm/eh/p_ex020/EEH13601A.anb
+ - name: anm/fm/eh/p_ex020/EEH13605A.anb
+   method: copy
+   source:
+     - name: anm/fm/eh/p_ex020/EEH13605A.anb
+ - name: anm/fm/eh/p_ex020/EEH13617E.anb
+   method: copy
+   source:
+     - name: anm/fm/eh/p_ex020/EEH13617E.anb
+ - name: anm/fm/eh/p_ex020/EEH99903E.anb
+   method: copy
+   source:
+     - name: anm/fm/eh/p_ex020/EEH99903E.anb
+ - name: anm/fm/eh/p_ex020/EHH11313E.anb
+   method: copy
+   source:
+     - name: anm/fm/eh/p_ex020/EHH11313E.anb
+ - name: anm/fm/ex/p_ex020/EEX00001C.anb
+   method: copy
+   source:
+     - name: anm/fm/ex/p_ex020/EEX00001C.anb
+ - name: anm/fm/ex/p_ex020/EEX00002C.anb
+   method: copy
+   source:
+     - name: anm/fm/ex/p_ex020/EEX00002C.anb
+ - name: anm/fm/ex/p_ex020/EEX00003C.anb
+   method: copy
+   source:
+     - name: anm/fm/ex/p_ex020/EEX00003C.anb
+ - name: anm/fm/ex/p_ex020/EEX00004C.anb
+   method: copy
+   source:
+     - name: anm/fm/ex/p_ex020/EEX00004C.anb
+ - name: anm/fm/ex/p_ex020/EEX00005C.anb
+   method: copy
+   source:
+     - name: anm/fm/ex/p_ex020/EEX00005C.anb
+ - name: anm/fm/ex/p_ex020/EEX00006C.anb
+   method: copy
+   source:
+     - name: anm/fm/ex/p_ex020/EEX00006C.anb
+ - name: anm/fm/ex/p_ex020/EEX00007C.anb
+   method: copy
+   source:
+     - name: anm/fm/ex/p_ex020/EEX00007C.anb
+ - name: anm/fm/ex/p_ex020/EEX00008C.anb
+   method: copy
+   source:
+     - name: anm/fm/ex/p_ex020/EEX00008C.anb
+ - name: anm/fm/ex/p_ex020/EEX00009C.anb
+   method: copy
+   source:
+     - name: anm/fm/ex/p_ex020/EEX00009C.anb
+ - name: anm/fm/ex/p_ex020/EEX00010E.anb
+   method: copy
+   source:
+     - name: anm/fm/ex/p_ex020/EEX00010E.anb
+ - name: anm/fm/ex/p_ex020/EEX00011C.anb
+   method: copy
+   source:
+     - name: anm/fm/ex/p_ex020/EEX00011C.anb
+ - name: anm/fm/ex/p_ex020/EEX00012C.anb
+   method: copy
+   source:
+     - name: anm/fm/ex/p_ex020/EEX00012C.anb
+ - name: anm/fm/ex/p_ex020/EEX00013C.anb
+   method: copy
+   source:
+     - name: anm/fm/ex/p_ex020/EEX00013C.anb
+ - name: anm/fm/ex/p_ex020/EEX00014C.anb
+   method: copy
+   source:
+     - name: anm/fm/ex/p_ex020/EEX00014C.anb
+ - name: anm/fm/ex/p_ex020/EEX00015C.anb
+   method: copy
+   source:
+     - name: anm/fm/ex/p_ex020/EEX00015C.anb
+ - name: anm/fm/ex/p_ex020/EEX00016A.anb
+   method: copy
+   source:
+     - name: anm/fm/ex/p_ex020/EEX00016A.anb
+ - name: anm/fm/ex/p_ex020/EEX00017A.anb
+   method: copy
+   source:
+     - name: anm/fm/ex/p_ex020/EEX00017A.anb
+ - name: anm/fm/ex/p_ex020/EEX00018E.anb
+   method: copy
+   source:
+     - name: anm/fm/ex/p_ex020/EEX00018E.anb
+ - name: anm/fm/ex/p_ex020/EEX00019E.anb
+   method: copy
+   source:
+     - name: anm/fm/ex/p_ex020/EEX00019E.anb
+ - name: anm/fm/ex/p_ex020/EEX00020E.anb
+   method: copy
+   source:
+     - name: anm/fm/ex/p_ex020/EEX00020E.anb
+ - name: anm/fm/ex/p_ex020/EEX00021E.anb
+   method: copy
+   source:
+     - name: anm/fm/ex/p_ex020/EEX00021E.anb
+ - name: anm/fm/ex/p_ex020/EEX00022E.anb
+   method: copy
+   source:
+     - name: anm/fm/ex/p_ex020/EEX00022E.anb
+ - name: anm/fm/ex/p_ex020/EEX00023E.anb
+   method: copy
+   source:
+     - name: anm/fm/ex/p_ex020/EEX00023E.anb
+ - name: anm/fm/ex/p_ex020/EEX00024E.anb
+   method: copy
+   source:
+     - name: anm/fm/ex/p_ex020/EEX00024E.anb
+ - name: anm/fm/ex/p_ex020/EEX00025E.anb
+   method: copy
+   source:
+     - name: anm/fm/ex/p_ex020/EEX00025E.anb
+ - name: anm/fm/ex/p_ex020/EEX00026E.anb
+   method: copy
+   source:
+     - name: anm/fm/ex/p_ex020/EEX00026E.anb
+ - name: anm/fm/ex/p_ex020/EEX00027E.anb
+   method: copy
+   source:
+     - name: anm/fm/ex/p_ex020/EEX00027E.anb
+ - name: anm/fm/ex/p_ex020/EEX00028E.anb
+   method: copy
+   source:
+     - name: anm/fm/ex/p_ex020/EEX00028E.anb
+ - name: anm/fm/ex/p_ex020/EEX00030E.anb
+   method: copy
+   source:
+     - name: anm/fm/ex/p_ex020/EEX00030E.anb
+ - name: anm/fm/hb/p_ex020/EHB10505E.anb
+   method: copy
+   source:
+     - name: anm/fm/hb/p_ex020/EHB10505E.anb
+ - name: anm/fm/hb/p_ex020/EHB10602E.anb
+   method: copy
+   source:
+     - name: anm/fm/hb/p_ex020/EHB10602E.anb
+ - name: anm/fm/hb/p_ex020/EHB10604E.anb
+   method: copy
+   source:
+     - name: anm/fm/hb/p_ex020/EHB10604E.anb
+ - name: anm/fm/hb/p_ex020/EHB10605E.anb
+   method: copy
+   source:
+     - name: anm/fm/hb/p_ex020/EHB10605E.anb
+ - name: anm/fm/hb/p_ex020/EHB10613E.anb
+   method: copy
+   source:
+     - name: anm/fm/hb/p_ex020/EHB10613E.anb
+ - name: anm/fm/hb/p_ex020/EHB10701E.anb
+   method: copy
+   source:
+     - name: anm/fm/hb/p_ex020/EHB10701E.anb
+ - name: anm/fm/hb/p_ex020/EHB10702E.anb
+   method: copy
+   source:
+     - name: anm/fm/hb/p_ex020/EHB10702E.anb
+ - name: anm/fm/hb/p_ex020/EHB10803A.anb
+   method: copy
+   source:
+     - name: anm/fm/hb/p_ex020/EHB10803A.anb
+ - name: anm/fm/hb/p_ex020/EHB10804A.anb
+   method: copy
+   source:
+     - name: anm/fm/hb/p_ex020/EHB10804A.anb
+ - name: anm/fm/hb/p_ex020/EHB10806A.anb
+   method: copy
+   source:
+     - name: anm/fm/hb/p_ex020/EHB10806A.anb
+ - name: anm/fm/hb/p_ex020/EHB10807A.anb
+   method: copy
+   source:
+     - name: anm/fm/hb/p_ex020/EHB10807A.anb
+ - name: anm/fm/hb/p_ex020/EHB10808A.anb
+   method: copy
+   source:
+     - name: anm/fm/hb/p_ex020/EHB10808A.anb
+ - name: anm/fm/hb/p_ex020/EHB10809A.anb
+   method: copy
+   source:
+     - name: anm/fm/hb/p_ex020/EHB10809A.anb
+ - name: anm/fm/hb/p_ex020/EHB10810A.anb
+   method: copy
+   source:
+     - name: anm/fm/hb/p_ex020/EHB10810A.anb
+ - name: anm/fm/hb/p_ex020/EHB10811A.anb
+   method: copy
+   source:
+     - name: anm/fm/hb/p_ex020/EHB10811A.anb
+ - name: anm/fm/hb/p_ex020/EHB10812A.anb
+   method: copy
+   source:
+     - name: anm/fm/hb/p_ex020/EHB10812A.anb
+ - name: anm/fm/hb/p_ex020/EHB10820E.anb
+   method: copy
+   source:
+     - name: anm/fm/hb/p_ex020/EHB10820E.anb
+ - name: anm/fm/hb/p_ex020/EHB20502E.anb
+   method: copy
+   source:
+     - name: anm/fm/hb/p_ex020/EHB20502E.anb
+ - name: anm/fm/hb/p_ex020/EHB20701E.anb
+   method: copy
+   source:
+     - name: anm/fm/hb/p_ex020/EHB20701E.anb
+ - name: anm/fm/hb/p_ex020/EHB20801E.anb
+   method: copy
+   source:
+     - name: anm/fm/hb/p_ex020/EHB20801E.anb
+ - name: anm/fm/hb/p_ex020/EHB20804E.anb
+   method: copy
+   source:
+     - name: anm/fm/hb/p_ex020/EHB20804E.anb
+ - name: anm/fm/hb/p_ex020/EHB20805E.anb
+   method: copy
+   source:
+     - name: anm/fm/hb/p_ex020/EHB20805E.anb
+ - name: anm/fm/hb/p_ex020/EHB21004E.anb
+   method: copy
+   source:
+     - name: anm/fm/hb/p_ex020/EHB21004E.anb
+ - name: anm/fm/hb/p_ex020/EHB21005E.anb
+   method: copy
+   source:
+     - name: anm/fm/hb/p_ex020/EHB21005E.anb
+ - name: anm/fm/hb/p_ex020/EHB21006E.anb
+   method: copy
+   source:
+     - name: anm/fm/hb/p_ex020/EHB21006E.anb
+ - name: anm/fm/hb/p_ex020/EHB21007E.anb
+   method: copy
+   source:
+     - name: anm/fm/hb/p_ex020/EHB21007E.anb
+ - name: anm/fm/hb/p_ex020/EHB21008E.anb
+   method: copy
+   source:
+     - name: anm/fm/hb/p_ex020/EHB21008E.anb
+ - name: anm/fm/hb/p_ex020/EHB21009E.anb
+   method: copy
+   source:
+     - name: anm/fm/hb/p_ex020/EHB21009E.anb
+ - name: anm/fm/hb/p_ex020/EHB21010E.anb
+   method: copy
+   source:
+     - name: anm/fm/hb/p_ex020/EHB21010E.anb
+ - name: anm/fm/hb/p_ex020/EHB21011E.anb
+   method: copy
+   source:
+     - name: anm/fm/hb/p_ex020/EHB21011E.anb
+ - name: anm/fm/hb/p_ex020/EHB21012E.anb
+   method: copy
+   source:
+     - name: anm/fm/hb/p_ex020/EHB21012E.anb
+ - name: anm/fm/hb/p_ex020/EHB30101E.anb
+   method: copy
+   source:
+     - name: anm/fm/hb/p_ex020/EHB30101E.anb
+ - name: anm/fm/hb/p_ex020/EHB30102E.anb
+   method: copy
+   source:
+     - name: anm/fm/hb/p_ex020/EHB30102E.anb
+ - name: anm/fm/hb/p_ex020/EHB30301E.anb
+   method: copy
+   source:
+     - name: anm/fm/hb/p_ex020/EHB30301E.anb
+ - name: anm/fm/hb/p_ex020/EHB30305E.anb
+   method: copy
+   source:
+     - name: anm/fm/hb/p_ex020/EHB30305E.anb
+ - name: anm/fm/hb/p_ex020/EHB30306E.anb
+   method: copy
+   source:
+     - name: anm/fm/hb/p_ex020/EHB30306E.anb
+ - name: anm/fm/hb/p_ex020/EHB30307E.anb
+   method: copy
+   source:
+     - name: anm/fm/hb/p_ex020/EHB30307E.anb
+ - name: anm/fm/hb/p_ex020/EHB30308E.anb
+   method: copy
+   source:
+     - name: anm/fm/hb/p_ex020/EHB30308E.anb
+ - name: anm/fm/hb/p_ex020/EHB30309E.anb
+   method: copy
+   source:
+     - name: anm/fm/hb/p_ex020/EHB30309E.anb
+ - name: anm/fm/hb/p_ex020/EHB30310E.anb
+   method: copy
+   source:
+     - name: anm/fm/hb/p_ex020/EHB30310E.anb
+ - name: anm/fm/hb/p_ex020/EHB30311E.anb
+   method: copy
+   source:
+     - name: anm/fm/hb/p_ex020/EHB30311E.anb
+ - name: anm/fm/hb/p_ex020/EHB30313E.anb
+   method: copy
+   source:
+     - name: anm/fm/hb/p_ex020/EHB30313E.anb
+ - name: anm/fm/hb/p_ex020/EHB30314E.anb
+   method: copy
+   source:
+     - name: anm/fm/hb/p_ex020/EHB30314E.anb
+ - name: anm/fm/hb/p_ex020/EHB30315E.anb
+   method: copy
+   source:
+     - name: anm/fm/hb/p_ex020/EHB30315E.anb
+ - name: anm/fm/hb/p_ex020/EHB40101E.anb
+   method: copy
+   source:
+     - name: anm/fm/hb/p_ex020/EHB40101E.anb
+ - name: anm/fm/hb/p_ex020/EHB40203E.anb
+   method: copy
+   source:
+     - name: anm/fm/hb/p_ex020/EHB40203E.anb
+ - name: anm/fm/hb/p_ex020/EHB40204E.anb
+   method: copy
+   source:
+     - name: anm/fm/hb/p_ex020/EHB40204E.anb
+ - name: anm/fm/hb/p_ex020/EHB40206E.anb
+   method: copy
+   source:
+     - name: anm/fm/hb/p_ex020/EHB40206E.anb
+ - name: anm/fm/hb/p_ex020/EHB40501E.anb
+   method: copy
+   source:
+     - name: anm/fm/hb/p_ex020/EHB40501E.anb
+ - name: anm/fm/hb/p_ex020/EHB40502E.anb
+   method: copy
+   source:
+     - name: anm/fm/hb/p_ex020/EHB40502E.anb
+ - name: anm/fm/hb/p_ex020/EHB40601A.anb
+   method: copy
+   source:
+     - name: anm/fm/hb/p_ex020/EHB40601A.anb
+ - name: anm/fm/hb/p_ex020/EHB40602E.anb
+   method: copy
+   source:
+     - name: anm/fm/hb/p_ex020/EHB40602E.anb
+ - name: anm/fm/hb/p_ex020/EHB40701E.anb
+   method: copy
+   source:
+     - name: anm/fm/hb/p_ex020/EHB40701E.anb
+ - name: anm/fm/hb/p_ex020/EHB40901E.anb
+   method: copy
+   source:
+     - name: anm/fm/hb/p_ex020/EHB40901E.anb
+ - name: anm/fm/hb/p_ex020/EHB40902E.anb
+   method: copy
+   source:
+     - name: anm/fm/hb/p_ex020/EHB40902E.anb
+ - name: anm/fm/hb/p_ex020/EHB41002E.anb
+   method: copy
+   source:
+     - name: anm/fm/hb/p_ex020/EHB41002E.anb
+ - name: anm/fm/hb/p_ex020/EHB41003E.anb
+   method: copy
+   source:
+     - name: anm/fm/hb/p_ex020/EHB41003E.anb
+ - name: anm/fm/hb/p_ex020/EHB41004E.anb
+   method: copy
+   source:
+     - name: anm/fm/hb/p_ex020/EHB41004E.anb
+ - name: anm/fm/hb/p_ex020/EHB41005E.anb
+   method: copy
+   source:
+     - name: anm/fm/hb/p_ex020/EHB41005E.anb
+ - name: anm/fm/hb/p_ex020/EHB41006E.anb
+   method: copy
+   source:
+     - name: anm/fm/hb/p_ex020/EHB41006E.anb
+ - name: anm/fm/hb/p_ex020/EHB41007E.anb
+   method: copy
+   source:
+     - name: anm/fm/hb/p_ex020/EHB41007E.anb
+ - name: anm/fm/hb/p_ex020/EHB41008E.anb
+   method: copy
+   source:
+     - name: anm/fm/hb/p_ex020/EHB41008E.anb
+ - name: anm/fm/hb/p_ex020/EHB41009E.anb
+   method: copy
+   source:
+     - name: anm/fm/hb/p_ex020/EHB41009E.anb
+ - name: anm/fm/hb/p_ex020/EHB41010E.anb
+   method: copy
+   source:
+     - name: anm/fm/hb/p_ex020/EHB41010E.anb
+ - name: anm/fm/hb/p_ex020/EHB41101E.anb
+   method: copy
+   source:
+     - name: anm/fm/hb/p_ex020/EHB41101E.anb
+ - name: anm/fm/hb/p_ex020/EHB41102E.anb
+   method: copy
+   source:
+     - name: anm/fm/hb/p_ex020/EHB41102E.anb
+ - name: anm/fm/hb/p_ex020/EHB41201E.anb
+   method: copy
+   source:
+     - name: anm/fm/hb/p_ex020/EHB41201E.anb
+ - name: anm/fm/hb/p_ex020/EHB41203E.anb
+   method: copy
+   source:
+     - name: anm/fm/hb/p_ex020/EHB41203E.anb
+ - name: anm/fm/hb/p_ex020/EHB41204E.anb
+   method: copy
+   source:
+     - name: anm/fm/hb/p_ex020/EHB41204E.anb
+ - name: anm/fm/hb/p_ex020/EHB41205E.anb
+   method: copy
+   source:
+     - name: anm/fm/hb/p_ex020/EHB41205E.anb
+ - name: anm/fm/hb/p_ex020/EHB41210E.anb
+   method: copy
+   source:
+     - name: anm/fm/hb/p_ex020/EHB41210E.anb
+ - name: anm/fm/hb/p_ex020/EHB41211E.anb
+   method: copy
+   source:
+     - name: anm/fm/hb/p_ex020/EHB41211E.anb
+ - name: anm/fm/hb/p_ex020/EHB41212E.anb
+   method: copy
+   source:
+     - name: anm/fm/hb/p_ex020/EHB41212E.anb
+ - name: anm/fm/hb/p_ex020/EHB41301E.anb
+   method: copy
+   source:
+     - name: anm/fm/hb/p_ex020/EHB41301E.anb
+ - name: anm/fm/hb/p_ex020/EHB41304E.anb
+   method: copy
+   source:
+     - name: anm/fm/hb/p_ex020/EHB41304E.anb
+ - name: anm/fm/hb/p_ex020/EHB41305E.anb
+   method: copy
+   source:
+     - name: anm/fm/hb/p_ex020/EHB41305E.anb
+ - name: anm/fm/hb/p_ex020/EHB41307E.anb
+   method: copy
+   source:
+     - name: anm/fm/hb/p_ex020/EHB41307E.anb
+ - name: anm/fm/hb/p_ex020/EHB41308E.anb
+   method: copy
+   source:
+     - name: anm/fm/hb/p_ex020/EHB41308E.anb
+ - name: anm/fm/hb/p_ex020/EHB41401E.anb
+   method: copy
+   source:
+     - name: anm/fm/hb/p_ex020/EHB41401E.anb
+ - name: anm/fm/hb/p_ex020/EHB41601A.anb
+   method: copy
+   source:
+     - name: anm/fm/hb/p_ex020/EHB41601A.anb
+ - name: anm/fm/hb/p_ex020/EHB41703A.anb
+   method: copy
+   source:
+     - name: anm/fm/hb/p_ex020/EHB41703A.anb
+ - name: anm/fm/hb/p_ex020/EHB41718A.anb
+   method: copy
+   source:
+     - name: anm/fm/hb/p_ex020/EHB41718A.anb
+ - name: anm/fm/hb/p_ex020/EHB41723A.anb
+   method: copy
+   source:
+     - name: anm/fm/hb/p_ex020/EHB41723A.anb
+ - name: anm/fm/hb/p_ex020/EHB41901E.anb
+   method: copy
+   source:
+     - name: anm/fm/hb/p_ex020/EHB41901E.anb
+ - name: anm/fm/hb/p_ex020/EHB41902E.anb
+   method: copy
+   source:
+     - name: anm/fm/hb/p_ex020/EHB41902E.anb
+ - name: anm/fm/hb/p_ex020/EHB41907E.anb
+   method: copy
+   source:
+     - name: anm/fm/hb/p_ex020/EHB41907E.anb
+ - name: anm/fm/hb/p_ex020/EHB41909E.anb
+   method: copy
+   source:
+     - name: anm/fm/hb/p_ex020/EHB41909E.anb
+ - name: anm/fm/hb/p_ex020/EHB42001A.anb
+   method: copy
+   source:
+     - name: anm/fm/hb/p_ex020/EHB42001A.anb
+ - name: anm/fm/hb/p_ex020/EHB42002A.anb
+   method: copy
+   source:
+     - name: anm/fm/hb/p_ex020/EHB42002A.anb
+ - name: anm/fm/hb/p_ex020/EHB42003E.anb
+   method: copy
+   source:
+     - name: anm/fm/hb/p_ex020/EHB42003E.anb
+ - name: anm/fm/hb/p_ex020/EHB42004E.anb
+   method: copy
+   source:
+     - name: anm/fm/hb/p_ex020/EHB42004E.anb
+ - name: anm/fm/hb/p_ex020/EHB42005E.anb
+   method: copy
+   source:
+     - name: anm/fm/hb/p_ex020/EHB42005E.anb
+ - name: anm/fm/hb/p_ex020/EHB42006E.anb
+   method: copy
+   source:
+     - name: anm/fm/hb/p_ex020/EHB42006E.anb
+ - name: anm/fm/hb/p_ex020/EHB42201E.anb
+   method: copy
+   source:
+     - name: anm/fm/hb/p_ex020/EHB42201E.anb
+ - name: anm/fm/hb/p_ex020/EHB42204E.anb
+   method: copy
+   source:
+     - name: anm/fm/hb/p_ex020/EHB42204E.anb
+ - name: anm/fm/hb/p_ex020/EHB50401E.anb
+   method: copy
+   source:
+     - name: anm/fm/hb/p_ex020/EHB50401E.anb
+ - name: anm/fm/hb/p_ex020/EHB50407E.anb
+   method: copy
+   source:
+     - name: anm/fm/hb/p_ex020/EHB50407E.anb
+ - name: anm/fm/hb/p_ex020/EHB50408E.anb
+   method: copy
+   source:
+     - name: anm/fm/hb/p_ex020/EHB50408E.anb
+ - name: anm/fm/hb/p_ex020/EHB50409E.anb
+   method: copy
+   source:
+     - name: anm/fm/hb/p_ex020/EHB50409E.anb
+ - name: anm/fm/hb/p_ex020/EHB50410E.anb
+   method: copy
+   source:
+     - name: anm/fm/hb/p_ex020/EHB50410E.anb
+ - name: anm/fm/hb/p_ex020/EHB50411E.anb
+   method: copy
+   source:
+     - name: anm/fm/hb/p_ex020/EHB50411E.anb
+ - name: anm/fm/hb/p_ex020/EHB52001E.anb
+   method: copy
+   source:
+     - name: anm/fm/hb/p_ex020/EHB52001E.anb
+ - name: anm/fm/hb/p_ex020/EHB52002E.anb
+   method: copy
+   source:
+     - name: anm/fm/hb/p_ex020/EHB52002E.anb
+ - name: anm/fm/hb/p_ex020/EHB52003E.anb
+   method: copy
+   source:
+     - name: anm/fm/hb/p_ex020/EHB52003E.anb
+ - name: anm/fm/hb/p_ex020/EHB52004E.anb
+   method: copy
+   source:
+     - name: anm/fm/hb/p_ex020/EHB52004E.anb
+ - name: anm/fm/hb/p_ex020/EHB60102E.anb
+   method: copy
+   source:
+     - name: anm/fm/hb/p_ex020/EHB60102E.anb
+ - name: anm/fm/hb/p_ex020/EHB60103E.anb
+   method: copy
+   source:
+     - name: anm/fm/hb/p_ex020/EHB60103E.anb
+ - name: anm/fm/hb/p_ex020/EHB60701E.anb
+   method: copy
+   source:
+     - name: anm/fm/hb/p_ex020/EHB60701E.anb
+ - name: anm/fm/hb/p_ex020/EHB80201E.anb
+   method: copy
+   source:
+     - name: anm/fm/hb/p_ex020/EHB80201E.anb
+ - name: anm/fm/hb/p_ex020/EHB90204E.anb
+   method: copy
+   source:
+     - name: anm/fm/hb/p_ex020/EHB90204E.anb
+ - name: anm/fm/hb/p_ex020/EHB90205E.anb
+   method: copy
+   source:
+     - name: anm/fm/hb/p_ex020/EHB90205E.anb
+ - name: anm/fm/hb/p_ex020/EHB90206E.anb
+   method: copy
+   source:
+     - name: anm/fm/hb/p_ex020/EHB90206E.anb
+ - name: anm/fm/hb/p_ex020/EHB90207E.anb
+   method: copy
+   source:
+     - name: anm/fm/hb/p_ex020/EHB90207E.anb
+ - name: anm/fm/hb/p_ex020/EHB90208E.anb
+   method: copy
+   source:
+     - name: anm/fm/hb/p_ex020/EHB90208E.anb
+ - name: anm/fm/hb/p_ex020/EHB90301E.anb
+   method: copy
+   source:
+     - name: anm/fm/hb/p_ex020/EHB90301E.anb
+ - name: anm/fm/hb/p_ex020/EHB90501A.anb
+   method: copy
+   source:
+     - name: anm/fm/hb/p_ex020/EHB90501A.anb
+ - name: anm/fm/hb/p_ex020/EHB90502A.anb
+   method: copy
+   source:
+     - name: anm/fm/hb/p_ex020/EHB90502A.anb
+ - name: anm/fm/hb/p_ex020/EHB90604E.anb
+   method: copy
+   source:
+     - name: anm/fm/hb/p_ex020/EHB90604E.anb
+ - name: anm/fm/hb/p_ex020/EHB90605E.anb
+   method: copy
+   source:
+     - name: anm/fm/hb/p_ex020/EHB90605E.anb
+ - name: anm/fm/hb/p_ex020/EHB99101E.anb
+   method: copy
+   source:
+     - name: anm/fm/hb/p_ex020/EHB99101E.anb
+ - name: anm/fm/hb/p_ex020/EHB99102A.anb
+   method: copy
+   source:
+     - name: anm/fm/hb/p_ex020/EHB99102A.anb
+ - name: anm/fm/hb/p_ex020/EHB99103A.anb
+   method: copy
+   source:
+     - name: anm/fm/hb/p_ex020/EHB99103A.anb
+ - name: anm/fm/hb/p_ex020/ETR90501A.anb
+   method: copy
+   source:
+     - name: anm/fm/hb/p_ex020/ETR90501A.anb
+ - name: anm/fm/hb/p_ex020/ETR90502A.anb
+   method: copy
+   source:
+     - name: anm/fm/hb/p_ex020/ETR90502A.anb
+ - name: anm/fm/he/p_ex020/EHE10201E.anb
+   method: copy
+   source:
+     - name: anm/fm/he/p_ex020/EHE10201E.anb
+ - name: anm/fm/he/p_ex020/EHE10202E.anb
+   method: copy
+   source:
+     - name: anm/fm/he/p_ex020/EHE10202E.anb
+ - name: anm/fm/he/p_ex020/EHE10301E.anb
+   method: copy
+   source:
+     - name: anm/fm/he/p_ex020/EHE10301E.anb
+ - name: anm/fm/he/p_ex020/EHE10302E.anb
+   method: copy
+   source:
+     - name: anm/fm/he/p_ex020/EHE10302E.anb
+ - name: anm/fm/he/p_ex020/EHE10310E.anb
+   method: copy
+   source:
+     - name: anm/fm/he/p_ex020/EHE10310E.anb
+ - name: anm/fm/he/p_ex020/EHE10701E.anb
+   method: copy
+   source:
+     - name: anm/fm/he/p_ex020/EHE10701E.anb
+ - name: anm/fm/he/p_ex020/EHE11101A.anb
+   method: copy
+   source:
+     - name: anm/fm/he/p_ex020/EHE11101A.anb
+ - name: anm/fm/he/p_ex020/EHE11202E.anb
+   method: copy
+   source:
+     - name: anm/fm/he/p_ex020/EHE11202E.anb
+ - name: anm/fm/he/p_ex020/EHE11301E.anb
+   method: copy
+   source:
+     - name: anm/fm/he/p_ex020/EHE11301E.anb
+ - name: anm/fm/he/p_ex020/EHE11305E.anb
+   method: copy
+   source:
+     - name: anm/fm/he/p_ex020/EHE11305E.anb
+ - name: anm/fm/he/p_ex020/EHE11306E.anb
+   method: copy
+   source:
+     - name: anm/fm/he/p_ex020/EHE11306E.anb
+ - name: anm/fm/he/p_ex020/EHE11307E.anb
+   method: copy
+   source:
+     - name: anm/fm/he/p_ex020/EHE11307E.anb
+ - name: anm/fm/he/p_ex020/EHE11501E.anb
+   method: copy
+   source:
+     - name: anm/fm/he/p_ex020/EHE11501E.anb
+ - name: anm/fm/he/p_ex020/EHE11502E.anb
+   method: copy
+   source:
+     - name: anm/fm/he/p_ex020/EHE11502E.anb
+ - name: anm/fm/he/p_ex020/EHE11503E.anb
+   method: copy
+   source:
+     - name: anm/fm/he/p_ex020/EHE11503E.anb
+ - name: anm/fm/he/p_ex020/EHE11504E.anb
+   method: copy
+   source:
+     - name: anm/fm/he/p_ex020/EHE11504E.anb
+ - name: anm/fm/he/p_ex020/EHE11505E.anb
+   method: copy
+   source:
+     - name: anm/fm/he/p_ex020/EHE11505E.anb
+ - name: anm/fm/he/p_ex020/EHE11601E.anb
+   method: copy
+   source:
+     - name: anm/fm/he/p_ex020/EHE11601E.anb
+ - name: anm/fm/he/p_ex020/EHE11602E.anb
+   method: copy
+   source:
+     - name: anm/fm/he/p_ex020/EHE11602E.anb
+ - name: anm/fm/he/p_ex020/EHE11603E.anb
+   method: copy
+   source:
+     - name: anm/fm/he/p_ex020/EHE11603E.anb
+ - name: anm/fm/he/p_ex020/EHE11604E.anb
+   method: copy
+   source:
+     - name: anm/fm/he/p_ex020/EHE11604E.anb
+ - name: anm/fm/he/p_ex020/EHE12201E.anb
+   method: copy
+   source:
+     - name: anm/fm/he/p_ex020/EHE12201E.anb
+ - name: anm/fm/he/p_ex020/EHE12210E.anb
+   method: copy
+   source:
+     - name: anm/fm/he/p_ex020/EHE12210E.anb
+ - name: anm/fm/he/p_ex020/EHE12211E.anb
+   method: copy
+   source:
+     - name: anm/fm/he/p_ex020/EHE12211E.anb
+ - name: anm/fm/he/p_ex020/EHE12302E.anb
+   method: copy
+   source:
+     - name: anm/fm/he/p_ex020/EHE12302E.anb
+ - name: anm/fm/he/p_ex020/EHE12303E.anb
+   method: copy
+   source:
+     - name: anm/fm/he/p_ex020/EHE12303E.anb
+ - name: anm/fm/he/p_ex020/EHE12304E.anb
+   method: copy
+   source:
+     - name: anm/fm/he/p_ex020/EHE12304E.anb
+ - name: anm/fm/he/p_ex020/EHE12501E.anb
+   method: copy
+   source:
+     - name: anm/fm/he/p_ex020/EHE12501E.anb
+ - name: anm/fm/he/p_ex020/EHE12508E.anb
+   method: copy
+   source:
+     - name: anm/fm/he/p_ex020/EHE12508E.anb
+ - name: anm/fm/he/p_ex020/EHE12509E.anb
+   method: copy
+   source:
+     - name: anm/fm/he/p_ex020/EHE12509E.anb
+ - name: anm/fm/he/p_ex020/EHE13001E.anb
+   method: copy
+   source:
+     - name: anm/fm/he/p_ex020/EHE13001E.anb
+ - name: anm/fm/he/p_ex020/EHE13002E.anb
+   method: copy
+   source:
+     - name: anm/fm/he/p_ex020/EHE13002E.anb
+ - name: anm/fm/he/p_ex020/EHE13201A.anb
+   method: copy
+   source:
+     - name: anm/fm/he/p_ex020/EHE13201A.anb
+ - name: anm/fm/he/p_ex020/EHE13201E.anb
+   method: copy
+   source:
+     - name: anm/fm/he/p_ex020/EHE13201E.anb
+ - name: anm/fm/he/p_ex020/EHE13202E.anb
+   method: copy
+   source:
+     - name: anm/fm/he/p_ex020/EHE13202E.anb
+ - name: anm/fm/he/p_ex020/EHE13301A.anb
+   method: copy
+   source:
+     - name: anm/fm/he/p_ex020/EHE13301A.anb
+ - name: anm/fm/he/p_ex020/EHE13401E.anb
+   method: copy
+   source:
+     - name: anm/fm/he/p_ex020/EHE13401E.anb
+ - name: anm/fm/he/p_ex020/EHE13901E.anb
+   method: copy
+   source:
+     - name: anm/fm/he/p_ex020/EHE13901E.anb
+ - name: anm/fm/he/p_ex020/EHE14001E.anb
+   method: copy
+   source:
+     - name: anm/fm/he/p_ex020/EHE14001E.anb
+ - name: anm/fm/he/p_ex020/EHE20801E.anb
+   method: copy
+   source:
+     - name: anm/fm/he/p_ex020/EHE20801E.anb
+ - name: anm/fm/he/p_ex020/EHE20802E.anb
+   method: copy
+   source:
+     - name: anm/fm/he/p_ex020/EHE20802E.anb
+ - name: anm/fm/he/p_ex020/EHE20804E.anb
+   method: copy
+   source:
+     - name: anm/fm/he/p_ex020/EHE20804E.anb
+ - name: anm/fm/he/p_ex020/EHE21101E.anb
+   method: copy
+   source:
+     - name: anm/fm/he/p_ex020/EHE21101E.anb
+ - name: anm/fm/he/p_ex020/EHE21201A.anb
+   method: copy
+   source:
+     - name: anm/fm/he/p_ex020/EHE21201A.anb
+ - name: anm/fm/he/p_ex020/EHE21201E.anb
+   method: copy
+   source:
+     - name: anm/fm/he/p_ex020/EHE21201E.anb
+ - name: anm/fm/he/p_ex020/EHE21301E.anb
+   method: copy
+   source:
+     - name: anm/fm/he/p_ex020/EHE21301E.anb
+ - name: anm/fm/he/p_ex020/EHE21302E.anb
+   method: copy
+   source:
+     - name: anm/fm/he/p_ex020/EHE21302E.anb
+ - name: anm/fm/he/p_ex020/EHE21304E.anb
+   method: copy
+   source:
+     - name: anm/fm/he/p_ex020/EHE21304E.anb
+ - name: anm/fm/he/p_ex020/EHE21306E.anb
+   method: copy
+   source:
+     - name: anm/fm/he/p_ex020/EHE21306E.anb
+ - name: anm/fm/he/p_ex020/EHE21401A.anb
+   method: copy
+   source:
+     - name: anm/fm/he/p_ex020/EHE21401A.anb
+ - name: anm/fm/he/p_ex020/EHE21402E.anb
+   method: copy
+   source:
+     - name: anm/fm/he/p_ex020/EHE21402E.anb
+ - name: anm/fm/he/p_ex020/EHE21602E.anb
+   method: copy
+   source:
+     - name: anm/fm/he/p_ex020/EHE21602E.anb
+ - name: anm/fm/he/p_ex020/EHE21701E.anb
+   method: copy
+   source:
+     - name: anm/fm/he/p_ex020/EHE21701E.anb
+ - name: anm/fm/he/p_ex020/EHE21702E.anb
+   method: copy
+   source:
+     - name: anm/fm/he/p_ex020/EHE21702E.anb
+ - name: anm/fm/he/p_ex020/EHE21703E.anb
+   method: copy
+   source:
+     - name: anm/fm/he/p_ex020/EHE21703E.anb
+ - name: anm/fm/he/p_ex020/EHE21704E.anb
+   method: copy
+   source:
+     - name: anm/fm/he/p_ex020/EHE21704E.anb
+ - name: anm/fm/he/p_ex020/EHE21705E.anb
+   method: copy
+   source:
+     - name: anm/fm/he/p_ex020/EHE21705E.anb
+ - name: anm/fm/he/p_ex020/EHE21706E.anb
+   method: copy
+   source:
+     - name: anm/fm/he/p_ex020/EHE21706E.anb
+ - name: anm/fm/he/p_ex020/EHE21707E.anb
+   method: copy
+   source:
+     - name: anm/fm/he/p_ex020/EHE21707E.anb
+ - name: anm/fm/he/p_ex020/EHE21710E.anb
+   method: copy
+   source:
+     - name: anm/fm/he/p_ex020/EHE21710E.anb
+ - name: anm/fm/he/p_ex020/EHE30101E.anb
+   method: copy
+   source:
+     - name: anm/fm/he/p_ex020/EHE30101E.anb
+ - name: anm/fm/he/p_ex020/EHE30102E.anb
+   method: copy
+   source:
+     - name: anm/fm/he/p_ex020/EHE30102E.anb
+ - name: anm/fm/he/p_ex020/EHE30301E.anb
+   method: copy
+   source:
+     - name: anm/fm/he/p_ex020/EHE30301E.anb
+ - name: anm/fm/lk/p_lk020/ELK00001E.anb
+   method: copy
+   source:
+     - name: anm/fm/lk/p_lk020/ELK00001E.anb
+ - name: anm/fm/lk/p_lk020/ELK00002E.anb
+   method: copy
+   source:
+     - name: anm/fm/lk/p_lk020/ELK00002E.anb
+ - name: anm/fm/lk/p_lk020/ELK00003E.anb
+   method: copy
+   source:
+     - name: anm/fm/lk/p_lk020/ELK00003E.anb
+ - name: anm/fm/lk/p_lk020/ELK00004E.anb
+   method: copy
+   source:
+     - name: anm/fm/lk/p_lk020/ELK00004E.anb
+ - name: anm/fm/lk/p_lk020/ELK00005E.anb
+   method: copy
+   source:
+     - name: anm/fm/lk/p_lk020/ELK00005E.anb
+ - name: anm/fm/lk/p_lk020/ELK00006E.anb
+   method: copy
+   source:
+     - name: anm/fm/lk/p_lk020/ELK00006E.anb
+ - name: anm/fm/lk/p_lk020/ELK00007E.anb
+   method: copy
+   source:
+     - name: anm/fm/lk/p_lk020/ELK00007E.anb
+ - name: anm/fm/lk/p_lk020/ELK00008E.anb
+   method: copy
+   source:
+     - name: anm/fm/lk/p_lk020/ELK00008E.anb
+ - name: anm/fm/lk/p_lk020/ELK00009E.anb
+   method: copy
+   source:
+     - name: anm/fm/lk/p_lk020/ELK00009E.anb
+ - name: anm/fm/lk/p_lk020/ELK00010E.anb
+   method: copy
+   source:
+     - name: anm/fm/lk/p_lk020/ELK00010E.anb
+ - name: anm/fm/lk/p_lk020/ELK00011E.anb
+   method: copy
+   source:
+     - name: anm/fm/lk/p_lk020/ELK00011E.anb
+ - name: anm/fm/lk/p_lk020/ELK00014E.anb
+   method: copy
+   source:
+     - name: anm/fm/lk/p_lk020/ELK00014E.anb
+ - name: anm/fm/lk/p_lk020/ELK00016C.anb
+   method: copy
+   source:
+     - name: anm/fm/lk/p_lk020/ELK00016C.anb
+ - name: anm/fm/lk/p_lk020/ELK10301E.anb
+   method: copy
+   source:
+     - name: anm/fm/lk/p_lk020/ELK10301E.anb
+ - name: anm/fm/lk/p_lk020/ELK10304E.anb
+   method: copy
+   source:
+     - name: anm/fm/lk/p_lk020/ELK10304E.anb
+ - name: anm/fm/lk/p_lk020/ELK10305E.anb
+   method: copy
+   source:
+     - name: anm/fm/lk/p_lk020/ELK10305E.anb
+ - name: anm/fm/lk/p_lk020/ELK10309E.anb
+   method: copy
+   source:
+     - name: anm/fm/lk/p_lk020/ELK10309E.anb
+ - name: anm/fm/lk/p_lk020/ELK10501E.anb
+   method: copy
+   source:
+     - name: anm/fm/lk/p_lk020/ELK10501E.anb
+ - name: anm/fm/lk/p_lk020/ELK10706E.anb
+   method: copy
+   source:
+     - name: anm/fm/lk/p_lk020/ELK10706E.anb
+ - name: anm/fm/lk/p_lk020/ELK11502E.anb
+   method: copy
+   source:
+     - name: anm/fm/lk/p_lk020/ELK11502E.anb
+ - name: anm/fm/lk/p_lk020/ELK12101E.anb
+   method: copy
+   source:
+     - name: anm/fm/lk/p_lk020/ELK12101E.anb
+ - name: anm/fm/lk/p_lk020/ELK12102E.anb
+   method: copy
+   source:
+     - name: anm/fm/lk/p_lk020/ELK12102E.anb
+ - name: anm/fm/lk/p_lk020/ELK12301E.anb
+   method: copy
+   source:
+     - name: anm/fm/lk/p_lk020/ELK12301E.anb
+ - name: anm/fm/lk/p_lk020/ELK20101E.anb
+   method: copy
+   source:
+     - name: anm/fm/lk/p_lk020/ELK20101E.anb
+ - name: anm/fm/lk/p_lk020/ELK20201E.anb
+   method: copy
+   source:
+     - name: anm/fm/lk/p_lk020/ELK20201E.anb
+ - name: anm/fm/lk/p_lk020/ELK20401E.anb
+   method: copy
+   source:
+     - name: anm/fm/lk/p_lk020/ELK20401E.anb
+ - name: anm/fm/lk/p_lk020/ELK21102E.anb
+   method: copy
+   source:
+     - name: anm/fm/lk/p_lk020/ELK21102E.anb
+ - name: anm/fm/lk/p_lk020/ELK21105E.anb
+   method: copy
+   source:
+     - name: anm/fm/lk/p_lk020/ELK21105E.anb
+ - name: anm/fm/mu/p_ex020/EMU10102E.anb
+   method: copy
+   source:
+     - name: anm/fm/mu/p_ex020/EMU10102E.anb
+ - name: anm/fm/mu/p_ex020/EMU10103E.anb
+   method: copy
+   source:
+     - name: anm/fm/mu/p_ex020/EMU10103E.anb
+ - name: anm/fm/mu/p_ex020/EMU10110E.anb
+   method: copy
+   source:
+     - name: anm/fm/mu/p_ex020/EMU10110E.anb
+ - name: anm/fm/mu/p_ex020/EMU10112E.anb
+   method: copy
+   source:
+     - name: anm/fm/mu/p_ex020/EMU10112E.anb
+ - name: anm/fm/mu/p_ex020/EMU10113E.anb
+   method: copy
+   source:
+     - name: anm/fm/mu/p_ex020/EMU10113E.anb
+ - name: anm/fm/mu/p_ex020/EMU10114E.anb
+   method: copy
+   source:
+     - name: anm/fm/mu/p_ex020/EMU10114E.anb
+ - name: anm/fm/mu/p_ex020/EMU10302E.anb
+   method: copy
+   source:
+     - name: anm/fm/mu/p_ex020/EMU10302E.anb
+ - name: anm/fm/mu/p_ex020/EMU10303E.anb
+   method: copy
+   source:
+     - name: anm/fm/mu/p_ex020/EMU10303E.anb
+ - name: anm/fm/mu/p_ex020/EMU10304E.anb
+   method: copy
+   source:
+     - name: anm/fm/mu/p_ex020/EMU10304E.anb
+ - name: anm/fm/mu/p_ex020/EMU10305E.anb
+   method: copy
+   source:
+     - name: anm/fm/mu/p_ex020/EMU10305E.anb
+ - name: anm/fm/mu/p_ex020/EMU10306E.anb
+   method: copy
+   source:
+     - name: anm/fm/mu/p_ex020/EMU10306E.anb
+ - name: anm/fm/mu/p_ex020/EMU10307E.anb
+   method: copy
+   source:
+     - name: anm/fm/mu/p_ex020/EMU10307E.anb
+ - name: anm/fm/mu/p_ex020/EMU10308E.anb
+   method: copy
+   source:
+     - name: anm/fm/mu/p_ex020/EMU10308E.anb
+ - name: anm/fm/mu/p_ex020/EMU10311E.anb
+   method: copy
+   source:
+     - name: anm/fm/mu/p_ex020/EMU10311E.anb
+ - name: anm/fm/mu/p_ex020/EMU10312E.anb
+   method: copy
+   source:
+     - name: anm/fm/mu/p_ex020/EMU10312E.anb
+ - name: anm/fm/mu/p_ex020/EMU10901E.anb
+   method: copy
+   source:
+     - name: anm/fm/mu/p_ex020/EMU10901E.anb
+ - name: anm/fm/mu/p_ex020/EMU11101E.anb
+   method: copy
+   source:
+     - name: anm/fm/mu/p_ex020/EMU11101E.anb
+ - name: anm/fm/mu/p_ex020/EMU11301E.anb
+   method: copy
+   source:
+     - name: anm/fm/mu/p_ex020/EMU11301E.anb
+ - name: anm/fm/mu/p_ex020/EMU11305E.anb
+   method: copy
+   source:
+     - name: anm/fm/mu/p_ex020/EMU11305E.anb
+ - name: anm/fm/mu/p_ex020/EMU11306E.anb
+   method: copy
+   source:
+     - name: anm/fm/mu/p_ex020/EMU11306E.anb
+ - name: anm/fm/mu/p_ex020/EMU11501E.anb
+   method: copy
+   source:
+     - name: anm/fm/mu/p_ex020/EMU11501E.anb
+ - name: anm/fm/mu/p_ex020/EMU11502E.anb
+   method: copy
+   source:
+     - name: anm/fm/mu/p_ex020/EMU11502E.anb
+ - name: anm/fm/mu/p_ex020/EMU11801E.anb
+   method: copy
+   source:
+     - name: anm/fm/mu/p_ex020/EMU11801E.anb
+ - name: anm/fm/mu/p_ex020/EMU11802E.anb
+   method: copy
+   source:
+     - name: anm/fm/mu/p_ex020/EMU11802E.anb
+ - name: anm/fm/mu/p_ex020/EMU11803E.anb
+   method: copy
+   source:
+     - name: anm/fm/mu/p_ex020/EMU11803E.anb
+ - name: anm/fm/mu/p_ex020/EMU11892E.anb
+   method: copy
+   source:
+     - name: anm/fm/mu/p_ex020/EMU11892E.anb
+ - name: anm/fm/mu/p_ex020/EMU20101E.anb
+   method: copy
+   source:
+     - name: anm/fm/mu/p_ex020/EMU20101E.anb
+ - name: anm/fm/mu/p_ex020/EMU20102E.anb
+   method: copy
+   source:
+     - name: anm/fm/mu/p_ex020/EMU20102E.anb
+ - name: anm/fm/mu/p_ex020/EMU20301E.anb
+   method: copy
+   source:
+     - name: anm/fm/mu/p_ex020/EMU20301E.anb
+ - name: anm/fm/mu/p_ex020/EMU20302E.anb
+   method: copy
+   source:
+     - name: anm/fm/mu/p_ex020/EMU20302E.anb
+ - name: anm/fm/mu/p_ex020/EMU20401E.anb
+   method: copy
+   source:
+     - name: anm/fm/mu/p_ex020/EMU20401E.anb
+ - name: anm/fm/mu/p_ex020/EMU20402E.anb
+   method: copy
+   source:
+     - name: anm/fm/mu/p_ex020/EMU20402E.anb
+ - name: anm/fm/mu/p_ex020/EMU20403E.anb
+   method: copy
+   source:
+     - name: anm/fm/mu/p_ex020/EMU20403E.anb
+ - name: anm/fm/mu/p_ex020/EMU20404E.anb
+   method: copy
+   source:
+     - name: anm/fm/mu/p_ex020/EMU20404E.anb
+ - name: anm/fm/mu/p_ex020/EMU20503A.anb
+   method: copy
+   source:
+     - name: anm/fm/mu/p_ex020/EMU20503A.anb
+ - name: anm/fm/mu/p_ex020/EMU20901E.anb
+   method: copy
+   source:
+     - name: anm/fm/mu/p_ex020/EMU20901E.anb
+ - name: anm/fm/mu/p_ex020/EMU20902E.anb
+   method: copy
+   source:
+     - name: anm/fm/mu/p_ex020/EMU20902E.anb
+ - name: anm/fm/mu/p_ex020/EMU20903E.anb
+   method: copy
+   source:
+     - name: anm/fm/mu/p_ex020/EMU20903E.anb
+ - name: anm/fm/mu/p_ex020/EMU21001E.anb
+   method: copy
+   source:
+     - name: anm/fm/mu/p_ex020/EMU21001E.anb
+ - name: anm/fm/mu/p_ex020/EMU21002A.anb
+   method: copy
+   source:
+     - name: anm/fm/mu/p_ex020/EMU21002A.anb
+ - name: anm/fm/mu/p_ex020/EMU21402A.anb
+   method: copy
+   source:
+     - name: anm/fm/mu/p_ex020/EMU21402A.anb
+ - name: anm/fm/mu/p_ex020/EMU21405A.anb
+   method: copy
+   source:
+     - name: anm/fm/mu/p_ex020/EMU21405A.anb
+ - name: anm/fm/mu/p_ex020/EMU21501E.anb
+   method: copy
+   source:
+     - name: anm/fm/mu/p_ex020/EMU21501E.anb
+ - name: anm/fm/mu/p_ex020/EMU21601E.anb
+   method: copy
+   source:
+     - name: anm/fm/mu/p_ex020/EMU21601E.anb
+ - name: anm/fm/mu/p_ex020/EMU21602E.anb
+   method: copy
+   source:
+     - name: anm/fm/mu/p_ex020/EMU21602E.anb
+ - name: anm/fm/mu/p_ex020/EMU21603E.anb
+   method: copy
+   source:
+     - name: anm/fm/mu/p_ex020/EMU21603E.anb
+ - name: anm/fm/mu/p_ex020/EMU21604E.anb
+   method: copy
+   source:
+     - name: anm/fm/mu/p_ex020/EMU21604E.anb
+ - name: anm/fm/mu/p_ex020/EMU21606E.anb
+   method: copy
+   source:
+     - name: anm/fm/mu/p_ex020/EMU21606E.anb
+ - name: anm/fm/mu/p_ex020/EMU21691E.anb
+   method: copy
+   source:
+     - name: anm/fm/mu/p_ex020/EMU21691E.anb
+ - name: anm/fm/nm/p_ex020/ENM10201E.anb
+   method: copy
+   source:
+     - name: anm/fm/nm/p_ex020/ENM10201E.anb
+ - name: anm/fm/nm/p_ex020/ENM10203E.anb
+   method: copy
+   source:
+     - name: anm/fm/nm/p_ex020/ENM10203E.anb
+ - name: anm/fm/nm/p_ex020/ENM10301E.anb
+   method: copy
+   source:
+     - name: anm/fm/nm/p_ex020/ENM10301E.anb
+ - name: anm/fm/nm/p_ex020/ENM10303E.anb
+   method: copy
+   source:
+     - name: anm/fm/nm/p_ex020/ENM10303E.anb
+ - name: anm/fm/nm/p_ex020/ENM10306E.anb
+   method: copy
+   source:
+     - name: anm/fm/nm/p_ex020/ENM10306E.anb
+ - name: anm/fm/nm/p_ex020/ENM10308E.anb
+   method: copy
+   source:
+     - name: anm/fm/nm/p_ex020/ENM10308E.anb
+ - name: anm/fm/nm/p_ex020/ENM10310E.anb
+   method: copy
+   source:
+     - name: anm/fm/nm/p_ex020/ENM10310E.anb
+ - name: anm/fm/nm/p_ex020/ENM10407E.anb
+   method: copy
+   source:
+     - name: anm/fm/nm/p_ex020/ENM10407E.anb
+ - name: anm/fm/nm/p_ex020/ENM10410E.anb
+   method: copy
+   source:
+     - name: anm/fm/nm/p_ex020/ENM10410E.anb
+ - name: anm/fm/nm/p_ex020/ENM10501E.anb
+   method: copy
+   source:
+     - name: anm/fm/nm/p_ex020/ENM10501E.anb
+ - name: anm/fm/nm/p_ex020/ENM10901E.anb
+   method: copy
+   source:
+     - name: anm/fm/nm/p_ex020/ENM10901E.anb
+ - name: anm/fm/nm/p_ex020/ENM10904E.anb
+   method: copy
+   source:
+     - name: anm/fm/nm/p_ex020/ENM10904E.anb
+ - name: anm/fm/nm/p_ex020/ENM11002E.anb
+   method: copy
+   source:
+     - name: anm/fm/nm/p_ex020/ENM11002E.anb
+ - name: anm/fm/nm/p_ex020/ENM11004E.anb
+   method: copy
+   source:
+     - name: anm/fm/nm/p_ex020/ENM11004E.anb
+ - name: anm/fm/nm/p_ex020/ENM11005E.anb
+   method: copy
+   source:
+     - name: anm/fm/nm/p_ex020/ENM11005E.anb
+ - name: anm/fm/nm/p_ex020/ENM11302E.anb
+   method: copy
+   source:
+     - name: anm/fm/nm/p_ex020/ENM11302E.anb
+ - name: anm/fm/nm/p_ex020/ENM11303E.anb
+   method: copy
+   source:
+     - name: anm/fm/nm/p_ex020/ENM11303E.anb
+ - name: anm/fm/nm/p_ex020/ENM11304E.anb
+   method: copy
+   source:
+     - name: anm/fm/nm/p_ex020/ENM11304E.anb
+ - name: anm/fm/nm/p_ex020/ENM11501E.anb
+   method: copy
+   source:
+     - name: anm/fm/nm/p_ex020/ENM11501E.anb
+ - name: anm/fm/nm/p_ex020/ENM12411A.anb
+   method: copy
+   source:
+     - name: anm/fm/nm/p_ex020/ENM12411A.anb
+ - name: anm/fm/nm/p_ex020/ENM12411E.anb
+   method: copy
+   source:
+     - name: anm/fm/nm/p_ex020/ENM12411E.anb
+ - name: anm/fm/nm/p_ex020/ENM12412A.anb
+   method: copy
+   source:
+     - name: anm/fm/nm/p_ex020/ENM12412A.anb
+ - name: anm/fm/nm/p_ex020/ENM12413A.anb
+   method: copy
+   source:
+     - name: anm/fm/nm/p_ex020/ENM12413A.anb
+ - name: anm/fm/nm/p_ex020/ENM12414A.anb
+   method: copy
+   source:
+     - name: anm/fm/nm/p_ex020/ENM12414A.anb
+ - name: anm/fm/nm/p_ex020/ENM12501E.anb
+   method: copy
+   source:
+     - name: anm/fm/nm/p_ex020/ENM12501E.anb
+ - name: anm/fm/nm/p_ex020/ENM12601E.anb
+   method: copy
+   source:
+     - name: anm/fm/nm/p_ex020/ENM12601E.anb
+ - name: anm/fm/nm/p_ex020/ENM20301E.anb
+   method: copy
+   source:
+     - name: anm/fm/nm/p_ex020/ENM20301E.anb
+ - name: anm/fm/nm/p_ex020/ENM20302E.anb
+   method: copy
+   source:
+     - name: anm/fm/nm/p_ex020/ENM20302E.anb
+ - name: anm/fm/nm/p_ex020/ENM20307E.anb
+   method: copy
+   source:
+     - name: anm/fm/nm/p_ex020/ENM20307E.anb
+ - name: anm/fm/nm/p_ex020/ENM20502E.anb
+   method: copy
+   source:
+     - name: anm/fm/nm/p_ex020/ENM20502E.anb
+ - name: anm/fm/nm/p_ex020/ENM20601E.anb
+   method: copy
+   source:
+     - name: anm/fm/nm/p_ex020/ENM20601E.anb
+ - name: anm/fm/nm/p_ex020/ENM21201E.anb
+   method: copy
+   source:
+     - name: anm/fm/nm/p_ex020/ENM21201E.anb
+ - name: anm/fm/nm/p_ex020/ENM21504E.anb
+   method: copy
+   source:
+     - name: anm/fm/nm/p_ex020/ENM21504E.anb
+ - name: anm/fm/nm/p_ex020/ENM21701E.anb
+   method: copy
+   source:
+     - name: anm/fm/nm/p_ex020/ENM21701E.anb
+ - name: anm/fm/nm/p_ex020/ENM21702E.anb
+   method: copy
+   source:
+     - name: anm/fm/nm/p_ex020/ENM21702E.anb
+ - name: anm/fm/tr/p_ex020/ETR10101E.anb
+   method: copy
+   source:
+     - name: anm/fm/tr/p_ex020/ETR10101E.anb
+ - name: anm/fm/tr/p_ex020/ETR10102E.anb
+   method: copy
+   source:
+     - name: anm/fm/tr/p_ex020/ETR10102E.anb
+ - name: anm/fm/tr/p_ex020/ETR10201E.anb
+   method: copy
+   source:
+     - name: anm/fm/tr/p_ex020/ETR10201E.anb
+ - name: anm/fm/tr/p_ex020/ETR10203E.anb
+   method: copy
+   source:
+     - name: anm/fm/tr/p_ex020/ETR10203E.anb
+ - name: anm/fm/tr/p_ex020/ETR10204E.anb
+   method: copy
+   source:
+     - name: anm/fm/tr/p_ex020/ETR10204E.anb
+ - name: anm/fm/tr/p_ex020/ETR10205E.anb
+   method: copy
+   source:
+     - name: anm/fm/tr/p_ex020/ETR10205E.anb
+ - name: anm/fm/tr/p_ex020/ETR10207E.anb
+   method: copy
+   source:
+     - name: anm/fm/tr/p_ex020/ETR10207E.anb
+ - name: anm/fm/tr/p_ex020/ETR10208E.anb
+   method: copy
+   source:
+     - name: anm/fm/tr/p_ex020/ETR10208E.anb
+ - name: anm/fm/tr/p_ex020/ETR10209E.anb
+   method: copy
+   source:
+     - name: anm/fm/tr/p_ex020/ETR10209E.anb
+ - name: anm/fm/tr/p_ex020/ETR10210E.anb
+   method: copy
+   source:
+     - name: anm/fm/tr/p_ex020/ETR10210E.anb
+ - name: anm/fm/tr/p_ex020/ETR10401E.anb
+   method: copy
+   source:
+     - name: anm/fm/tr/p_ex020/ETR10401E.anb
+ - name: anm/fm/tr/p_ex020/ETR11001E.anb
+   method: copy
+   source:
+     - name: anm/fm/tr/p_ex020/ETR11001E.anb
+ - name: anm/fm/tr/p_ex020/ETR11002E.anb
+   method: copy
+   source:
+     - name: anm/fm/tr/p_ex020/ETR11002E.anb
+ - name: anm/fm/tr/p_ex020/ETR11204E.anb
+   method: copy
+   source:
+     - name: anm/fm/tr/p_ex020/ETR11204E.anb
+ - name: anm/fm/tr/p_ex020/ETR20601E.anb
+   method: copy
+   source:
+     - name: anm/fm/tr/p_ex020/ETR20601E.anb
+ - name: anm/fm/tr/p_ex020/ETR20801E.anb
+   method: copy
+   source:
+     - name: anm/fm/tr/p_ex020/ETR20801E.anb
+ - name: anm/fm/tr/p_ex020/ETR20802A.anb
+   method: copy
+   source:
+     - name: anm/fm/tr/p_ex020/ETR20802A.anb
+ - name: anm/fm/tr/p_ex020/ETR20802E.anb
+   method: copy
+   source:
+     - name: anm/fm/tr/p_ex020/ETR20802E.anb
+ - name: anm/fm/tr/p_ex020/ETR21204E.anb
+   method: copy
+   source:
+     - name: anm/fm/tr/p_ex020/ETR21204E.anb
+ - name: anm/fm/tr/p_ex020/ETR21214E.anb
+   method: copy
+   source:
+     - name: anm/fm/tr/p_ex020/ETR21214E.anb
+ - name: anm/fm/tr/p_ex020/ETR21215E.anb
+   method: copy
+   source:
+     - name: anm/fm/tr/p_ex020/ETR21215E.anb
+ - name: anm/fm/tr/p_ex020/ETR21216E.anb
+   method: copy
+   source:
+     - name: anm/fm/tr/p_ex020/ETR21216E.anb
+ - name: anm/fm/tr/p_ex020/ETR21217E.anb
+   method: copy
+   source:
+     - name: anm/fm/tr/p_ex020/ETR21217E.anb
+ - name: anm/fm/tt/p_ex020/ETT00101E.anb
+   method: copy
+   source:
+     - name: anm/fm/tt/p_ex020/ETT00101E.anb
+ - name: anm/fm/tt/p_ex020/ETT01103A.anb
+   method: copy
+   source:
+     - name: anm/fm/tt/p_ex020/ETT01103A.anb
+ - name: anm/fm/tt/p_ex020/ETT09104E.anb
+   method: copy
+   source:
+     - name: anm/fm/tt/p_ex020/ETT09104E.anb
+ - name: anm/fm/tt/p_ex020/ETT61601E.anb
+   method: copy
+   source:
+     - name: anm/fm/tt/p_ex020/ETT61601E.anb
+ - name: anm/fm/tt/p_ex020/ETT70201E.anb
+   method: copy
+   source:
+     - name: anm/fm/tt/p_ex020/ETT70201E.anb
+ - name: anm/fm/tt/p_ex020/ETT70202E.anb
+   method: copy
+   source:
+     - name: anm/fm/tt/p_ex020/ETT70202E.anb
+ - name: anm/fm/tt/p_ex020/ETT70205E.anb
+   method: copy
+   source:
+     - name: anm/fm/tt/p_ex020/ETT70205E.anb
+ - name: anm/fm/tt/p_ex020/ETT70206E.anb
+   method: copy
+   source:
+     - name: anm/fm/tt/p_ex020/ETT70206E.anb
+ - name: anm/fm/tt/p_ex020/ETT70211E.anb
+   method: copy
+   source:
+     - name: anm/fm/tt/p_ex020/ETT70211E.anb
+ - name: anm/fm/tt/p_ex020/ETT70212E.anb
+   method: copy
+   source:
+     - name: anm/fm/tt/p_ex020/ETT70212E.anb
+ - name: anm/fm/tt/p_ex020/ETT70501E.anb
+   method: copy
+   source:
+     - name: anm/fm/tt/p_ex020/ETT70501E.anb
+ - name: anm/fm/tt/p_ex020/ETT70504E.anb
+   method: copy
+   source:
+     - name: anm/fm/tt/p_ex020/ETT70504E.anb
+ - name: anm/fm/tt/p_ex020/ETT70505E.anb
+   method: copy
+   source:
+     - name: anm/fm/tt/p_ex020/ETT70505E.anb
+ - name: anm/fm/tt/p_ex020/ETT70701A.anb
+   method: copy
+   source:
+     - name: anm/fm/tt/p_ex020/ETT70701A.anb
+ - name: anm/fm/tt/p_ex020/ETT70702A.anb
+   method: copy
+   source:
+     - name: anm/fm/tt/p_ex020/ETT70702A.anb
+ - name: anm/fm/tt/p_ex020/ETT70711E.anb
+   method: copy
+   source:
+     - name: anm/fm/tt/p_ex020/ETT70711E.anb
+ - name: anm/fm/tt/p_ex020/ETT70712E.anb
+   method: copy
+   source:
+     - name: anm/fm/tt/p_ex020/ETT70712E.anb
+ - name: anm/fm/tt/p_ex020/ETT70713E.anb
+   method: copy
+   source:
+     - name: anm/fm/tt/p_ex020/ETT70713E.anb
+ - name: anm/fm/tt/p_ex020/ETT70716E.anb
+   method: copy
+   source:
+     - name: anm/fm/tt/p_ex020/ETT70716E.anb
+ - name: anm/fm/tt/p_ex020/ETT70717E.anb
+   method: copy
+   source:
+     - name: anm/fm/tt/p_ex020/ETT70717E.anb
+ - name: anm/fm/tt/p_ex020/ETT70720E.anb
+   method: copy
+   source:
+     - name: anm/fm/tt/p_ex020/ETT70720E.anb
+ - name: anm/fm/tt/p_ex020/ETT71001E.anb
+   method: copy
+   source:
+     - name: anm/fm/tt/p_ex020/ETT71001E.anb
+ - name: anm/fm/tt/p_ex020/ETT71101E.anb
+   method: copy
+   source:
+     - name: anm/fm/tt/p_ex020/ETT71101E.anb
+ - name: anm/fm/tt/p_ex020/ETT71102E.anb
+   method: copy
+   source:
+     - name: anm/fm/tt/p_ex020/ETT71102E.anb
+ - name: anm/fm/tt/p_ex020/ETT80201E.anb
+   method: copy
+   source:
+     - name: anm/fm/tt/p_ex020/ETT80201E.anb
+ - name: anm/fm/tt/p_ex020/ETT80210E.anb
+   method: copy
+   source:
+     - name: anm/fm/tt/p_ex020/ETT80210E.anb
+ - name: anm/fm/tt/p_ex020/ETT80211E.anb
+   method: copy
+   source:
+     - name: anm/fm/tt/p_ex020/ETT80211E.anb
+ - name: anm/fm/tt/p_ex020/ETT80302E.anb
+   method: copy
+   source:
+     - name: anm/fm/tt/p_ex020/ETT80302E.anb
+ - name: anm/fm/tt/p_ex020/ETT80501E.anb
+   method: copy
+   source:
+     - name: anm/fm/tt/p_ex020/ETT80501E.anb
+ - name: anm/fm/tt/p_ex020/ETT80502E.anb
+   method: copy
+   source:
+     - name: anm/fm/tt/p_ex020/ETT80502E.anb
+ - name: anm/fm/tt/p_ex020/ETT80503E.anb
+   method: copy
+   source:
+     - name: anm/fm/tt/p_ex020/ETT80503E.anb
+ - name: anm/fm/tt/p_ex020/ETT80603E.anb
+   method: copy
+   source:
+     - name: anm/fm/tt/p_ex020/ETT80603E.anb
+ - name: anm/fm/tt/p_ex020/ETT80604E.anb
+   method: copy
+   source:
+     - name: anm/fm/tt/p_ex020/ETT80604E.anb
+ - name: anm/fm/tt/p_ex020/ETT80606E.anb
+   method: copy
+   source:
+     - name: anm/fm/tt/p_ex020/ETT80606E.anb
+ - name: anm/fm/tt/p_ex020/ETT80610E.anb
+   method: copy
+   source:
+     - name: anm/fm/tt/p_ex020/ETT80610E.anb
+ - name: anm/fm/tt/p_ex020/ETT80902E.anb
+   method: copy
+   source:
+     - name: anm/fm/tt/p_ex020/ETT80902E.anb
+ - name: anm/fm/tt/p_ex020/ETT90401E.anb
+   method: copy
+   source:
+     - name: anm/fm/tt/p_ex020/ETT90401E.anb
+ - name: anm/fm/tt/p_ex020/ETT90701E.anb
+   method: copy
+   source:
+     - name: anm/fm/tt/p_ex020/ETT90701E.anb
+ - name: anm/fm/tt/w_ex020/ETT01103A.anb
+   method: copy
+   source:
+     - name: anm/fm/tt/w_ex020/ETT01103A.anb
+ - name: anm/fm/tt/w_ex020/ETT70701A.anb
+   method: copy
+   source:
+     - name: anm/fm/tt/w_ex020/ETT70701A.anb
+ - name: anm/fm/tt/w_ex020/ETT70702A.anb
+   method: copy
+   source:
+     - name: anm/fm/tt/w_ex020/ETT70702A.anb
+ - name: anm/fm/wi/p_ex020/EWI10101E.anb
+   method: copy
+   source:
+     - name: anm/fm/wi/p_ex020/EWI10101E.anb
+ - name: anm/fm/wi/p_ex020/EWI10104E.anb
+   method: copy
+   source:
+     - name: anm/fm/wi/p_ex020/EWI10104E.anb
+ - name: anm/fm/wi/p_ex020/EWI11601E.anb
+   method: copy
+   source:
+     - name: anm/fm/wi/p_ex020/EWI11601E.anb
+ - name: anm/fm/wi/p_ex020/EWI11801E.anb
+   method: copy
+   source:
+     - name: anm/fm/wi/p_ex020/EWI11801E.anb
+ - name: anm/fm/wi/p_ex020/EWI11901E.anb
+   method: copy
+   source:
+     - name: anm/fm/wi/p_ex020/EWI11901E.anb
+ - name: anm/fm/wi/p_ex020/EWI11902A.anb
+   method: copy
+   source:
+     - name: anm/fm/wi/p_ex020/EWI11902A.anb
+ - name: anm/fm/wi/p_ex020/EWI12001E.anb
+   method: copy
+   source:
+     - name: anm/fm/wi/p_ex020/EWI12001E.anb
+ - name: anm/fm/wi/p_ex020/EWI12005E.anb
+   method: copy
+   source:
+     - name: anm/fm/wi/p_ex020/EWI12005E.anb
+ - name: anm/fm/wi/p_ex020/EWI12102E.anb
+   method: copy
+   source:
+     - name: anm/fm/wi/p_ex020/EWI12102E.anb
+ - name: anm/fm/wi/p_ex020/EWI12202E.anb
+   method: copy
+   source:
+     - name: anm/fm/wi/p_ex020/EWI12202E.anb
+ - name: anm/fm/wi/p_ex020/EWI12203E.anb
+   method: copy
+   source:
+     - name: anm/fm/wi/p_ex020/EWI12203E.anb
+ - name: anm/fm/wi/p_ex020/EWI12204E.anb
+   method: copy
+   source:
+     - name: anm/fm/wi/p_ex020/EWI12204E.anb
+ - name: anm/us/al/p_ex020/EAL10102E.anb
+   method: copy
+   source:
+     - name: anm/us/al/p_ex020/EAL10102E.anb
+ - name: anm/us/al/p_ex020/EAL10103A.anb
+   method: copy
+   source:
+     - name: anm/us/al/p_ex020/EAL10103A.anb
+ - name: anm/us/al/p_ex020/EAL10103E.anb
+   method: copy
+   source:
+     - name: anm/us/al/p_ex020/EAL10103E.anb
+ - name: anm/us/al/p_ex020/EAL10105E.anb
+   method: copy
+   source:
+     - name: anm/us/al/p_ex020/EAL10105E.anb
+ - name: anm/us/al/p_ex020/EAL10107E.anb
+   method: copy
+   source:
+     - name: anm/us/al/p_ex020/EAL10107E.anb
+ - name: anm/us/al/p_ex020/EAL10110E.anb
+   method: copy
+   source:
+     - name: anm/us/al/p_ex020/EAL10110E.anb
+ - name: anm/us/al/p_ex020/EAL10113E.anb
+   method: copy
+   source:
+     - name: anm/us/al/p_ex020/EAL10113E.anb
+ - name: anm/us/al/p_ex020/EAL10301E.anb
+   method: copy
+   source:
+     - name: anm/us/al/p_ex020/EAL10301E.anb
+ - name: anm/us/al/p_ex020/EAL10403E.anb
+   method: copy
+   source:
+     - name: anm/us/al/p_ex020/EAL10403E.anb
+ - name: anm/us/al/p_ex020/EAL10409A.anb
+   method: copy
+   source:
+     - name: anm/us/al/p_ex020/EAL10409A.anb
+ - name: anm/us/al/p_ex020/EAL10409E.anb
+   method: copy
+   source:
+     - name: anm/us/al/p_ex020/EAL10409E.anb
+ - name: anm/us/al/p_ex020/EAL10417E.anb
+   method: copy
+   source:
+     - name: anm/us/al/p_ex020/EAL10417E.anb
+ - name: anm/us/al/p_ex020/EAL10421E.anb
+   method: copy
+   source:
+     - name: anm/us/al/p_ex020/EAL10421E.anb
+ - name: anm/us/al/p_ex020/EAL10501E.anb
+   method: copy
+   source:
+     - name: anm/us/al/p_ex020/EAL10501E.anb
+ - name: anm/us/al/p_ex020/EAL10502E.anb
+   method: copy
+   source:
+     - name: anm/us/al/p_ex020/EAL10502E.anb
+ - name: anm/us/al/p_ex020/EAL10503E.anb
+   method: copy
+   source:
+     - name: anm/us/al/p_ex020/EAL10503E.anb
+ - name: anm/us/al/p_ex020/EAL10609E.anb
+   method: copy
+   source:
+     - name: anm/us/al/p_ex020/EAL10609E.anb
+ - name: anm/us/al/p_ex020/EAL10615E.anb
+   method: copy
+   source:
+     - name: anm/us/al/p_ex020/EAL10615E.anb
+ - name: anm/us/al/p_ex020/EAL10704E.anb
+   method: copy
+   source:
+     - name: anm/us/al/p_ex020/EAL10704E.anb
+ - name: anm/us/al/p_ex020/EAL10709E.anb
+   method: copy
+   source:
+     - name: anm/us/al/p_ex020/EAL10709E.anb
+ - name: anm/us/al/p_ex020/EAL10802E.anb
+   method: copy
+   source:
+     - name: anm/us/al/p_ex020/EAL10802E.anb
+ - name: anm/us/al/p_ex020/EAL11003E.anb
+   method: copy
+   source:
+     - name: anm/us/al/p_ex020/EAL11003E.anb
+ - name: anm/us/al/p_ex020/EAL11004E.anb
+   method: copy
+   source:
+     - name: anm/us/al/p_ex020/EAL11004E.anb
+ - name: anm/us/al/p_ex020/EAL11005E.anb
+   method: copy
+   source:
+     - name: anm/us/al/p_ex020/EAL11005E.anb
+ - name: anm/us/al/p_ex020/EAL11006E.anb
+   method: copy
+   source:
+     - name: anm/us/al/p_ex020/EAL11006E.anb
+ - name: anm/us/al/p_ex020/EAL11009E.anb
+   method: copy
+   source:
+     - name: anm/us/al/p_ex020/EAL11009E.anb
+ - name: anm/us/al/p_ex020/EAL11010E.anb
+   method: copy
+   source:
+     - name: anm/us/al/p_ex020/EAL11010E.anb
+ - name: anm/us/al/p_ex020/EAL11201E.anb
+   method: copy
+   source:
+     - name: anm/us/al/p_ex020/EAL11201E.anb
+ - name: anm/us/al/p_ex020/EAL11407E.anb
+   method: copy
+   source:
+     - name: anm/us/al/p_ex020/EAL11407E.anb
+ - name: anm/us/al/p_ex020/EAL11418E.anb
+   method: copy
+   source:
+     - name: anm/us/al/p_ex020/EAL11418E.anb
+ - name: anm/us/al/p_ex020/EAL11705E.anb
+   method: copy
+   source:
+     - name: anm/us/al/p_ex020/EAL11705E.anb
+ - name: anm/us/al/p_ex020/EAL11710E.anb
+   method: copy
+   source:
+     - name: anm/us/al/p_ex020/EAL11710E.anb
+ - name: anm/us/al/p_ex020/EAL11711E.anb
+   method: copy
+   source:
+     - name: anm/us/al/p_ex020/EAL11711E.anb
+ - name: anm/us/al/p_ex020/EAL11712E.anb
+   method: copy
+   source:
+     - name: anm/us/al/p_ex020/EAL11712E.anb
+ - name: anm/us/al/p_ex020/EAL11713E.anb
+   method: copy
+   source:
+     - name: anm/us/al/p_ex020/EAL11713E.anb
+ - name: anm/us/al/p_ex020/EAL11714E.anb
+   method: copy
+   source:
+     - name: anm/us/al/p_ex020/EAL11714E.anb
+ - name: anm/us/al/p_ex020/EAL11715E.anb
+   method: copy
+   source:
+     - name: anm/us/al/p_ex020/EAL11715E.anb
+ - name: anm/us/al/p_ex020/EAL11716E.anb
+   method: copy
+   source:
+     - name: anm/us/al/p_ex020/EAL11716E.anb
+ - name: anm/us/al/p_ex020/EAL20201E.anb
+   method: copy
+   source:
+     - name: anm/us/al/p_ex020/EAL20201E.anb
+ - name: anm/us/al/p_ex020/EAL20214E.anb
+   method: copy
+   source:
+     - name: anm/us/al/p_ex020/EAL20214E.anb
+ - name: anm/us/al/p_ex020/EAL20306E.anb
+   method: copy
+   source:
+     - name: anm/us/al/p_ex020/EAL20306E.anb
+ - name: anm/us/al/p_ex020/EAL20310E.anb
+   method: copy
+   source:
+     - name: anm/us/al/p_ex020/EAL20310E.anb
+ - name: anm/us/al/p_ex020/EAL20501E.anb
+   method: copy
+   source:
+     - name: anm/us/al/p_ex020/EAL20501E.anb
+ - name: anm/us/al/p_ex020/EAL20506E.anb
+   method: copy
+   source:
+     - name: anm/us/al/p_ex020/EAL20506E.anb
+ - name: anm/us/al/p_ex020/EAL20710E.anb
+   method: copy
+   source:
+     - name: anm/us/al/p_ex020/EAL20710E.anb
+ - name: anm/us/al/p_ex020/EAL20904E.anb
+   method: copy
+   source:
+     - name: anm/us/al/p_ex020/EAL20904E.anb
+ - name: anm/us/al/p_ex020/EAL21003E.anb
+   method: copy
+   source:
+     - name: anm/us/al/p_ex020/EAL21003E.anb
+ - name: anm/us/al/p_ex020/EAL21008E.anb
+   method: copy
+   source:
+     - name: anm/us/al/p_ex020/EAL21008E.anb
+ - name: anm/us/al/p_ex020/EAL21011E.anb
+   method: copy
+   source:
+     - name: anm/us/al/p_ex020/EAL21011E.anb
+ - name: anm/us/al/p_ex020/EAL21013E.anb
+   method: copy
+   source:
+     - name: anm/us/al/p_ex020/EAL21013E.anb
+ - name: anm/us/bb/p_ex020/EBB10101E.anb
+   method: copy
+   source:
+     - name: anm/us/bb/p_ex020/EBB10101E.anb
+ - name: anm/us/bb/p_ex020/EBB10102E.anb
+   method: copy
+   source:
+     - name: anm/us/bb/p_ex020/EBB10102E.anb
+ - name: anm/us/bb/p_ex020/EBB10103E.anb
+   method: copy
+   source:
+     - name: anm/us/bb/p_ex020/EBB10103E.anb
+ - name: anm/us/bb/p_ex020/EBB10201E.anb
+   method: copy
+   source:
+     - name: anm/us/bb/p_ex020/EBB10201E.anb
+ - name: anm/us/bb/p_ex020/EBB10202E.anb
+   method: copy
+   source:
+     - name: anm/us/bb/p_ex020/EBB10202E.anb
+ - name: anm/us/bb/p_ex020/EBB10203E.anb
+   method: copy
+   source:
+     - name: anm/us/bb/p_ex020/EBB10203E.anb
+ - name: anm/us/bb/p_ex020/EBB10204A.anb
+   method: copy
+   source:
+     - name: anm/us/bb/p_ex020/EBB10204A.anb
+ - name: anm/us/bb/p_ex020/EBB10205A.anb
+   method: copy
+   source:
+     - name: anm/us/bb/p_ex020/EBB10205A.anb
+ - name: anm/us/bb/p_ex020/EBB10301R.anb
+   method: copy
+   source:
+     - name: anm/us/bb/p_ex020/EBB10301R.anb
+ - name: anm/us/bb/p_ex020/EBB10302R.anb
+   method: copy
+   source:
+     - name: anm/us/bb/p_ex020/EBB10302R.anb
+ - name: anm/us/bb/p_ex020/EBB10303E.anb
+   method: copy
+   source:
+     - name: anm/us/bb/p_ex020/EBB10303E.anb
+ - name: anm/us/bb/p_ex020/EBB10304E.anb
+   method: copy
+   source:
+     - name: anm/us/bb/p_ex020/EBB10304E.anb
+ - name: anm/us/bb/p_ex020/EBB10305E.anb
+   method: copy
+   source:
+     - name: anm/us/bb/p_ex020/EBB10305E.anb
+ - name: anm/us/bb/p_ex020/EBB10306E.anb
+   method: copy
+   source:
+     - name: anm/us/bb/p_ex020/EBB10306E.anb
+ - name: anm/us/bb/p_ex020/EBB10401E.anb
+   method: copy
+   source:
+     - name: anm/us/bb/p_ex020/EBB10401E.anb
+ - name: anm/us/bb/p_ex020/EBB10402E.anb
+   method: copy
+   source:
+     - name: anm/us/bb/p_ex020/EBB10402E.anb
+ - name: anm/us/bb/p_ex020/EBB10403E.anb
+   method: copy
+   source:
+     - name: anm/us/bb/p_ex020/EBB10403E.anb
+ - name: anm/us/bb/p_ex020/EBB10404E.anb
+   method: copy
+   source:
+     - name: anm/us/bb/p_ex020/EBB10404E.anb
+ - name: anm/us/bb/p_ex020/EBB10405E.anb
+   method: copy
+   source:
+     - name: anm/us/bb/p_ex020/EBB10405E.anb
+ - name: anm/us/bb/p_ex020/EBB10406E.anb
+   method: copy
+   source:
+     - name: anm/us/bb/p_ex020/EBB10406E.anb
+ - name: anm/us/bb/p_ex020/EBB10407E.anb
+   method: copy
+   source:
+     - name: anm/us/bb/p_ex020/EBB10407E.anb
+ - name: anm/us/bb/p_ex020/EBB10601E.anb
+   method: copy
+   source:
+     - name: anm/us/bb/p_ex020/EBB10601E.anb
+ - name: anm/us/bb/p_ex020/EBB10701E.anb
+   method: copy
+   source:
+     - name: anm/us/bb/p_ex020/EBB10701E.anb
+ - name: anm/us/bb/p_ex020/EBB10801E.anb
+   method: copy
+   source:
+     - name: anm/us/bb/p_ex020/EBB10801E.anb
+ - name: anm/us/bb/p_ex020/EBB10803E.anb
+   method: copy
+   source:
+     - name: anm/us/bb/p_ex020/EBB10803E.anb
+ - name: anm/us/bb/p_ex020/EBB11001E.anb
+   method: copy
+   source:
+     - name: anm/us/bb/p_ex020/EBB11001E.anb
+ - name: anm/us/bb/p_ex020/EBB11002E.anb
+   method: copy
+   source:
+     - name: anm/us/bb/p_ex020/EBB11002E.anb
+ - name: anm/us/bb/p_ex020/EBB11003E.anb
+   method: copy
+   source:
+     - name: anm/us/bb/p_ex020/EBB11003E.anb
+ - name: anm/us/bb/p_ex020/EBB11004E.anb
+   method: copy
+   source:
+     - name: anm/us/bb/p_ex020/EBB11004E.anb
+ - name: anm/us/bb/p_ex020/EBB11005E.anb
+   method: copy
+   source:
+     - name: anm/us/bb/p_ex020/EBB11005E.anb
+ - name: anm/us/bb/p_ex020/EBB11006E.anb
+   method: copy
+   source:
+     - name: anm/us/bb/p_ex020/EBB11006E.anb
+ - name: anm/us/bb/p_ex020/EBB11007E.anb
+   method: copy
+   source:
+     - name: anm/us/bb/p_ex020/EBB11007E.anb
+ - name: anm/us/bb/p_ex020/EBB11008E.anb
+   method: copy
+   source:
+     - name: anm/us/bb/p_ex020/EBB11008E.anb
+ - name: anm/us/bb/p_ex020/EBB11009E.anb
+   method: copy
+   source:
+     - name: anm/us/bb/p_ex020/EBB11009E.anb
+ - name: anm/us/bb/p_ex020/EBB11010E.anb
+   method: copy
+   source:
+     - name: anm/us/bb/p_ex020/EBB11010E.anb
+ - name: anm/us/bb/p_ex020/EBB11401E.anb
+   method: copy
+   source:
+     - name: anm/us/bb/p_ex020/EBB11401E.anb
+ - name: anm/us/bb/p_ex020/EBB11402E.anb
+   method: copy
+   source:
+     - name: anm/us/bb/p_ex020/EBB11402E.anb
+ - name: anm/us/bb/p_ex020/EBB11501E.anb
+   method: copy
+   source:
+     - name: anm/us/bb/p_ex020/EBB11501E.anb
+ - name: anm/us/bb/p_ex020/EBB11502E.anb
+   method: copy
+   source:
+     - name: anm/us/bb/p_ex020/EBB11502E.anb
+ - name: anm/us/bb/p_ex020/EBB11601E.anb
+   method: copy
+   source:
+     - name: anm/us/bb/p_ex020/EBB11601E.anb
+ - name: anm/us/bb/p_ex020/EBB11801E.anb
+   method: copy
+   source:
+     - name: anm/us/bb/p_ex020/EBB11801E.anb
+ - name: anm/us/bb/p_ex020/EBB11901A.anb
+   method: copy
+   source:
+     - name: anm/us/bb/p_ex020/EBB11901A.anb
+ - name: anm/us/bb/p_ex020/EBB11902E.anb
+   method: copy
+   source:
+     - name: anm/us/bb/p_ex020/EBB11902E.anb
+ - name: anm/us/bb/p_ex020/EBB12101E.anb
+   method: copy
+   source:
+     - name: anm/us/bb/p_ex020/EBB12101E.anb
+ - name: anm/us/bb/p_ex020/EBB12102E.anb
+   method: copy
+   source:
+     - name: anm/us/bb/p_ex020/EBB12102E.anb
+ - name: anm/us/bb/p_ex020/EBB20402E.anb
+   method: copy
+   source:
+     - name: anm/us/bb/p_ex020/EBB20402E.anb
+ - name: anm/us/bb/p_ex020/EBB20501A.anb
+   method: copy
+   source:
+     - name: anm/us/bb/p_ex020/EBB20501A.anb
+ - name: anm/us/bb/p_ex020/EBB21001E.anb
+   method: copy
+   source:
+     - name: anm/us/bb/p_ex020/EBB21001E.anb
+ - name: anm/us/bb/p_ex020/EBB21201E.anb
+   method: copy
+   source:
+     - name: anm/us/bb/p_ex020/EBB21201E.anb
+ - name: anm/us/bb/p_ex020/EBB21301E.anb
+   method: copy
+   source:
+     - name: anm/us/bb/p_ex020/EBB21301E.anb
+ - name: anm/us/bb/p_ex020/EBB21601E.anb
+   method: copy
+   source:
+     - name: anm/us/bb/p_ex020/EBB21601E.anb
+ - name: anm/us/bb/p_ex020/EBB21602E.anb
+   method: copy
+   source:
+     - name: anm/us/bb/p_ex020/EBB21602E.anb
+ - name: anm/us/bb/p_ex020/EBB21603E.anb
+   method: copy
+   source:
+     - name: anm/us/bb/p_ex020/EBB21603E.anb
+ - name: anm/us/ca/p_ex020/ECA10103E.anb
+   method: copy
+   source:
+     - name: anm/us/ca/p_ex020/ECA10103E.anb
+ - name: anm/us/ca/p_ex020/ECA10501A.anb
+   method: copy
+   source:
+     - name: anm/us/ca/p_ex020/ECA10501A.anb
+ - name: anm/us/ca/p_ex020/ECA10701E.anb
+   method: copy
+   source:
+     - name: anm/us/ca/p_ex020/ECA10701E.anb
+ - name: anm/us/ca/p_ex020/ECA10702E.anb
+   method: copy
+   source:
+     - name: anm/us/ca/p_ex020/ECA10702E.anb
+ - name: anm/us/ca/p_ex020/ECA10703E.anb
+   method: copy
+   source:
+     - name: anm/us/ca/p_ex020/ECA10703E.anb
+ - name: anm/us/ca/p_ex020/ECA10706E.anb
+   method: copy
+   source:
+     - name: anm/us/ca/p_ex020/ECA10706E.anb
+ - name: anm/us/ca/p_ex020/ECA11901E.anb
+   method: copy
+   source:
+     - name: anm/us/ca/p_ex020/ECA11901E.anb
+ - name: anm/us/ca/p_ex020/ECA11902E.anb
+   method: copy
+   source:
+     - name: anm/us/ca/p_ex020/ECA11902E.anb
+ - name: anm/us/ca/p_ex020/ECA11903E.anb
+   method: copy
+   source:
+     - name: anm/us/ca/p_ex020/ECA11903E.anb
+ - name: anm/us/ca/p_ex020/ECA12001E.anb
+   method: copy
+   source:
+     - name: anm/us/ca/p_ex020/ECA12001E.anb
+ - name: anm/us/ca/p_ex020/ECA12002E.anb
+   method: copy
+   source:
+     - name: anm/us/ca/p_ex020/ECA12002E.anb
+ - name: anm/us/ca/p_ex020/ECA12111E.anb
+   method: copy
+   source:
+     - name: anm/us/ca/p_ex020/ECA12111E.anb
+ - name: anm/us/ca/p_ex020/ECA12112E.anb
+   method: copy
+   source:
+     - name: anm/us/ca/p_ex020/ECA12112E.anb
+ - name: anm/us/ca/p_ex020/ECA12113E.anb
+   method: copy
+   source:
+     - name: anm/us/ca/p_ex020/ECA12113E.anb
+ - name: anm/us/ca/p_ex020/ECA12301E.anb
+   method: copy
+   source:
+     - name: anm/us/ca/p_ex020/ECA12301E.anb
+ - name: anm/us/ca/p_ex020/ECA12302A.anb
+   method: copy
+   source:
+     - name: anm/us/ca/p_ex020/ECA12302A.anb
+ - name: anm/us/ca/p_ex020/ECA12303E.anb
+   method: copy
+   source:
+     - name: anm/us/ca/p_ex020/ECA12303E.anb
+ - name: anm/us/ca/p_ex020/ECA12304E.anb
+   method: copy
+   source:
+     - name: anm/us/ca/p_ex020/ECA12304E.anb
+ - name: anm/us/ca/p_ex020/ECA12504E.anb
+   method: copy
+   source:
+     - name: anm/us/ca/p_ex020/ECA12504E.anb
+ - name: anm/us/ca/p_ex020/ECA12505E.anb
+   method: copy
+   source:
+     - name: anm/us/ca/p_ex020/ECA12505E.anb
+ - name: anm/us/ca/p_ex020/ECA20801E.anb
+   method: copy
+   source:
+     - name: anm/us/ca/p_ex020/ECA20801E.anb
+ - name: anm/us/ca/p_ex020/ECA20803E.anb
+   method: copy
+   source:
+     - name: anm/us/ca/p_ex020/ECA20803E.anb
+ - name: anm/us/ca/p_ex020/ECA20804A.anb
+   method: copy
+   source:
+     - name: anm/us/ca/p_ex020/ECA20804A.anb
+ - name: anm/us/ca/p_ex020/ECA20903E.anb
+   method: copy
+   source:
+     - name: anm/us/ca/p_ex020/ECA20903E.anb
+ - name: anm/us/ca/p_ex020/ECA21001E.anb
+   method: copy
+   source:
+     - name: anm/us/ca/p_ex020/ECA21001E.anb
+ - name: anm/us/ca/p_ex020/ECA21403E.anb
+   method: copy
+   source:
+     - name: anm/us/ca/p_ex020/ECA21403E.anb
+ - name: anm/us/ca/p_ex020/ECA21404E.anb
+   method: copy
+   source:
+     - name: anm/us/ca/p_ex020/ECA21404E.anb
+ - name: anm/us/ca/p_ex020/ECA21405E.anb
+   method: copy
+   source:
+     - name: anm/us/ca/p_ex020/ECA21405E.anb
+ - name: anm/us/ca/p_ex020/ECA21608E.anb
+   method: copy
+   source:
+     - name: anm/us/ca/p_ex020/ECA21608E.anb
+ - name: anm/us/dc/p_ex020/EDC10201E.anb
+   method: copy
+   source:
+     - name: anm/us/dc/p_ex020/EDC10201E.anb
+ - name: anm/us/dc/p_ex020/EDC10401E.anb
+   method: copy
+   source:
+     - name: anm/us/dc/p_ex020/EDC10401E.anb
+ - name: anm/us/dc/p_ex020/EDC10402E.anb
+   method: copy
+   source:
+     - name: anm/us/dc/p_ex020/EDC10402E.anb
+ - name: anm/us/dc/p_ex020/EDC10403E.anb
+   method: copy
+   source:
+     - name: anm/us/dc/p_ex020/EDC10403E.anb
+ - name: anm/us/dc/p_ex020/EDC10405E.anb
+   method: copy
+   source:
+     - name: anm/us/dc/p_ex020/EDC10405E.anb
+ - name: anm/us/dc/p_ex020/EDC10406E.anb
+   method: copy
+   source:
+     - name: anm/us/dc/p_ex020/EDC10406E.anb
+ - name: anm/us/dc/p_ex020/EDC10407E.anb
+   method: copy
+   source:
+     - name: anm/us/dc/p_ex020/EDC10407E.anb
+ - name: anm/us/dc/p_ex020/EDC10408E.anb
+   method: copy
+   source:
+     - name: anm/us/dc/p_ex020/EDC10408E.anb
+ - name: anm/us/dc/p_ex020/EDC10801E.anb
+   method: copy
+   source:
+     - name: anm/us/dc/p_ex020/EDC10801E.anb
+ - name: anm/us/dc/p_ex020/EDC10802A.anb
+   method: copy
+   source:
+     - name: anm/us/dc/p_ex020/EDC10802A.anb
+ - name: anm/us/dc/p_ex020/EDC10803A.anb
+   method: copy
+   source:
+     - name: anm/us/dc/p_ex020/EDC10803A.anb
+ - name: anm/us/dc/p_ex020/EDC10804E.anb
+   method: copy
+   source:
+     - name: anm/us/dc/p_ex020/EDC10804E.anb
+ - name: anm/us/dc/p_ex020/EDC10901E.anb
+   method: copy
+   source:
+     - name: anm/us/dc/p_ex020/EDC10901E.anb
+ - name: anm/us/dc/p_ex020/EDC10902E.anb
+   method: copy
+   source:
+     - name: anm/us/dc/p_ex020/EDC10902E.anb
+ - name: anm/us/dc/p_ex020/EDC10903E.anb
+   method: copy
+   source:
+     - name: anm/us/dc/p_ex020/EDC10903E.anb
+ - name: anm/us/dc/p_ex020/EDC11102E.anb
+   method: copy
+   source:
+     - name: anm/us/dc/p_ex020/EDC11102E.anb
+ - name: anm/us/dc/p_ex020/EDC11106E.anb
+   method: copy
+   source:
+     - name: anm/us/dc/p_ex020/EDC11106E.anb
+ - name: anm/us/dc/p_ex020/EDC11107E.anb
+   method: copy
+   source:
+     - name: anm/us/dc/p_ex020/EDC11107E.anb
+ - name: anm/us/dc/p_ex020/EDC11110E.anb
+   method: copy
+   source:
+     - name: anm/us/dc/p_ex020/EDC11110E.anb
+ - name: anm/us/dc/p_ex020/EDC11111E.anb
+   method: copy
+   source:
+     - name: anm/us/dc/p_ex020/EDC11111E.anb
+ - name: anm/us/dc/p_ex020/EDC11114E.anb
+   method: copy
+   source:
+     - name: anm/us/dc/p_ex020/EDC11114E.anb
+ - name: anm/us/dc/p_ex020/EDC11115E.anb
+   method: copy
+   source:
+     - name: anm/us/dc/p_ex020/EDC11115E.anb
+ - name: anm/us/dc/p_ex020/EDC11116E.anb
+   method: copy
+   source:
+     - name: anm/us/dc/p_ex020/EDC11116E.anb
+ - name: anm/us/dc/p_ex020/EDC99901E.anb
+   method: copy
+   source:
+     - name: anm/us/dc/p_ex020/EDC99901E.anb
+ - name: anm/us/eh/p_ex020/EEH10201E.anb
+   method: copy
+   source:
+     - name: anm/us/eh/p_ex020/EEH10201E.anb
+ - name: anm/us/eh/p_ex020/EEH10501E.anb
+   method: copy
+   source:
+     - name: anm/us/eh/p_ex020/EEH10501E.anb
+ - name: anm/us/eh/p_ex020/EEH10901E.anb
+   method: copy
+   source:
+     - name: anm/us/eh/p_ex020/EEH10901E.anb
+ - name: anm/us/eh/p_ex020/EEH11103A.anb
+   method: copy
+   source:
+     - name: anm/us/eh/p_ex020/EEH11103A.anb
+ - name: anm/us/eh/p_ex020/EEH11313E.anb
+   method: copy
+   source:
+     - name: anm/us/eh/p_ex020/EEH11313E.anb
+ - name: anm/us/eh/p_ex020/EEH11314E.anb
+   method: copy
+   source:
+     - name: anm/us/eh/p_ex020/EEH11314E.anb
+ - name: anm/us/eh/p_ex020/EEH11403E.anb
+   method: copy
+   source:
+     - name: anm/us/eh/p_ex020/EEH11403E.anb
+ - name: anm/us/eh/p_ex020/EEH11605E.anb
+   method: copy
+   source:
+     - name: anm/us/eh/p_ex020/EEH11605E.anb
+ - name: anm/us/eh/p_ex020/EEH11611E.anb
+   method: copy
+   source:
+     - name: anm/us/eh/p_ex020/EEH11611E.anb
+ - name: anm/us/eh/p_ex020/EEH11626E.anb
+   method: copy
+   source:
+     - name: anm/us/eh/p_ex020/EEH11626E.anb
+ - name: anm/us/eh/p_ex020/EEH12105A.anb
+   method: copy
+   source:
+     - name: anm/us/eh/p_ex020/EEH12105A.anb
+ - name: anm/us/eh/p_ex020/EEH12422E.anb
+   method: copy
+   source:
+     - name: anm/us/eh/p_ex020/EEH12422E.anb
+ - name: anm/us/eh/p_ex020/EEH12601E.anb
+   method: copy
+   source:
+     - name: anm/us/eh/p_ex020/EEH12601E.anb
+ - name: anm/us/eh/p_ex020/EEH13503E.anb
+   method: copy
+   source:
+     - name: anm/us/eh/p_ex020/EEH13503E.anb
+ - name: anm/us/eh/p_ex020/EEH13504A.anb
+   method: copy
+   source:
+     - name: anm/us/eh/p_ex020/EEH13504A.anb
+ - name: anm/us/eh/p_ex020/EEH13601A.anb
+   method: copy
+   source:
+     - name: anm/us/eh/p_ex020/EEH13601A.anb
+ - name: anm/us/eh/p_ex020/EEH13605A.anb
+   method: copy
+   source:
+     - name: anm/us/eh/p_ex020/EEH13605A.anb
+ - name: anm/us/eh/p_ex020/EEH13617E.anb
+   method: copy
+   source:
+     - name: anm/us/eh/p_ex020/EEH13617E.anb
+ - name: anm/us/eh/p_ex020/EEH99903E.anb
+   method: copy
+   source:
+     - name: anm/us/eh/p_ex020/EEH99903E.anb
+ - name: anm/us/eh/p_ex020/EHH11313E.anb
+   method: copy
+   source:
+     - name: anm/us/eh/p_ex020/EHH11313E.anb
+ - name: anm/us/ex/p_ex020/EEX00001C.anb
+   method: copy
+   source:
+     - name: anm/us/ex/p_ex020/EEX00001C.anb
+ - name: anm/us/ex/p_ex020/EEX00002C.anb
+   method: copy
+   source:
+     - name: anm/us/ex/p_ex020/EEX00002C.anb
+ - name: anm/us/ex/p_ex020/EEX00003C.anb
+   method: copy
+   source:
+     - name: anm/us/ex/p_ex020/EEX00003C.anb
+ - name: anm/us/ex/p_ex020/EEX00004C.anb
+   method: copy
+   source:
+     - name: anm/us/ex/p_ex020/EEX00004C.anb
+ - name: anm/us/ex/p_ex020/EEX00005C.anb
+   method: copy
+   source:
+     - name: anm/us/ex/p_ex020/EEX00005C.anb
+ - name: anm/us/ex/p_ex020/EEX00006C.anb
+   method: copy
+   source:
+     - name: anm/us/ex/p_ex020/EEX00006C.anb
+ - name: anm/us/ex/p_ex020/EEX00007C.anb
+   method: copy
+   source:
+     - name: anm/us/ex/p_ex020/EEX00007C.anb
+ - name: anm/us/ex/p_ex020/EEX00008C.anb
+   method: copy
+   source:
+     - name: anm/us/ex/p_ex020/EEX00008C.anb
+ - name: anm/us/ex/p_ex020/EEX00009C.anb
+   method: copy
+   source:
+     - name: anm/us/ex/p_ex020/EEX00009C.anb
+ - name: anm/us/ex/p_ex020/EEX00010E.anb
+   method: copy
+   source:
+     - name: anm/us/ex/p_ex020/EEX00010E.anb
+ - name: anm/us/ex/p_ex020/EEX00011C.anb
+   method: copy
+   source:
+     - name: anm/us/ex/p_ex020/EEX00011C.anb
+ - name: anm/us/ex/p_ex020/EEX00012C.anb
+   method: copy
+   source:
+     - name: anm/us/ex/p_ex020/EEX00012C.anb
+ - name: anm/us/ex/p_ex020/EEX00013C.anb
+   method: copy
+   source:
+     - name: anm/us/ex/p_ex020/EEX00013C.anb
+ - name: anm/us/ex/p_ex020/EEX00014C.anb
+   method: copy
+   source:
+     - name: anm/us/ex/p_ex020/EEX00014C.anb
+ - name: anm/us/ex/p_ex020/EEX00015C.anb
+   method: copy
+   source:
+     - name: anm/us/ex/p_ex020/EEX00015C.anb
+ - name: anm/us/ex/p_ex020/EEX00016A.anb
+   method: copy
+   source:
+     - name: anm/us/ex/p_ex020/EEX00016A.anb
+ - name: anm/us/ex/p_ex020/EEX00017A.anb
+   method: copy
+   source:
+     - name: anm/us/ex/p_ex020/EEX00017A.anb
+ - name: anm/us/ex/p_ex020/EEX00018E.anb
+   method: copy
+   source:
+     - name: anm/us/ex/p_ex020/EEX00018E.anb
+ - name: anm/us/ex/p_ex020/EEX00019E.anb
+   method: copy
+   source:
+     - name: anm/us/ex/p_ex020/EEX00019E.anb
+ - name: anm/us/ex/p_ex020/EEX00020E.anb
+   method: copy
+   source:
+     - name: anm/us/ex/p_ex020/EEX00020E.anb
+ - name: anm/us/ex/p_ex020/EEX00021E.anb
+   method: copy
+   source:
+     - name: anm/us/ex/p_ex020/EEX00021E.anb
+ - name: anm/us/ex/p_ex020/EEX00022E.anb
+   method: copy
+   source:
+     - name: anm/us/ex/p_ex020/EEX00022E.anb
+ - name: anm/us/ex/p_ex020/EEX00023E.anb
+   method: copy
+   source:
+     - name: anm/us/ex/p_ex020/EEX00023E.anb
+ - name: anm/us/ex/p_ex020/EEX00024E.anb
+   method: copy
+   source:
+     - name: anm/us/ex/p_ex020/EEX00024E.anb
+ - name: anm/us/ex/p_ex020/EEX00025E.anb
+   method: copy
+   source:
+     - name: anm/us/ex/p_ex020/EEX00025E.anb
+ - name: anm/us/ex/p_ex020/EEX00026E.anb
+   method: copy
+   source:
+     - name: anm/us/ex/p_ex020/EEX00026E.anb
+ - name: anm/us/ex/p_ex020/EEX00027E.anb
+   method: copy
+   source:
+     - name: anm/us/ex/p_ex020/EEX00027E.anb
+ - name: anm/us/ex/p_ex020/EEX00028E.anb
+   method: copy
+   source:
+     - name: anm/us/ex/p_ex020/EEX00028E.anb
+ - name: anm/us/ex/p_ex020/EEX00030E.anb
+   method: copy
+   source:
+     - name: anm/us/ex/p_ex020/EEX00030E.anb
+ - name: anm/us/hb/p_ex020/EHB10505E.anb
+   method: copy
+   source:
+     - name: anm/us/hb/p_ex020/EHB10505E.anb
+ - name: anm/us/hb/p_ex020/EHB10602E.anb
+   method: copy
+   source:
+     - name: anm/us/hb/p_ex020/EHB10602E.anb
+ - name: anm/us/hb/p_ex020/EHB10604E.anb
+   method: copy
+   source:
+     - name: anm/us/hb/p_ex020/EHB10604E.anb
+ - name: anm/us/hb/p_ex020/EHB10605E.anb
+   method: copy
+   source:
+     - name: anm/us/hb/p_ex020/EHB10605E.anb
+ - name: anm/us/hb/p_ex020/EHB10613E.anb
+   method: copy
+   source:
+     - name: anm/us/hb/p_ex020/EHB10613E.anb
+ - name: anm/us/hb/p_ex020/EHB10701E.anb
+   method: copy
+   source:
+     - name: anm/us/hb/p_ex020/EHB10701E.anb
+ - name: anm/us/hb/p_ex020/EHB10702E.anb
+   method: copy
+   source:
+     - name: anm/us/hb/p_ex020/EHB10702E.anb
+ - name: anm/us/hb/p_ex020/EHB10803A.anb
+   method: copy
+   source:
+     - name: anm/us/hb/p_ex020/EHB10803A.anb
+ - name: anm/us/hb/p_ex020/EHB10804A.anb
+   method: copy
+   source:
+     - name: anm/us/hb/p_ex020/EHB10804A.anb
+ - name: anm/us/hb/p_ex020/EHB10806A.anb
+   method: copy
+   source:
+     - name: anm/us/hb/p_ex020/EHB10806A.anb
+ - name: anm/us/hb/p_ex020/EHB10807A.anb
+   method: copy
+   source:
+     - name: anm/us/hb/p_ex020/EHB10807A.anb
+ - name: anm/us/hb/p_ex020/EHB10808A.anb
+   method: copy
+   source:
+     - name: anm/us/hb/p_ex020/EHB10808A.anb
+ - name: anm/us/hb/p_ex020/EHB10809A.anb
+   method: copy
+   source:
+     - name: anm/us/hb/p_ex020/EHB10809A.anb
+ - name: anm/us/hb/p_ex020/EHB10810A.anb
+   method: copy
+   source:
+     - name: anm/us/hb/p_ex020/EHB10810A.anb
+ - name: anm/us/hb/p_ex020/EHB10811A.anb
+   method: copy
+   source:
+     - name: anm/us/hb/p_ex020/EHB10811A.anb
+ - name: anm/us/hb/p_ex020/EHB10812A.anb
+   method: copy
+   source:
+     - name: anm/us/hb/p_ex020/EHB10812A.anb
+ - name: anm/us/hb/p_ex020/EHB10820E.anb
+   method: copy
+   source:
+     - name: anm/us/hb/p_ex020/EHB10820E.anb
+ - name: anm/us/hb/p_ex020/EHB20502E.anb
+   method: copy
+   source:
+     - name: anm/us/hb/p_ex020/EHB20502E.anb
+ - name: anm/us/hb/p_ex020/EHB20701E.anb
+   method: copy
+   source:
+     - name: anm/us/hb/p_ex020/EHB20701E.anb
+ - name: anm/us/hb/p_ex020/EHB20801E.anb
+   method: copy
+   source:
+     - name: anm/us/hb/p_ex020/EHB20801E.anb
+ - name: anm/us/hb/p_ex020/EHB20804E.anb
+   method: copy
+   source:
+     - name: anm/us/hb/p_ex020/EHB20804E.anb
+ - name: anm/us/hb/p_ex020/EHB20805E.anb
+   method: copy
+   source:
+     - name: anm/us/hb/p_ex020/EHB20805E.anb
+ - name: anm/us/hb/p_ex020/EHB21004E.anb
+   method: copy
+   source:
+     - name: anm/us/hb/p_ex020/EHB21004E.anb
+ - name: anm/us/hb/p_ex020/EHB21005E.anb
+   method: copy
+   source:
+     - name: anm/us/hb/p_ex020/EHB21005E.anb
+ - name: anm/us/hb/p_ex020/EHB21006E.anb
+   method: copy
+   source:
+     - name: anm/us/hb/p_ex020/EHB21006E.anb
+ - name: anm/us/hb/p_ex020/EHB21007E.anb
+   method: copy
+   source:
+     - name: anm/us/hb/p_ex020/EHB21007E.anb
+ - name: anm/us/hb/p_ex020/EHB21008E.anb
+   method: copy
+   source:
+     - name: anm/us/hb/p_ex020/EHB21008E.anb
+ - name: anm/us/hb/p_ex020/EHB21009E.anb
+   method: copy
+   source:
+     - name: anm/us/hb/p_ex020/EHB21009E.anb
+ - name: anm/us/hb/p_ex020/EHB21010E.anb
+   method: copy
+   source:
+     - name: anm/us/hb/p_ex020/EHB21010E.anb
+ - name: anm/us/hb/p_ex020/EHB21011E.anb
+   method: copy
+   source:
+     - name: anm/us/hb/p_ex020/EHB21011E.anb
+ - name: anm/us/hb/p_ex020/EHB21012E.anb
+   method: copy
+   source:
+     - name: anm/us/hb/p_ex020/EHB21012E.anb
+ - name: anm/us/hb/p_ex020/EHB30101E.anb
+   method: copy
+   source:
+     - name: anm/us/hb/p_ex020/EHB30101E.anb
+ - name: anm/us/hb/p_ex020/EHB30102E.anb
+   method: copy
+   source:
+     - name: anm/us/hb/p_ex020/EHB30102E.anb
+ - name: anm/us/hb/p_ex020/EHB30301E.anb
+   method: copy
+   source:
+     - name: anm/us/hb/p_ex020/EHB30301E.anb
+ - name: anm/us/hb/p_ex020/EHB30305E.anb
+   method: copy
+   source:
+     - name: anm/us/hb/p_ex020/EHB30305E.anb
+ - name: anm/us/hb/p_ex020/EHB30306E.anb
+   method: copy
+   source:
+     - name: anm/us/hb/p_ex020/EHB30306E.anb
+ - name: anm/us/hb/p_ex020/EHB30307E.anb
+   method: copy
+   source:
+     - name: anm/us/hb/p_ex020/EHB30307E.anb
+ - name: anm/us/hb/p_ex020/EHB30308E.anb
+   method: copy
+   source:
+     - name: anm/us/hb/p_ex020/EHB30308E.anb
+ - name: anm/us/hb/p_ex020/EHB30309E.anb
+   method: copy
+   source:
+     - name: anm/us/hb/p_ex020/EHB30309E.anb
+ - name: anm/us/hb/p_ex020/EHB30310E.anb
+   method: copy
+   source:
+     - name: anm/us/hb/p_ex020/EHB30310E.anb
+ - name: anm/us/hb/p_ex020/EHB30311E.anb
+   method: copy
+   source:
+     - name: anm/us/hb/p_ex020/EHB30311E.anb
+ - name: anm/us/hb/p_ex020/EHB30313E.anb
+   method: copy
+   source:
+     - name: anm/us/hb/p_ex020/EHB30313E.anb
+ - name: anm/us/hb/p_ex020/EHB30314E.anb
+   method: copy
+   source:
+     - name: anm/us/hb/p_ex020/EHB30314E.anb
+ - name: anm/us/hb/p_ex020/EHB30315E.anb
+   method: copy
+   source:
+     - name: anm/us/hb/p_ex020/EHB30315E.anb
+ - name: anm/us/hb/p_ex020/EHB40101E.anb
+   method: copy
+   source:
+     - name: anm/us/hb/p_ex020/EHB40101E.anb
+ - name: anm/us/hb/p_ex020/EHB40203E.anb
+   method: copy
+   source:
+     - name: anm/us/hb/p_ex020/EHB40203E.anb
+ - name: anm/us/hb/p_ex020/EHB40204E.anb
+   method: copy
+   source:
+     - name: anm/us/hb/p_ex020/EHB40204E.anb
+ - name: anm/us/hb/p_ex020/EHB40206E.anb
+   method: copy
+   source:
+     - name: anm/us/hb/p_ex020/EHB40206E.anb
+ - name: anm/us/hb/p_ex020/EHB40501E.anb
+   method: copy
+   source:
+     - name: anm/us/hb/p_ex020/EHB40501E.anb
+ - name: anm/us/hb/p_ex020/EHB40502E.anb
+   method: copy
+   source:
+     - name: anm/us/hb/p_ex020/EHB40502E.anb
+ - name: anm/us/hb/p_ex020/EHB40601A.anb
+   method: copy
+   source:
+     - name: anm/us/hb/p_ex020/EHB40601A.anb
+ - name: anm/us/hb/p_ex020/EHB40602E.anb
+   method: copy
+   source:
+     - name: anm/us/hb/p_ex020/EHB40602E.anb
+ - name: anm/us/hb/p_ex020/EHB40701E.anb
+   method: copy
+   source:
+     - name: anm/us/hb/p_ex020/EHB40701E.anb
+ - name: anm/us/hb/p_ex020/EHB40901E.anb
+   method: copy
+   source:
+     - name: anm/us/hb/p_ex020/EHB40901E.anb
+ - name: anm/us/hb/p_ex020/EHB40902E.anb
+   method: copy
+   source:
+     - name: anm/us/hb/p_ex020/EHB40902E.anb
+ - name: anm/us/hb/p_ex020/EHB41002E.anb
+   method: copy
+   source:
+     - name: anm/us/hb/p_ex020/EHB41002E.anb
+ - name: anm/us/hb/p_ex020/EHB41003E.anb
+   method: copy
+   source:
+     - name: anm/us/hb/p_ex020/EHB41003E.anb
+ - name: anm/us/hb/p_ex020/EHB41004E.anb
+   method: copy
+   source:
+     - name: anm/us/hb/p_ex020/EHB41004E.anb
+ - name: anm/us/hb/p_ex020/EHB41005E.anb
+   method: copy
+   source:
+     - name: anm/us/hb/p_ex020/EHB41005E.anb
+ - name: anm/us/hb/p_ex020/EHB41006E.anb
+   method: copy
+   source:
+     - name: anm/us/hb/p_ex020/EHB41006E.anb
+ - name: anm/us/hb/p_ex020/EHB41007E.anb
+   method: copy
+   source:
+     - name: anm/us/hb/p_ex020/EHB41007E.anb
+ - name: anm/us/hb/p_ex020/EHB41008E.anb
+   method: copy
+   source:
+     - name: anm/us/hb/p_ex020/EHB41008E.anb
+ - name: anm/us/hb/p_ex020/EHB41009E.anb
+   method: copy
+   source:
+     - name: anm/us/hb/p_ex020/EHB41009E.anb
+ - name: anm/us/hb/p_ex020/EHB41010E.anb
+   method: copy
+   source:
+     - name: anm/us/hb/p_ex020/EHB41010E.anb
+ - name: anm/us/hb/p_ex020/EHB41101E.anb
+   method: copy
+   source:
+     - name: anm/us/hb/p_ex020/EHB41101E.anb
+ - name: anm/us/hb/p_ex020/EHB41102E.anb
+   method: copy
+   source:
+     - name: anm/us/hb/p_ex020/EHB41102E.anb
+ - name: anm/us/hb/p_ex020/EHB41201E.anb
+   method: copy
+   source:
+     - name: anm/us/hb/p_ex020/EHB41201E.anb
+ - name: anm/us/hb/p_ex020/EHB41203E.anb
+   method: copy
+   source:
+     - name: anm/us/hb/p_ex020/EHB41203E.anb
+ - name: anm/us/hb/p_ex020/EHB41204E.anb
+   method: copy
+   source:
+     - name: anm/us/hb/p_ex020/EHB41204E.anb
+ - name: anm/us/hb/p_ex020/EHB41205E.anb
+   method: copy
+   source:
+     - name: anm/us/hb/p_ex020/EHB41205E.anb
+ - name: anm/us/hb/p_ex020/EHB41210E.anb
+   method: copy
+   source:
+     - name: anm/us/hb/p_ex020/EHB41210E.anb
+ - name: anm/us/hb/p_ex020/EHB41211E.anb
+   method: copy
+   source:
+     - name: anm/us/hb/p_ex020/EHB41211E.anb
+ - name: anm/us/hb/p_ex020/EHB41212E.anb
+   method: copy
+   source:
+     - name: anm/us/hb/p_ex020/EHB41212E.anb
+ - name: anm/us/hb/p_ex020/EHB41301E.anb
+   method: copy
+   source:
+     - name: anm/us/hb/p_ex020/EHB41301E.anb
+ - name: anm/us/hb/p_ex020/EHB41304E.anb
+   method: copy
+   source:
+     - name: anm/us/hb/p_ex020/EHB41304E.anb
+ - name: anm/us/hb/p_ex020/EHB41305E.anb
+   method: copy
+   source:
+     - name: anm/us/hb/p_ex020/EHB41305E.anb
+ - name: anm/us/hb/p_ex020/EHB41307E.anb
+   method: copy
+   source:
+     - name: anm/us/hb/p_ex020/EHB41307E.anb
+ - name: anm/us/hb/p_ex020/EHB41308E.anb
+   method: copy
+   source:
+     - name: anm/us/hb/p_ex020/EHB41308E.anb
+ - name: anm/us/hb/p_ex020/EHB41401E.anb
+   method: copy
+   source:
+     - name: anm/us/hb/p_ex020/EHB41401E.anb
+ - name: anm/us/hb/p_ex020/EHB41601A.anb
+   method: copy
+   source:
+     - name: anm/us/hb/p_ex020/EHB41601A.anb
+ - name: anm/us/hb/p_ex020/EHB41703A.anb
+   method: copy
+   source:
+     - name: anm/us/hb/p_ex020/EHB41703A.anb
+ - name: anm/us/hb/p_ex020/EHB41718A.anb
+   method: copy
+   source:
+     - name: anm/us/hb/p_ex020/EHB41718A.anb
+ - name: anm/us/hb/p_ex020/EHB41723A.anb
+   method: copy
+   source:
+     - name: anm/us/hb/p_ex020/EHB41723A.anb
+ - name: anm/us/hb/p_ex020/EHB41901E.anb
+   method: copy
+   source:
+     - name: anm/us/hb/p_ex020/EHB41901E.anb
+ - name: anm/us/hb/p_ex020/EHB41902E.anb
+   method: copy
+   source:
+     - name: anm/us/hb/p_ex020/EHB41902E.anb
+ - name: anm/us/hb/p_ex020/EHB41907E.anb
+   method: copy
+   source:
+     - name: anm/us/hb/p_ex020/EHB41907E.anb
+ - name: anm/us/hb/p_ex020/EHB41909E.anb
+   method: copy
+   source:
+     - name: anm/us/hb/p_ex020/EHB41909E.anb
+ - name: anm/us/hb/p_ex020/EHB42001A.anb
+   method: copy
+   source:
+     - name: anm/us/hb/p_ex020/EHB42001A.anb
+ - name: anm/us/hb/p_ex020/EHB42002A.anb
+   method: copy
+   source:
+     - name: anm/us/hb/p_ex020/EHB42002A.anb
+ - name: anm/us/hb/p_ex020/EHB42003E.anb
+   method: copy
+   source:
+     - name: anm/us/hb/p_ex020/EHB42003E.anb
+ - name: anm/us/hb/p_ex020/EHB42004E.anb
+   method: copy
+   source:
+     - name: anm/us/hb/p_ex020/EHB42004E.anb
+ - name: anm/us/hb/p_ex020/EHB42005E.anb
+   method: copy
+   source:
+     - name: anm/us/hb/p_ex020/EHB42005E.anb
+ - name: anm/us/hb/p_ex020/EHB42006E.anb
+   method: copy
+   source:
+     - name: anm/us/hb/p_ex020/EHB42006E.anb
+ - name: anm/us/hb/p_ex020/EHB42201E.anb
+   method: copy
+   source:
+     - name: anm/us/hb/p_ex020/EHB42201E.anb
+ - name: anm/us/hb/p_ex020/EHB42204E.anb
+   method: copy
+   source:
+     - name: anm/us/hb/p_ex020/EHB42204E.anb
+ - name: anm/us/hb/p_ex020/EHB50401E.anb
+   method: copy
+   source:
+     - name: anm/us/hb/p_ex020/EHB50401E.anb
+ - name: anm/us/hb/p_ex020/EHB50407E.anb
+   method: copy
+   source:
+     - name: anm/us/hb/p_ex020/EHB50407E.anb
+ - name: anm/us/hb/p_ex020/EHB50408E.anb
+   method: copy
+   source:
+     - name: anm/us/hb/p_ex020/EHB50408E.anb
+ - name: anm/us/hb/p_ex020/EHB50409E.anb
+   method: copy
+   source:
+     - name: anm/us/hb/p_ex020/EHB50409E.anb
+ - name: anm/us/hb/p_ex020/EHB50410E.anb
+   method: copy
+   source:
+     - name: anm/us/hb/p_ex020/EHB50410E.anb
+ - name: anm/us/hb/p_ex020/EHB50411E.anb
+   method: copy
+   source:
+     - name: anm/us/hb/p_ex020/EHB50411E.anb
+ - name: anm/us/hb/p_ex020/EHB52001E.anb
+   method: copy
+   source:
+     - name: anm/us/hb/p_ex020/EHB52001E.anb
+ - name: anm/us/hb/p_ex020/EHB52002E.anb
+   method: copy
+   source:
+     - name: anm/us/hb/p_ex020/EHB52002E.anb
+ - name: anm/us/hb/p_ex020/EHB52003E.anb
+   method: copy
+   source:
+     - name: anm/us/hb/p_ex020/EHB52003E.anb
+ - name: anm/us/hb/p_ex020/EHB52004E.anb
+   method: copy
+   source:
+     - name: anm/us/hb/p_ex020/EHB52004E.anb
+ - name: anm/us/hb/p_ex020/EHB60102E.anb
+   method: copy
+   source:
+     - name: anm/us/hb/p_ex020/EHB60102E.anb
+ - name: anm/us/hb/p_ex020/EHB60103E.anb
+   method: copy
+   source:
+     - name: anm/us/hb/p_ex020/EHB60103E.anb
+ - name: anm/us/hb/p_ex020/EHB60701E.anb
+   method: copy
+   source:
+     - name: anm/us/hb/p_ex020/EHB60701E.anb
+ - name: anm/us/hb/p_ex020/EHB80201E.anb
+   method: copy
+   source:
+     - name: anm/us/hb/p_ex020/EHB80201E.anb
+ - name: anm/us/hb/p_ex020/EHB90204E.anb
+   method: copy
+   source:
+     - name: anm/us/hb/p_ex020/EHB90204E.anb
+ - name: anm/us/hb/p_ex020/EHB90205E.anb
+   method: copy
+   source:
+     - name: anm/us/hb/p_ex020/EHB90205E.anb
+ - name: anm/us/hb/p_ex020/EHB90206E.anb
+   method: copy
+   source:
+     - name: anm/us/hb/p_ex020/EHB90206E.anb
+ - name: anm/us/hb/p_ex020/EHB90207E.anb
+   method: copy
+   source:
+     - name: anm/us/hb/p_ex020/EHB90207E.anb
+ - name: anm/us/hb/p_ex020/EHB90208E.anb
+   method: copy
+   source:
+     - name: anm/us/hb/p_ex020/EHB90208E.anb
+ - name: anm/us/hb/p_ex020/EHB90301E.anb
+   method: copy
+   source:
+     - name: anm/us/hb/p_ex020/EHB90301E.anb
+ - name: anm/us/hb/p_ex020/EHB90501A.anb
+   method: copy
+   source:
+     - name: anm/us/hb/p_ex020/EHB90501A.anb
+ - name: anm/us/hb/p_ex020/EHB90502A.anb
+   method: copy
+   source:
+     - name: anm/us/hb/p_ex020/EHB90502A.anb
+ - name: anm/us/hb/p_ex020/EHB90604E.anb
+   method: copy
+   source:
+     - name: anm/us/hb/p_ex020/EHB90604E.anb
+ - name: anm/us/hb/p_ex020/EHB90605E.anb
+   method: copy
+   source:
+     - name: anm/us/hb/p_ex020/EHB90605E.anb
+ - name: anm/us/hb/p_ex020/EHB99101E.anb
+   method: copy
+   source:
+     - name: anm/us/hb/p_ex020/EHB99101E.anb
+ - name: anm/us/hb/p_ex020/EHB99102A.anb
+   method: copy
+   source:
+     - name: anm/us/hb/p_ex020/EHB99102A.anb
+ - name: anm/us/hb/p_ex020/EHB99103A.anb
+   method: copy
+   source:
+     - name: anm/us/hb/p_ex020/EHB99103A.anb
+ - name: anm/us/hb/p_ex020/ETR90501A.anb
+   method: copy
+   source:
+     - name: anm/us/hb/p_ex020/ETR90501A.anb
+ - name: anm/us/hb/p_ex020/ETR90502A.anb
+   method: copy
+   source:
+     - name: anm/us/hb/p_ex020/ETR90502A.anb
+ - name: anm/us/he/p_ex020/EHE10201E.anb
+   method: copy
+   source:
+     - name: anm/us/he/p_ex020/EHE10201E.anb
+ - name: anm/us/he/p_ex020/EHE10202E.anb
+   method: copy
+   source:
+     - name: anm/us/he/p_ex020/EHE10202E.anb
+ - name: anm/us/he/p_ex020/EHE10301E.anb
+   method: copy
+   source:
+     - name: anm/us/he/p_ex020/EHE10301E.anb
+ - name: anm/us/he/p_ex020/EHE10302E.anb
+   method: copy
+   source:
+     - name: anm/us/he/p_ex020/EHE10302E.anb
+ - name: anm/us/he/p_ex020/EHE10310E.anb
+   method: copy
+   source:
+     - name: anm/us/he/p_ex020/EHE10310E.anb
+ - name: anm/us/he/p_ex020/EHE10701E.anb
+   method: copy
+   source:
+     - name: anm/us/he/p_ex020/EHE10701E.anb
+ - name: anm/us/he/p_ex020/EHE11101A.anb
+   method: copy
+   source:
+     - name: anm/us/he/p_ex020/EHE11101A.anb
+ - name: anm/us/he/p_ex020/EHE11202E.anb
+   method: copy
+   source:
+     - name: anm/us/he/p_ex020/EHE11202E.anb
+ - name: anm/us/he/p_ex020/EHE11301E.anb
+   method: copy
+   source:
+     - name: anm/us/he/p_ex020/EHE11301E.anb
+ - name: anm/us/he/p_ex020/EHE11305E.anb
+   method: copy
+   source:
+     - name: anm/us/he/p_ex020/EHE11305E.anb
+ - name: anm/us/he/p_ex020/EHE11306E.anb
+   method: copy
+   source:
+     - name: anm/us/he/p_ex020/EHE11306E.anb
+ - name: anm/us/he/p_ex020/EHE11307E.anb
+   method: copy
+   source:
+     - name: anm/us/he/p_ex020/EHE11307E.anb
+ - name: anm/us/he/p_ex020/EHE11501E.anb
+   method: copy
+   source:
+     - name: anm/us/he/p_ex020/EHE11501E.anb
+ - name: anm/us/he/p_ex020/EHE11502E.anb
+   method: copy
+   source:
+     - name: anm/us/he/p_ex020/EHE11502E.anb
+ - name: anm/us/he/p_ex020/EHE11503E.anb
+   method: copy
+   source:
+     - name: anm/us/he/p_ex020/EHE11503E.anb
+ - name: anm/us/he/p_ex020/EHE11504E.anb
+   method: copy
+   source:
+     - name: anm/us/he/p_ex020/EHE11504E.anb
+ - name: anm/us/he/p_ex020/EHE11505E.anb
+   method: copy
+   source:
+     - name: anm/us/he/p_ex020/EHE11505E.anb
+ - name: anm/us/he/p_ex020/EHE11601E.anb
+   method: copy
+   source:
+     - name: anm/us/he/p_ex020/EHE11601E.anb
+ - name: anm/us/he/p_ex020/EHE11602E.anb
+   method: copy
+   source:
+     - name: anm/us/he/p_ex020/EHE11602E.anb
+ - name: anm/us/he/p_ex020/EHE11603E.anb
+   method: copy
+   source:
+     - name: anm/us/he/p_ex020/EHE11603E.anb
+ - name: anm/us/he/p_ex020/EHE11604E.anb
+   method: copy
+   source:
+     - name: anm/us/he/p_ex020/EHE11604E.anb
+ - name: anm/us/he/p_ex020/EHE12201E.anb
+   method: copy
+   source:
+     - name: anm/us/he/p_ex020/EHE12201E.anb
+ - name: anm/us/he/p_ex020/EHE12210E.anb
+   method: copy
+   source:
+     - name: anm/us/he/p_ex020/EHE12210E.anb
+ - name: anm/us/he/p_ex020/EHE12211E.anb
+   method: copy
+   source:
+     - name: anm/us/he/p_ex020/EHE12211E.anb
+ - name: anm/us/he/p_ex020/EHE12302E.anb
+   method: copy
+   source:
+     - name: anm/us/he/p_ex020/EHE12302E.anb
+ - name: anm/us/he/p_ex020/EHE12303E.anb
+   method: copy
+   source:
+     - name: anm/us/he/p_ex020/EHE12303E.anb
+ - name: anm/us/he/p_ex020/EHE12304E.anb
+   method: copy
+   source:
+     - name: anm/us/he/p_ex020/EHE12304E.anb
+ - name: anm/us/he/p_ex020/EHE12501E.anb
+   method: copy
+   source:
+     - name: anm/us/he/p_ex020/EHE12501E.anb
+ - name: anm/us/he/p_ex020/EHE12508E.anb
+   method: copy
+   source:
+     - name: anm/us/he/p_ex020/EHE12508E.anb
+ - name: anm/us/he/p_ex020/EHE12509E.anb
+   method: copy
+   source:
+     - name: anm/us/he/p_ex020/EHE12509E.anb
+ - name: anm/us/he/p_ex020/EHE13001E.anb
+   method: copy
+   source:
+     - name: anm/us/he/p_ex020/EHE13001E.anb
+ - name: anm/us/he/p_ex020/EHE13002E.anb
+   method: copy
+   source:
+     - name: anm/us/he/p_ex020/EHE13002E.anb
+ - name: anm/us/he/p_ex020/EHE13201A.anb
+   method: copy
+   source:
+     - name: anm/us/he/p_ex020/EHE13201A.anb
+ - name: anm/us/he/p_ex020/EHE13201E.anb
+   method: copy
+   source:
+     - name: anm/us/he/p_ex020/EHE13201E.anb
+ - name: anm/us/he/p_ex020/EHE13202E.anb
+   method: copy
+   source:
+     - name: anm/us/he/p_ex020/EHE13202E.anb
+ - name: anm/us/he/p_ex020/EHE13301A.anb
+   method: copy
+   source:
+     - name: anm/us/he/p_ex020/EHE13301A.anb
+ - name: anm/us/he/p_ex020/EHE13401E.anb
+   method: copy
+   source:
+     - name: anm/us/he/p_ex020/EHE13401E.anb
+ - name: anm/us/he/p_ex020/EHE13901E.anb
+   method: copy
+   source:
+     - name: anm/us/he/p_ex020/EHE13901E.anb
+ - name: anm/us/he/p_ex020/EHE14001E.anb
+   method: copy
+   source:
+     - name: anm/us/he/p_ex020/EHE14001E.anb
+ - name: anm/us/he/p_ex020/EHE20801E.anb
+   method: copy
+   source:
+     - name: anm/us/he/p_ex020/EHE20801E.anb
+ - name: anm/us/he/p_ex020/EHE20802E.anb
+   method: copy
+   source:
+     - name: anm/us/he/p_ex020/EHE20802E.anb
+ - name: anm/us/he/p_ex020/EHE20804E.anb
+   method: copy
+   source:
+     - name: anm/us/he/p_ex020/EHE20804E.anb
+ - name: anm/us/he/p_ex020/EHE21101E.anb
+   method: copy
+   source:
+     - name: anm/us/he/p_ex020/EHE21101E.anb
+ - name: anm/us/he/p_ex020/EHE21201A.anb
+   method: copy
+   source:
+     - name: anm/us/he/p_ex020/EHE21201A.anb
+ - name: anm/us/he/p_ex020/EHE21201E.anb
+   method: copy
+   source:
+     - name: anm/us/he/p_ex020/EHE21201E.anb
+ - name: anm/us/he/p_ex020/EHE21301E.anb
+   method: copy
+   source:
+     - name: anm/us/he/p_ex020/EHE21301E.anb
+ - name: anm/us/he/p_ex020/EHE21302E.anb
+   method: copy
+   source:
+     - name: anm/us/he/p_ex020/EHE21302E.anb
+ - name: anm/us/he/p_ex020/EHE21304E.anb
+   method: copy
+   source:
+     - name: anm/us/he/p_ex020/EHE21304E.anb
+ - name: anm/us/he/p_ex020/EHE21306E.anb
+   method: copy
+   source:
+     - name: anm/us/he/p_ex020/EHE21306E.anb
+ - name: anm/us/he/p_ex020/EHE21401A.anb
+   method: copy
+   source:
+     - name: anm/us/he/p_ex020/EHE21401A.anb
+ - name: anm/us/he/p_ex020/EHE21402E.anb
+   method: copy
+   source:
+     - name: anm/us/he/p_ex020/EHE21402E.anb
+ - name: anm/us/he/p_ex020/EHE21602E.anb
+   method: copy
+   source:
+     - name: anm/us/he/p_ex020/EHE21602E.anb
+ - name: anm/us/he/p_ex020/EHE21701E.anb
+   method: copy
+   source:
+     - name: anm/us/he/p_ex020/EHE21701E.anb
+ - name: anm/us/he/p_ex020/EHE21702E.anb
+   method: copy
+   source:
+     - name: anm/us/he/p_ex020/EHE21702E.anb
+ - name: anm/us/he/p_ex020/EHE21703E.anb
+   method: copy
+   source:
+     - name: anm/us/he/p_ex020/EHE21703E.anb
+ - name: anm/us/he/p_ex020/EHE21704E.anb
+   method: copy
+   source:
+     - name: anm/us/he/p_ex020/EHE21704E.anb
+ - name: anm/us/he/p_ex020/EHE21705E.anb
+   method: copy
+   source:
+     - name: anm/us/he/p_ex020/EHE21705E.anb
+ - name: anm/us/he/p_ex020/EHE21706E.anb
+   method: copy
+   source:
+     - name: anm/us/he/p_ex020/EHE21706E.anb
+ - name: anm/us/he/p_ex020/EHE21707E.anb
+   method: copy
+   source:
+     - name: anm/us/he/p_ex020/EHE21707E.anb
+ - name: anm/us/he/p_ex020/EHE21710E.anb
+   method: copy
+   source:
+     - name: anm/us/he/p_ex020/EHE21710E.anb
+ - name: anm/us/he/p_ex020/EHE30101E.anb
+   method: copy
+   source:
+     - name: anm/us/he/p_ex020/EHE30101E.anb
+ - name: anm/us/he/p_ex020/EHE30102E.anb
+   method: copy
+   source:
+     - name: anm/us/he/p_ex020/EHE30102E.anb
+ - name: anm/us/he/p_ex020/EHE30301E.anb
+   method: copy
+   source:
+     - name: anm/us/he/p_ex020/EHE30301E.anb
+ - name: anm/us/lk/p_lk020/ELK00001E.anb
+   method: copy
+   source:
+     - name: anm/us/lk/p_lk020/ELK00001E.anb
+ - name: anm/us/lk/p_lk020/ELK00002E.anb
+   method: copy
+   source:
+     - name: anm/us/lk/p_lk020/ELK00002E.anb
+ - name: anm/us/lk/p_lk020/ELK00003E.anb
+   method: copy
+   source:
+     - name: anm/us/lk/p_lk020/ELK00003E.anb
+ - name: anm/us/lk/p_lk020/ELK00004E.anb
+   method: copy
+   source:
+     - name: anm/us/lk/p_lk020/ELK00004E.anb
+ - name: anm/us/lk/p_lk020/ELK00005E.anb
+   method: copy
+   source:
+     - name: anm/us/lk/p_lk020/ELK00005E.anb
+ - name: anm/us/lk/p_lk020/ELK00006E.anb
+   method: copy
+   source:
+     - name: anm/us/lk/p_lk020/ELK00006E.anb
+ - name: anm/us/lk/p_lk020/ELK00007E.anb
+   method: copy
+   source:
+     - name: anm/us/lk/p_lk020/ELK00007E.anb
+ - name: anm/us/lk/p_lk020/ELK00008E.anb
+   method: copy
+   source:
+     - name: anm/us/lk/p_lk020/ELK00008E.anb
+ - name: anm/us/lk/p_lk020/ELK00009E.anb
+   method: copy
+   source:
+     - name: anm/us/lk/p_lk020/ELK00009E.anb
+ - name: anm/us/lk/p_lk020/ELK00010E.anb
+   method: copy
+   source:
+     - name: anm/us/lk/p_lk020/ELK00010E.anb
+ - name: anm/us/lk/p_lk020/ELK00011E.anb
+   method: copy
+   source:
+     - name: anm/us/lk/p_lk020/ELK00011E.anb
+ - name: anm/us/lk/p_lk020/ELK00014E.anb
+   method: copy
+   source:
+     - name: anm/us/lk/p_lk020/ELK00014E.anb
+ - name: anm/us/lk/p_lk020/ELK00016C.anb
+   method: copy
+   source:
+     - name: anm/us/lk/p_lk020/ELK00016C.anb
+ - name: anm/us/lk/p_lk020/ELK10301E.anb
+   method: copy
+   source:
+     - name: anm/us/lk/p_lk020/ELK10301E.anb
+ - name: anm/us/lk/p_lk020/ELK10304E.anb
+   method: copy
+   source:
+     - name: anm/us/lk/p_lk020/ELK10304E.anb
+ - name: anm/us/lk/p_lk020/ELK10305E.anb
+   method: copy
+   source:
+     - name: anm/us/lk/p_lk020/ELK10305E.anb
+ - name: anm/us/lk/p_lk020/ELK10309E.anb
+   method: copy
+   source:
+     - name: anm/us/lk/p_lk020/ELK10309E.anb
+ - name: anm/us/lk/p_lk020/ELK10501E.anb
+   method: copy
+   source:
+     - name: anm/us/lk/p_lk020/ELK10501E.anb
+ - name: anm/us/lk/p_lk020/ELK10706E.anb
+   method: copy
+   source:
+     - name: anm/us/lk/p_lk020/ELK10706E.anb
+ - name: anm/us/lk/p_lk020/ELK11502E.anb
+   method: copy
+   source:
+     - name: anm/us/lk/p_lk020/ELK11502E.anb
+ - name: anm/us/lk/p_lk020/ELK12101E.anb
+   method: copy
+   source:
+     - name: anm/us/lk/p_lk020/ELK12101E.anb
+ - name: anm/us/lk/p_lk020/ELK12102E.anb
+   method: copy
+   source:
+     - name: anm/us/lk/p_lk020/ELK12102E.anb
+ - name: anm/us/lk/p_lk020/ELK12301E.anb
+   method: copy
+   source:
+     - name: anm/us/lk/p_lk020/ELK12301E.anb
+ - name: anm/us/lk/p_lk020/ELK20101E.anb
+   method: copy
+   source:
+     - name: anm/us/lk/p_lk020/ELK20101E.anb
+ - name: anm/us/lk/p_lk020/ELK20201E.anb
+   method: copy
+   source:
+     - name: anm/us/lk/p_lk020/ELK20201E.anb
+ - name: anm/us/lk/p_lk020/ELK20401E.anb
+   method: copy
+   source:
+     - name: anm/us/lk/p_lk020/ELK20401E.anb
+ - name: anm/us/lk/p_lk020/ELK21102E.anb
+   method: copy
+   source:
+     - name: anm/us/lk/p_lk020/ELK21102E.anb
+ - name: anm/us/lk/p_lk020/ELK21105E.anb
+   method: copy
+   source:
+     - name: anm/us/lk/p_lk020/ELK21105E.anb
+ - name: anm/us/mu/p_ex020/EMU10102E.anb
+   method: copy
+   source:
+     - name: anm/us/mu/p_ex020/EMU10102E.anb
+ - name: anm/us/mu/p_ex020/EMU10103E.anb
+   method: copy
+   source:
+     - name: anm/us/mu/p_ex020/EMU10103E.anb
+ - name: anm/us/mu/p_ex020/EMU10110E.anb
+   method: copy
+   source:
+     - name: anm/us/mu/p_ex020/EMU10110E.anb
+ - name: anm/us/mu/p_ex020/EMU10112E.anb
+   method: copy
+   source:
+     - name: anm/us/mu/p_ex020/EMU10112E.anb
+ - name: anm/us/mu/p_ex020/EMU10113E.anb
+   method: copy
+   source:
+     - name: anm/us/mu/p_ex020/EMU10113E.anb
+ - name: anm/us/mu/p_ex020/EMU10114E.anb
+   method: copy
+   source:
+     - name: anm/us/mu/p_ex020/EMU10114E.anb
+ - name: anm/us/mu/p_ex020/EMU10302E.anb
+   method: copy
+   source:
+     - name: anm/us/mu/p_ex020/EMU10302E.anb
+ - name: anm/us/mu/p_ex020/EMU10303E.anb
+   method: copy
+   source:
+     - name: anm/us/mu/p_ex020/EMU10303E.anb
+ - name: anm/us/mu/p_ex020/EMU10304E.anb
+   method: copy
+   source:
+     - name: anm/us/mu/p_ex020/EMU10304E.anb
+ - name: anm/us/mu/p_ex020/EMU10305E.anb
+   method: copy
+   source:
+     - name: anm/us/mu/p_ex020/EMU10305E.anb
+ - name: anm/us/mu/p_ex020/EMU10306E.anb
+   method: copy
+   source:
+     - name: anm/us/mu/p_ex020/EMU10306E.anb
+ - name: anm/us/mu/p_ex020/EMU10307E.anb
+   method: copy
+   source:
+     - name: anm/us/mu/p_ex020/EMU10307E.anb
+ - name: anm/us/mu/p_ex020/EMU10308E.anb
+   method: copy
+   source:
+     - name: anm/us/mu/p_ex020/EMU10308E.anb
+ - name: anm/us/mu/p_ex020/EMU10311E.anb
+   method: copy
+   source:
+     - name: anm/us/mu/p_ex020/EMU10311E.anb
+ - name: anm/us/mu/p_ex020/EMU10312E.anb
+   method: copy
+   source:
+     - name: anm/us/mu/p_ex020/EMU10312E.anb
+ - name: anm/us/mu/p_ex020/EMU10901E.anb
+   method: copy
+   source:
+     - name: anm/us/mu/p_ex020/EMU10901E.anb
+ - name: anm/us/mu/p_ex020/EMU11101E.anb
+   method: copy
+   source:
+     - name: anm/us/mu/p_ex020/EMU11101E.anb
+ - name: anm/us/mu/p_ex020/EMU11301E.anb
+   method: copy
+   source:
+     - name: anm/us/mu/p_ex020/EMU11301E.anb
+ - name: anm/us/mu/p_ex020/EMU11305E.anb
+   method: copy
+   source:
+     - name: anm/us/mu/p_ex020/EMU11305E.anb
+ - name: anm/us/mu/p_ex020/EMU11306E.anb
+   method: copy
+   source:
+     - name: anm/us/mu/p_ex020/EMU11306E.anb
+ - name: anm/us/mu/p_ex020/EMU11501E.anb
+   method: copy
+   source:
+     - name: anm/us/mu/p_ex020/EMU11501E.anb
+ - name: anm/us/mu/p_ex020/EMU11502E.anb
+   method: copy
+   source:
+     - name: anm/us/mu/p_ex020/EMU11502E.anb
+ - name: anm/us/mu/p_ex020/EMU11801E.anb
+   method: copy
+   source:
+     - name: anm/us/mu/p_ex020/EMU11801E.anb
+ - name: anm/us/mu/p_ex020/EMU11802E.anb
+   method: copy
+   source:
+     - name: anm/us/mu/p_ex020/EMU11802E.anb
+ - name: anm/us/mu/p_ex020/EMU11803E.anb
+   method: copy
+   source:
+     - name: anm/us/mu/p_ex020/EMU11803E.anb
+ - name: anm/us/mu/p_ex020/EMU11892E.anb
+   method: copy
+   source:
+     - name: anm/us/mu/p_ex020/EMU11892E.anb
+ - name: anm/us/mu/p_ex020/EMU20101E.anb
+   method: copy
+   source:
+     - name: anm/us/mu/p_ex020/EMU20101E.anb
+ - name: anm/us/mu/p_ex020/EMU20102E.anb
+   method: copy
+   source:
+     - name: anm/us/mu/p_ex020/EMU20102E.anb
+ - name: anm/us/mu/p_ex020/EMU20301E.anb
+   method: copy
+   source:
+     - name: anm/us/mu/p_ex020/EMU20301E.anb
+ - name: anm/us/mu/p_ex020/EMU20302E.anb
+   method: copy
+   source:
+     - name: anm/us/mu/p_ex020/EMU20302E.anb
+ - name: anm/us/mu/p_ex020/EMU20401E.anb
+   method: copy
+   source:
+     - name: anm/us/mu/p_ex020/EMU20401E.anb
+ - name: anm/us/mu/p_ex020/EMU20402E.anb
+   method: copy
+   source:
+     - name: anm/us/mu/p_ex020/EMU20402E.anb
+ - name: anm/us/mu/p_ex020/EMU20403E.anb
+   method: copy
+   source:
+     - name: anm/us/mu/p_ex020/EMU20403E.anb
+ - name: anm/us/mu/p_ex020/EMU20404E.anb
+   method: copy
+   source:
+     - name: anm/us/mu/p_ex020/EMU20404E.anb
+ - name: anm/us/mu/p_ex020/EMU20503A.anb
+   method: copy
+   source:
+     - name: anm/us/mu/p_ex020/EMU20503A.anb
+ - name: anm/us/mu/p_ex020/EMU20901E.anb
+   method: copy
+   source:
+     - name: anm/us/mu/p_ex020/EMU20901E.anb
+ - name: anm/us/mu/p_ex020/EMU20902E.anb
+   method: copy
+   source:
+     - name: anm/us/mu/p_ex020/EMU20902E.anb
+ - name: anm/us/mu/p_ex020/EMU20903E.anb
+   method: copy
+   source:
+     - name: anm/us/mu/p_ex020/EMU20903E.anb
+ - name: anm/us/mu/p_ex020/EMU21001E.anb
+   method: copy
+   source:
+     - name: anm/us/mu/p_ex020/EMU21001E.anb
+ - name: anm/us/mu/p_ex020/EMU21002A.anb
+   method: copy
+   source:
+     - name: anm/us/mu/p_ex020/EMU21002A.anb
+ - name: anm/us/mu/p_ex020/EMU21402A.anb
+   method: copy
+   source:
+     - name: anm/us/mu/p_ex020/EMU21402A.anb
+ - name: anm/us/mu/p_ex020/EMU21405A.anb
+   method: copy
+   source:
+     - name: anm/us/mu/p_ex020/EMU21405A.anb
+ - name: anm/us/mu/p_ex020/EMU21501E.anb
+   method: copy
+   source:
+     - name: anm/us/mu/p_ex020/EMU21501E.anb
+ - name: anm/us/mu/p_ex020/EMU21601E.anb
+   method: copy
+   source:
+     - name: anm/us/mu/p_ex020/EMU21601E.anb
+ - name: anm/us/mu/p_ex020/EMU21602E.anb
+   method: copy
+   source:
+     - name: anm/us/mu/p_ex020/EMU21602E.anb
+ - name: anm/us/mu/p_ex020/EMU21603E.anb
+   method: copy
+   source:
+     - name: anm/us/mu/p_ex020/EMU21603E.anb
+ - name: anm/us/mu/p_ex020/EMU21604E.anb
+   method: copy
+   source:
+     - name: anm/us/mu/p_ex020/EMU21604E.anb
+ - name: anm/us/mu/p_ex020/EMU21606E.anb
+   method: copy
+   source:
+     - name: anm/us/mu/p_ex020/EMU21606E.anb
+ - name: anm/us/mu/p_ex020/EMU21691E.anb
+   method: copy
+   source:
+     - name: anm/us/mu/p_ex020/EMU21691E.anb
+ - name: anm/us/nm/p_ex020/ENM10201E.anb
+   method: copy
+   source:
+     - name: anm/us/nm/p_ex020/ENM10201E.anb
+ - name: anm/us/nm/p_ex020/ENM10203E.anb
+   method: copy
+   source:
+     - name: anm/us/nm/p_ex020/ENM10203E.anb
+ - name: anm/us/nm/p_ex020/ENM10301E.anb
+   method: copy
+   source:
+     - name: anm/us/nm/p_ex020/ENM10301E.anb
+ - name: anm/us/nm/p_ex020/ENM10303E.anb
+   method: copy
+   source:
+     - name: anm/us/nm/p_ex020/ENM10303E.anb
+ - name: anm/us/nm/p_ex020/ENM10306E.anb
+   method: copy
+   source:
+     - name: anm/us/nm/p_ex020/ENM10306E.anb
+ - name: anm/us/nm/p_ex020/ENM10308E.anb
+   method: copy
+   source:
+     - name: anm/us/nm/p_ex020/ENM10308E.anb
+ - name: anm/us/nm/p_ex020/ENM10310E.anb
+   method: copy
+   source:
+     - name: anm/us/nm/p_ex020/ENM10310E.anb
+ - name: anm/us/nm/p_ex020/ENM10407E.anb
+   method: copy
+   source:
+     - name: anm/us/nm/p_ex020/ENM10407E.anb
+ - name: anm/us/nm/p_ex020/ENM10410E.anb
+   method: copy
+   source:
+     - name: anm/us/nm/p_ex020/ENM10410E.anb
+ - name: anm/us/nm/p_ex020/ENM10501E.anb
+   method: copy
+   source:
+     - name: anm/us/nm/p_ex020/ENM10501E.anb
+ - name: anm/us/nm/p_ex020/ENM10901E.anb
+   method: copy
+   source:
+     - name: anm/us/nm/p_ex020/ENM10901E.anb
+ - name: anm/us/nm/p_ex020/ENM10904E.anb
+   method: copy
+   source:
+     - name: anm/us/nm/p_ex020/ENM10904E.anb
+ - name: anm/us/nm/p_ex020/ENM11002E.anb
+   method: copy
+   source:
+     - name: anm/us/nm/p_ex020/ENM11002E.anb
+ - name: anm/us/nm/p_ex020/ENM11004E.anb
+   method: copy
+   source:
+     - name: anm/us/nm/p_ex020/ENM11004E.anb
+ - name: anm/us/nm/p_ex020/ENM11005E.anb
+   method: copy
+   source:
+     - name: anm/us/nm/p_ex020/ENM11005E.anb
+ - name: anm/us/nm/p_ex020/ENM11302E.anb
+   method: copy
+   source:
+     - name: anm/us/nm/p_ex020/ENM11302E.anb
+ - name: anm/us/nm/p_ex020/ENM11303E.anb
+   method: copy
+   source:
+     - name: anm/us/nm/p_ex020/ENM11303E.anb
+ - name: anm/us/nm/p_ex020/ENM11304E.anb
+   method: copy
+   source:
+     - name: anm/us/nm/p_ex020/ENM11304E.anb
+ - name: anm/us/nm/p_ex020/ENM11501E.anb
+   method: copy
+   source:
+     - name: anm/us/nm/p_ex020/ENM11501E.anb
+ - name: anm/us/nm/p_ex020/ENM12411A.anb
+   method: copy
+   source:
+     - name: anm/us/nm/p_ex020/ENM12411A.anb
+ - name: anm/us/nm/p_ex020/ENM12411E.anb
+   method: copy
+   source:
+     - name: anm/us/nm/p_ex020/ENM12411E.anb
+ - name: anm/us/nm/p_ex020/ENM12412A.anb
+   method: copy
+   source:
+     - name: anm/us/nm/p_ex020/ENM12412A.anb
+ - name: anm/us/nm/p_ex020/ENM12413A.anb
+   method: copy
+   source:
+     - name: anm/us/nm/p_ex020/ENM12413A.anb
+ - name: anm/us/nm/p_ex020/ENM12414A.anb
+   method: copy
+   source:
+     - name: anm/us/nm/p_ex020/ENM12414A.anb
+ - name: anm/us/nm/p_ex020/ENM12501E.anb
+   method: copy
+   source:
+     - name: anm/us/nm/p_ex020/ENM12501E.anb
+ - name: anm/us/nm/p_ex020/ENM12601E.anb
+   method: copy
+   source:
+     - name: anm/us/nm/p_ex020/ENM12601E.anb
+ - name: anm/us/nm/p_ex020/ENM20301E.anb
+   method: copy
+   source:
+     - name: anm/us/nm/p_ex020/ENM20301E.anb
+ - name: anm/us/nm/p_ex020/ENM20302E.anb
+   method: copy
+   source:
+     - name: anm/us/nm/p_ex020/ENM20302E.anb
+ - name: anm/us/nm/p_ex020/ENM20307E.anb
+   method: copy
+   source:
+     - name: anm/us/nm/p_ex020/ENM20307E.anb
+ - name: anm/us/nm/p_ex020/ENM20502E.anb
+   method: copy
+   source:
+     - name: anm/us/nm/p_ex020/ENM20502E.anb
+ - name: anm/us/nm/p_ex020/ENM20601E.anb
+   method: copy
+   source:
+     - name: anm/us/nm/p_ex020/ENM20601E.anb
+ - name: anm/us/nm/p_ex020/ENM21201E.anb
+   method: copy
+   source:
+     - name: anm/us/nm/p_ex020/ENM21201E.anb
+ - name: anm/us/nm/p_ex020/ENM21504E.anb
+   method: copy
+   source:
+     - name: anm/us/nm/p_ex020/ENM21504E.anb
+ - name: anm/us/nm/p_ex020/ENM21701E.anb
+   method: copy
+   source:
+     - name: anm/us/nm/p_ex020/ENM21701E.anb
+ - name: anm/us/nm/p_ex020/ENM21702E.anb
+   method: copy
+   source:
+     - name: anm/us/nm/p_ex020/ENM21702E.anb
+ - name: anm/us/nm/w_ex020/ENM12411A.anb
+   method: copy
+   source:
+     - name: anm/us/nm/w_ex020/ENM12411A.anb
+ - name: anm/us/nm/w_ex020/ENM12411E.anb
+   method: copy
+   source:
+     - name: anm/us/nm/w_ex020/ENM12411E.anb
+ - name: anm/us/nm/w_ex020/ENM12412A.anb
+   method: copy
+   source:
+     - name: anm/us/nm/w_ex020/ENM12412A.anb
+ - name: anm/us/nm/w_ex020/ENM12413A.anb
+   method: copy
+   source:
+     - name: anm/us/nm/w_ex020/ENM12413A.anb
+ - name: anm/us/nm/w_ex020/ENM12414A.anb
+   method: copy
+   source:
+     - name: anm/us/nm/w_ex020/ENM12414A.anb
+ - name: anm/us/tr/p_ex020/ETR10101E.anb
+   method: copy
+   source:
+     - name: anm/us/tr/p_ex020/ETR10101E.anb
+ - name: anm/us/tr/p_ex020/ETR10102E.anb
+   method: copy
+   source:
+     - name: anm/us/tr/p_ex020/ETR10102E.anb
+ - name: anm/us/tr/p_ex020/ETR10201E.anb
+   method: copy
+   source:
+     - name: anm/us/tr/p_ex020/ETR10201E.anb
+ - name: anm/us/tr/p_ex020/ETR10203E.anb
+   method: copy
+   source:
+     - name: anm/us/tr/p_ex020/ETR10203E.anb
+ - name: anm/us/tr/p_ex020/ETR10204E.anb
+   method: copy
+   source:
+     - name: anm/us/tr/p_ex020/ETR10204E.anb
+ - name: anm/us/tr/p_ex020/ETR10205E.anb
+   method: copy
+   source:
+     - name: anm/us/tr/p_ex020/ETR10205E.anb
+ - name: anm/us/tr/p_ex020/ETR10207E.anb
+   method: copy
+   source:
+     - name: anm/us/tr/p_ex020/ETR10207E.anb
+ - name: anm/us/tr/p_ex020/ETR10208E.anb
+   method: copy
+   source:
+     - name: anm/us/tr/p_ex020/ETR10208E.anb
+ - name: anm/us/tr/p_ex020/ETR10209E.anb
+   method: copy
+   source:
+     - name: anm/us/tr/p_ex020/ETR10209E.anb
+ - name: anm/us/tr/p_ex020/ETR10210E.anb
+   method: copy
+   source:
+     - name: anm/us/tr/p_ex020/ETR10210E.anb
+ - name: anm/us/tr/p_ex020/ETR10401E.anb
+   method: copy
+   source:
+     - name: anm/us/tr/p_ex020/ETR10401E.anb
+ - name: anm/us/tr/p_ex020/ETR11001E.anb
+   method: copy
+   source:
+     - name: anm/us/tr/p_ex020/ETR11001E.anb
+ - name: anm/us/tr/p_ex020/ETR11002E.anb
+   method: copy
+   source:
+     - name: anm/us/tr/p_ex020/ETR11002E.anb
+ - name: anm/us/tr/p_ex020/ETR11204E.anb
+   method: copy
+   source:
+     - name: anm/us/tr/p_ex020/ETR11204E.anb
+ - name: anm/us/tr/p_ex020/ETR20601E.anb
+   method: copy
+   source:
+     - name: anm/us/tr/p_ex020/ETR20601E.anb
+ - name: anm/us/tr/p_ex020/ETR20801E.anb
+   method: copy
+   source:
+     - name: anm/us/tr/p_ex020/ETR20801E.anb
+ - name: anm/us/tr/p_ex020/ETR20802A.anb
+   method: copy
+   source:
+     - name: anm/us/tr/p_ex020/ETR20802A.anb
+ - name: anm/us/tr/p_ex020/ETR20802E.anb
+   method: copy
+   source:
+     - name: anm/us/tr/p_ex020/ETR20802E.anb
+ - name: anm/us/tr/p_ex020/ETR21204E.anb
+   method: copy
+   source:
+     - name: anm/us/tr/p_ex020/ETR21204E.anb
+ - name: anm/us/tr/p_ex020/ETR21214E.anb
+   method: copy
+   source:
+     - name: anm/us/tr/p_ex020/ETR21214E.anb
+ - name: anm/us/tr/p_ex020/ETR21215E.anb
+   method: copy
+   source:
+     - name: anm/us/tr/p_ex020/ETR21215E.anb
+ - name: anm/us/tr/p_ex020/ETR21216E.anb
+   method: copy
+   source:
+     - name: anm/us/tr/p_ex020/ETR21216E.anb
+ - name: anm/us/tr/p_ex020/ETR21217E.anb
+   method: copy
+   source:
+     - name: anm/us/tr/p_ex020/ETR21217E.anb
+ - name: anm/us/tr/w_ex020/ETR20802A.anb
+   method: copy
+   source:
+     - name: anm/us/tr/w_ex020/ETR20802A.anb
+ - name: anm/us/tt/p_ex020/ETT00101E.anb
+   method: copy
+   source:
+     - name: anm/us/tt/p_ex020/ETT00101E.anb
+ - name: anm/us/tt/p_ex020/ETT01103A.anb
+   method: copy
+   source:
+     - name: anm/us/tt/p_ex020/ETT01103A.anb
+ - name: anm/us/tt/p_ex020/ETT09104E.anb
+   method: copy
+   source:
+     - name: anm/us/tt/p_ex020/ETT09104E.anb
+ - name: anm/us/tt/p_ex020/ETT61601E.anb
+   method: copy
+   source:
+     - name: anm/us/tt/p_ex020/ETT61601E.anb
+ - name: anm/us/tt/p_ex020/ETT70201E.anb
+   method: copy
+   source:
+     - name: anm/us/tt/p_ex020/ETT70201E.anb
+ - name: anm/us/tt/p_ex020/ETT70202E.anb
+   method: copy
+   source:
+     - name: anm/us/tt/p_ex020/ETT70202E.anb
+ - name: anm/us/tt/p_ex020/ETT70205E.anb
+   method: copy
+   source:
+     - name: anm/us/tt/p_ex020/ETT70205E.anb
+ - name: anm/us/tt/p_ex020/ETT70206E.anb
+   method: copy
+   source:
+     - name: anm/us/tt/p_ex020/ETT70206E.anb
+ - name: anm/us/tt/p_ex020/ETT70211E.anb
+   method: copy
+   source:
+     - name: anm/us/tt/p_ex020/ETT70211E.anb
+ - name: anm/us/tt/p_ex020/ETT70212E.anb
+   method: copy
+   source:
+     - name: anm/us/tt/p_ex020/ETT70212E.anb
+ - name: anm/us/tt/p_ex020/ETT70501E.anb
+   method: copy
+   source:
+     - name: anm/us/tt/p_ex020/ETT70501E.anb
+ - name: anm/us/tt/p_ex020/ETT70504E.anb
+   method: copy
+   source:
+     - name: anm/us/tt/p_ex020/ETT70504E.anb
+ - name: anm/us/tt/p_ex020/ETT70505E.anb
+   method: copy
+   source:
+     - name: anm/us/tt/p_ex020/ETT70505E.anb
+ - name: anm/us/tt/p_ex020/ETT70701A.anb
+   method: copy
+   source:
+     - name: anm/us/tt/p_ex020/ETT70701A.anb
+ - name: anm/us/tt/p_ex020/ETT70702A.anb
+   method: copy
+   source:
+     - name: anm/us/tt/p_ex020/ETT70702A.anb
+ - name: anm/us/tt/p_ex020/ETT70711E.anb
+   method: copy
+   source:
+     - name: anm/us/tt/p_ex020/ETT70711E.anb
+ - name: anm/us/tt/p_ex020/ETT70712E.anb
+   method: copy
+   source:
+     - name: anm/us/tt/p_ex020/ETT70712E.anb
+ - name: anm/us/tt/p_ex020/ETT70713E.anb
+   method: copy
+   source:
+     - name: anm/us/tt/p_ex020/ETT70713E.anb
+ - name: anm/us/tt/p_ex020/ETT70716E.anb
+   method: copy
+   source:
+     - name: anm/us/tt/p_ex020/ETT70716E.anb
+ - name: anm/us/tt/p_ex020/ETT70717E.anb
+   method: copy
+   source:
+     - name: anm/us/tt/p_ex020/ETT70717E.anb
+ - name: anm/us/tt/p_ex020/ETT70720E.anb
+   method: copy
+   source:
+     - name: anm/us/tt/p_ex020/ETT70720E.anb
+ - name: anm/us/tt/p_ex020/ETT71001E.anb
+   method: copy
+   source:
+     - name: anm/us/tt/p_ex020/ETT71001E.anb
+ - name: anm/us/tt/p_ex020/ETT71101E.anb
+   method: copy
+   source:
+     - name: anm/us/tt/p_ex020/ETT71101E.anb
+ - name: anm/us/tt/p_ex020/ETT71102E.anb
+   method: copy
+   source:
+     - name: anm/us/tt/p_ex020/ETT71102E.anb
+ - name: anm/us/tt/p_ex020/ETT80201E.anb
+   method: copy
+   source:
+     - name: anm/us/tt/p_ex020/ETT80201E.anb
+ - name: anm/us/tt/p_ex020/ETT80210E.anb
+   method: copy
+   source:
+     - name: anm/us/tt/p_ex020/ETT80210E.anb
+ - name: anm/us/tt/p_ex020/ETT80211E.anb
+   method: copy
+   source:
+     - name: anm/us/tt/p_ex020/ETT80211E.anb
+ - name: anm/us/tt/p_ex020/ETT80302E.anb
+   method: copy
+   source:
+     - name: anm/us/tt/p_ex020/ETT80302E.anb
+ - name: anm/us/tt/p_ex020/ETT80501E.anb
+   method: copy
+   source:
+     - name: anm/us/tt/p_ex020/ETT80501E.anb
+ - name: anm/us/tt/p_ex020/ETT80502E.anb
+   method: copy
+   source:
+     - name: anm/us/tt/p_ex020/ETT80502E.anb
+ - name: anm/us/tt/p_ex020/ETT80503E.anb
+   method: copy
+   source:
+     - name: anm/us/tt/p_ex020/ETT80503E.anb
+ - name: anm/us/tt/p_ex020/ETT80603E.anb
+   method: copy
+   source:
+     - name: anm/us/tt/p_ex020/ETT80603E.anb
+ - name: anm/us/tt/p_ex020/ETT80604E.anb
+   method: copy
+   source:
+     - name: anm/us/tt/p_ex020/ETT80604E.anb
+ - name: anm/us/tt/p_ex020/ETT80606E.anb
+   method: copy
+   source:
+     - name: anm/us/tt/p_ex020/ETT80606E.anb
+ - name: anm/us/tt/p_ex020/ETT80610E.anb
+   method: copy
+   source:
+     - name: anm/us/tt/p_ex020/ETT80610E.anb
+ - name: anm/us/tt/p_ex020/ETT80902E.anb
+   method: copy
+   source:
+     - name: anm/us/tt/p_ex020/ETT80902E.anb
+ - name: anm/us/tt/p_ex020/ETT90401E.anb
+   method: copy
+   source:
+     - name: anm/us/tt/p_ex020/ETT90401E.anb
+ - name: anm/us/tt/p_ex020/ETT90701E.anb
+   method: copy
+   source:
+     - name: anm/us/tt/p_ex020/ETT90701E.anb
+ - name: anm/us/tt/w_ex020/ETT01103A.anb
+   method: copy
+   source:
+     - name: anm/us/tt/w_ex020/ETT01103A.anb
+ - name: anm/us/tt/w_ex020/ETT70701A.anb
+   method: copy
+   source:
+     - name: anm/us/tt/w_ex020/ETT70701A.anb
+ - name: anm/us/tt/w_ex020/ETT70702A.anb
+   method: copy
+   source:
+     - name: anm/us/tt/w_ex020/ETT70702A.anb
+ - name: anm/us/wi/p_ex020/EWI10101E.anb
+   method: copy
+   source:
+     - name: anm/us/wi/p_ex020/EWI10101E.anb
+ - name: anm/us/wi/p_ex020/EWI10104E.anb
+   method: copy
+   source:
+     - name: anm/us/wi/p_ex020/EWI10104E.anb
+ - name: anm/us/wi/p_ex020/EWI11601E.anb
+   method: copy
+   source:
+     - name: anm/us/wi/p_ex020/EWI11601E.anb
+ - name: anm/us/wi/p_ex020/EWI11801E.anb
+   method: copy
+   source:
+     - name: anm/us/wi/p_ex020/EWI11801E.anb
+ - name: anm/us/wi/p_ex020/EWI11901E.anb
+   method: copy
+   source:
+     - name: anm/us/wi/p_ex020/EWI11901E.anb
+ - name: anm/us/wi/p_ex020/EWI11902A.anb
+   method: copy
+   source:
+     - name: anm/us/wi/p_ex020/EWI11902A.anb
+ - name: anm/us/wi/p_ex020/EWI12001E.anb
+   method: copy
+   source:
+     - name: anm/us/wi/p_ex020/EWI12001E.anb
+ - name: anm/us/wi/p_ex020/EWI12005E.anb
+   method: copy
+   source:
+     - name: anm/us/wi/p_ex020/EWI12005E.anb
+ - name: anm/us/wi/p_ex020/EWI12102E.anb
+   method: copy
+   source:
+     - name: anm/us/wi/p_ex020/EWI12102E.anb
+ - name: anm/us/wi/p_ex020/EWI12202E.anb
+   method: copy
+   source:
+     - name: anm/us/wi/p_ex020/EWI12202E.anb
+ - name: anm/us/wi/p_ex020/EWI12203E.anb
+   method: copy
+   source:
+     - name: anm/us/wi/p_ex020/EWI12203E.anb
+ - name: anm/us/wi/p_ex020/EWI12204E.anb
+   method: copy
+   source:
+     - name: anm/us/wi/p_ex020/EWI12204E.anb
+ - name: anm/us/wi/p_wi020/EWI00001C.anb
+   method: copy
+   source:
+     - name: anm/us/wi/p_wi020/EWI00001C.anb
+ - name: anm/us/wi/p_wi020/EWI00002C.anb
+   method: copy
+   source:
+     - name: anm/us/wi/p_wi020/EWI00002C.anb
+ - name: anm/us/wi/p_wi020/EWI00003C.anb
+   method: copy
+   source:
+     - name: anm/us/wi/p_wi020/EWI00003C.anb
+ - name: anm/us/wi/p_wi020/EWI00009C.anb
+   method: copy
+   source:
+     - name: anm/us/wi/p_wi020/EWI00009C.anb
+ - name: anm/us/wi/p_wi020/EWI00010E.anb
+   method: copy
+   source:
+     - name: anm/us/wi/p_wi020/EWI00010E.anb
+ - name: anm/us/wi/p_wi020/EWI00014C.anb
+   method: copy
+   source:
+     - name: anm/us/wi/p_wi020/EWI00014C.anb
+ - name: anm/us/wi/p_wi020/EWI00016A.anb
+   method: copy
+   source:
+     - name: anm/us/wi/p_wi020/EWI00016A.anb
+ - name: anm/us/wi/p_wi020/EWI00018E.anb
+   method: copy
+   source:
+     - name: anm/us/wi/p_wi020/EWI00018E.anb
+ - name: anm/us/wi/p_wi020/EWI00019E.anb
+   method: copy
+   source:
+     - name: anm/us/wi/p_wi020/EWI00019E.anb
+ - name: anm/us/wi/p_wi020/EWI00021E.anb
+   method: copy
+   source:
+     - name: anm/us/wi/p_wi020/EWI00021E.anb
+ - name: anm/us/wi/p_wi020/EWI00022E.anb
+   method: copy
+   source:
+     - name: anm/us/wi/p_wi020/EWI00022E.anb
+ - name: anm/us/wi/p_wi020/EWI00023E.anb
+   method: copy
+   source:
+     - name: anm/us/wi/p_wi020/EWI00023E.anb
+ - name: anm/us/wi/p_wi020/EWI00024E.anb
+   method: copy
+   source:
+     - name: anm/us/wi/p_wi020/EWI00024E.anb
+ - name: anm/us/wi/p_wi020/EWI00027E.anb
+   method: copy
+   source:
+     - name: anm/us/wi/p_wi020/EWI00027E.anb
+ - name: anm/us/wi/p_wi020/EWI10101E.anb
+   method: copy
+   source:
+     - name: anm/us/wi/p_wi020/EWI10101E.anb
+ - name: anm/us/wi/p_wi020/EWI10104E.anb
+   method: copy
+   source:
+     - name: anm/us/wi/p_wi020/EWI10104E.anb
+ - name: anm/us/wi/p_wi020/EWI10105E.anb
+   method: copy
+   source:
+     - name: anm/us/wi/p_wi020/EWI10105E.anb
+ - name: anm/us/wi/p_wi020/EWI10301E.anb
+   method: copy
+   source:
+     - name: anm/us/wi/p_wi020/EWI10301E.anb
+ - name: anm/us/wi/p_wi020/EWI10307E.anb
+   method: copy
+   source:
+     - name: anm/us/wi/p_wi020/EWI10307E.anb
+ - name: anm/us/wi/p_wi020/EWI10401E.anb
+   method: copy
+   source:
+     - name: anm/us/wi/p_wi020/EWI10401E.anb
+ - name: anm/us/wi/p_wi020/EWI10402E.anb
+   method: copy
+   source:
+     - name: anm/us/wi/p_wi020/EWI10402E.anb
+ - name: anm/us/wi/p_wi020/EWI11801E.anb
+   method: copy
+   source:
+     - name: anm/us/wi/p_wi020/EWI11801E.anb
+ - name: anm/us/wi/p_wi020/EWI11901E.anb
+   method: copy
+   source:
+     - name: anm/us/wi/p_wi020/EWI11901E.anb
+ - name: anm/us/wi/p_wi020/EWI11902A.anb
+   method: copy
+   source:
+     - name: anm/us/wi/p_wi020/EWI11902A.anb
+ - name: anm/us/wi/p_wi020/EWI12001E.anb
+   method: copy
+   source:
+     - name: anm/us/wi/p_wi020/EWI12001E.anb
+ - name: anm/us/wi/p_wi020/EWI12005E.anb
+   method: copy
+   source:
+     - name: anm/us/wi/p_wi020/EWI12005E.anb
+ - name: anm/us/wi/p_wi020/EWI12102E.anb
+   method: copy
+   source:
+     - name: anm/us/wi/p_wi020/EWI12102E.anb
+ - name: anm/us/wi/p_wi020/EWI12202E.anb
+   method: copy
+   source:
+     - name: anm/us/wi/p_wi020/EWI12202E.anb
+ - name: anm/us/wi/p_wi020/EWI12203E.anb
+   method: copy
+   source:
+     - name: anm/us/wi/p_wi020/EWI12203E.anb
+ - name: anm/us/wi/p_wi020/EWI12204E.anb
+   method: copy
+   source:
+     - name: anm/us/wi/p_wi020/EWI12204E.anb
+ - name: anm/us/wi/w_ex020/EWI00001C.anb
+   method: copy
+   source:
+     - name: anm/us/wi/w_ex020/EWI00001C.anb
+ - name: anm/us/wi/w_ex020/EWI00002C.anb
+   method: copy
+   source:
+     - name: anm/us/wi/w_ex020/EWI00002C.anb
+ - name: anm/us/wi/w_ex020/EWI00003C.anb
+   method: copy
+   source:
+     - name: anm/us/wi/w_ex020/EWI00003C.anb
+ - name: anm/us/wi/w_ex020/EWI00009C.anb
+   method: copy
+   source:
+     - name: anm/us/wi/w_ex020/EWI00009C.anb
+ - name: anm/us/wi/w_ex020/EWI00010E.anb
+   method: copy
+   source:
+     - name: anm/us/wi/w_ex020/EWI00010E.anb
+ - name: anm/us/wi/w_ex020/EWI00014C.anb
+   method: copy
+   source:
+     - name: anm/us/wi/w_ex020/EWI00014C.anb
+ - name: anm/us/wi/w_ex020/EWI00016A.anb
+   method: copy
+   source:
+     - name: anm/us/wi/w_ex020/EWI00016A.anb
+ - name: anm/us/wi/w_ex020/EWI11902A.anb
+   method: copy
+   source:
+     - name: anm/us/wi/w_ex020/EWI11902A.anb

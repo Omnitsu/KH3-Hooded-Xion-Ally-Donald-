@@ -1,0 +1,19 @@
+- Id: 0 #Donald
+  Character: 2
+  Hp: 18
+  Mp: 100
+  Ap: 0
+  Strength: 0
+  Magic: 0
+  Defense: 0
+  ArmorSlotMax: 1
+  AccessorySlotMax: 2
+  ItemSlotMax: 2
+  Items:
+  - 32769
+  - 32771
+  - 32935
+  - 32934
+  - 416
+  - 415
+  Padding: []
